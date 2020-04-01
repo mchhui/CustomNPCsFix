@@ -1,0 +1,42 @@
+package mchhui.customnpcsfix.command;
+
+import java.io.File;
+
+import net.minecraft.command.CommandBase;
+import net.minecraft.command.ICommandSender;
+import net.minecraft.util.ChatComponentText;
+import noppes.npcs.controllers.PlayerDataController;
+
+public class CommandHueihuea extends CommandBase{
+
+    @Override
+    public String getCommandName() {
+        return "hueihuea";
+    }
+
+    @Override
+    public String getCommandUsage(ICommandSender p_71518_1_) {
+        // TODO 自动生成的方法存根
+        return "/hueihuea help";
+    }
+    
+    @Override
+    public void processCommand(ICommandSender sender, String[] args) {
+        if(args.length==0) {
+            args=new String[] {"help"};
+        }
+        if(args.length==1) {
+            if(args[0].equals("help")) {
+                sender.addChatMessage(new ChatComponentText("/hueihuea gson playerdata 把所有playerdata转为gson序列储存"));
+                return;
+            }
+        }
+        if(args.length==2) {
+            if(args[0].equals("gson")&&args[1].equals("playerdata")) {
+                File[] files=PlayerDataController.instance.getSaveDir().listFiles();
+                
+            }
+        }
+    }
+
+}

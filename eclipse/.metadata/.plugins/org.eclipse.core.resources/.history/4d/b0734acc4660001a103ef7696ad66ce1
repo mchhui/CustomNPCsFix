@@ -1,0 +1,5 @@
+package mchhui.customnpcsfix.coremod.noppes.npcs.util;
+
+public class NBTJsonUtilTransformer {
+
+}

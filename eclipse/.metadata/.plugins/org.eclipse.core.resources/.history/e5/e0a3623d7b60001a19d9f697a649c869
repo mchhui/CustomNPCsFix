@@ -1,0 +1,7 @@
+package mchhui.customnpcsfix;
+
+public class EntityNPCHelper {
+    public static int[] CallNPCDamagedScript() {
+        
+    }
+}

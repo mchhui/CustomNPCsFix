@@ -1,0 +1,7 @@
+package mchhui.customnpcsfix.fixer;
+
+public class Fixer {
+    public void fix() {
+        
+    }
+}

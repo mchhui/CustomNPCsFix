@@ -1,0 +1,117 @@
+---- Minecraft Crash Report ----
+// But it works on my machine.
+
+Time: 20-3-8 下午10:04
+Description: Unexpected error
+
+net.minecraft.util.ChatComponentTranslationFormatException: Error parsing: TranslatableComponent{key='%', args=[], siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null}}: Unsupported format: '%'
+	at net.minecraft.util.ChatComponentTranslation.initializeFromFormat(ChatComponentTranslation.java:123)
+	at net.minecraft.util.ChatComponentTranslation.ensureInitialized(ChatComponentTranslation.java:67)
+	at net.minecraft.util.ChatComponentTranslation.iterator(ChatComponentTranslation.java:202)
+	at com.google.common.collect.Lists.newArrayList(Lists.java:129)
+	at net.minecraft.client.gui.GuiNewChat.func_146237_a(GuiNewChat.java:176)
+	at net.minecraft.client.gui.GuiNewChat.printChatMessageWithOptionalDeletion(GuiNewChat.java:156)
+	at net.minecraft.client.gui.GuiNewChat.printChatMessage(GuiNewChat.java:148)
+	at net.minecraft.client.network.NetHandlerPlayClient.handleChat(NetHandlerPlayClient.java:795)
+	at net.minecraft.network.play.server.S02PacketChat.processPacket(S02PacketChat.java:56)
+	at net.minecraft.network.play.server.S02PacketChat.processPacket(S02PacketChat.java:83)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:241)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.updateController(PlayerControllerMP.java:317)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1693)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.util.ChatComponentTranslation.initializeFromFormat(ChatComponentTranslation.java:123)
+	at net.minecraft.util.ChatComponentTranslation.ensureInitialized(ChatComponentTranslation.java:67)
+	at net.minecraft.util.ChatComponentTranslation.iterator(ChatComponentTranslation.java:202)
+	at com.google.common.collect.Lists.newArrayList(Lists.java:129)
+	at net.minecraft.client.gui.GuiNewChat.func_146237_a(GuiNewChat.java:176)
+	at net.minecraft.client.gui.GuiNewChat.printChatMessageWithOptionalDeletion(GuiNewChat.java:156)
+	at net.minecraft.client.gui.GuiNewChat.printChatMessage(GuiNewChat.java:148)
+	at net.minecraft.client.network.NetHandlerPlayClient.handleChat(NetHandlerPlayClient.java:795)
+	at net.minecraft.network.play.server.S02PacketChat.processPacket(S02PacketChat.java:56)
+	at net.minecraft.network.play.server.S02PacketChat.processPacket(S02PacketChat.java:83)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:241)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.updateController(PlayerControllerMP.java:317)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player863'/152, l='MpServer', x=1577.61, y=5.62, z=322.54]]
+	Chunk stats: MultiplayerChunkCache: 625, 625
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (1530,4,271), Chunk: (at 10,0,15 in 95,16; contains blocks 1520,0,256 to 1535,255,271), Region: (2,0; contains chunks 64,0 to 95,31, blocks 1024,0,0 to 1535,255,511)
+	Level time: 290180 game time, 55589 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 57 total; [EntityCustomNpc['Tiakono'/128, l='MpServer', x=1572.50, y=4.00, z=318.50], EntityCustomNpc['Farcri'/129, l='MpServer', x=1572.50, y=4.00, z=316.50], EntityCustomNpc['Magnus'/130, l='MpServer', x=1575.50, y=4.00, z=318.50], EntityCustomNpc['t'/131, l='MpServer', x=1575.50, y=4.00, z=322.50], EntitySheep['羊'/132, l='MpServer', x=1587.13, y=4.00, z=272.09], EntityPig['猪'/133, l='MpServer', x=1586.88, y=4.00, z=274.59], EntityChicken['鸡'/134, l='MpServer', x=1593.91, y=4.00, z=361.59], EntityItem['item.item.egg'/135, l='MpServer', x=1595.44, y=4.13, z=361.78], EntityPig['猪'/136, l='MpServer', x=1604.16, y=4.00, z=357.16], EntitySheep['羊'/137, l='MpServer', x=1615.09, y=4.00, z=271.03], EntitySheep['羊'/138, l='MpServer', x=1603.97, y=4.00, z=361.06], EntitySheep['羊'/139, l='MpServer', x=1615.09, y=4.00, z=361.09], EntitySheep['羊'/140, l='MpServer', x=1621.72, y=4.00, z=282.09], EntityPig['猪'/141, l='MpServer', x=1619.91, y=4.00, z=294.88], EntitySheep['羊'/142, l='MpServer', x=1624.72, y=4.00, z=315.22], EntitySheep['羊'/143, l='MpServer', x=1621.41, y=4.00, z=327.78], EntitySheep['羊'/144, l='MpServer', x=1618.81, y=4.00, z=321.34], EntitySheep['羊'/145, l='MpServer', x=1617.25, y=4.00, z=345.59], EntitySheep['羊'/146, l='MpServer', x=1618.84, y=4.00, z=343.66], EntitySheep['羊'/147, l='MpServer', x=1616.13, y=4.00, z=345.81], EntityChicken['鸡'/148, l='MpServer', x=1618.47, y=4.00, z=353.47], EntityItem['item.item.egg'/149, l='MpServer', x=1618.28, y=4.13, z=352.28], EntityChicken['鸡'/150, l='MpServer', x=1634.38, y=4.00, z=356.44], EntityItem['item.item.egg'/151, l='MpServer', x=1632.63, y=4.13, z=356.06], EntityClientPlayerMP['Player863'/152, l='MpServer', x=1577.61, y=5.62, z=322.54], EntityChicken['鸡'/75, l='MpServer', x=1499.44, y=4.00, z=297.53], EntitySheep['羊'/79, l='MpServer', x=1498.19, y=4.00, z=347.44], EntityChicken['鸡'/83, l='MpServer', x=1498.47, y=4.00, z=363.53], EntityCow['牛'/88, l='MpServer', x=1514.09, y=4.00, z=258.16], EntityCow['牛'/89, l='MpServer', x=1518.69, y=4.00, z=268.28], EntityCow['牛'/90, l='MpServer', x=1510.16, y=4.00, z=289.13], EntitySheep['羊'/91, l='MpServer', x=1506.66, y=4.00, z=301.81], EntityChicken['鸡'/92, l='MpServer', x=1516.47, y=4.00, z=309.47], EntityHorse['驴'/97, l='MpServer', x=1530.00, y=4.00, z=253.47], EntitySheep['羊'/98, l='MpServer', x=1532.09, y=4.00, z=280.31], EntityItem['item.item.egg'/99, l='MpServer', x=1523.03, y=4.13, z=302.88], EntityCustomNpc['Magnus'/100, l='MpServer', x=1522.50, y=4.00, z=309.50], EntitySheep['羊'/101, l='MpServer', x=1521.44, y=4.00, z=312.31], EntityChicken['鸡'/102, l='MpServer', x=1523.28, y=4.00, z=305.06], EntityCow['牛'/103, l='MpServer', x=1533.75, y=4.00, z=315.69], EntityCow['牛'/104, l='MpServer', x=1521.03, y=4.00, z=304.91], EntityHorse['驴'/105, l='MpServer', x=1521.13, y=4.00, z=308.50], EntityHorse['驴'/106, l='MpServer', x=1531.97, y=4.00, z=324.34], EntitySheep['羊'/107, l='MpServer', x=1533.94, y=4.00, z=335.53], EntitySheep['羊'/113, l='MpServer', x=1548.72, y=4.00, z=273.75], EntitySheep['羊'/114, l='MpServer', x=1545.16, y=4.00, z=280.84], EntityPig['猪'/115, l='MpServer', x=1536.94, y=4.00, z=274.88], EntityCow['牛'/116, l='MpServer', x=1537.66, y=4.00, z=289.22], EntityCow['牛'/117, l='MpServer', x=1541.94, y=4.00, z=330.16], EntityPig['猪'/118, l='MpServer', x=1539.94, y=4.00, z=345.44], EntityChicken['鸡'/119, l='MpServer', x=1551.47, y=4.00, z=347.56], EntityItem['item.item.egg'/120, l='MpServer', x=1551.31, y=4.13, z=349.69], EntitySheep['羊'/123, l='MpServer', x=1561.81, y=4.00, z=266.34], EntitySheep['羊'/124, l='MpServer', x=1567.78, y=4.00, z=287.16], EntityChicken['鸡'/125, l='MpServer', x=1563.59, y=4.00, z=368.47], EntityItem['item.item.egg'/126, l='MpServer', x=1566.03, y=4.13, z=368.81], EntityCustomNpc['Sakiama'/127, l='MpServer', x=1575.50, y=4.00, z=313.50]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:991)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_231, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 885994488 bytes (844 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 6 mods loaded, 6 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1614} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	customnpcs{1.7.10d} [CustomNpcs] (npc-deobf.jar) 
+	UCHIJAAAA	customnpcsfix{1.0} [CustomNPCs Fix] (bin) 
+	UCHIJAAAA	NBTEdit{1.7.2.2} [In-game NBTEdit] (NBTEdit-deobf.jar) 
+	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '4.6.13543 Compatibility Profile Context 25.20.15003.5010' Renderer: 'Radeon RX 580 Series'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Radeon RX 580 Series GL version 4.6.13543 Compatibility Profile Context 25.20.15003.5010, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: 简体中文 (中国)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

@@ -1,0 +1,5 @@
+package mchhui.customnpcsfix.fixer;
+
+public class DamagedFireSlowerThanBukkit {
+    
+}

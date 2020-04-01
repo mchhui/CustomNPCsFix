@@ -1,0 +1,14 @@
+package mchhui.customnpcsfix;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class CustomNPCFixJavaPlugin extends JavaPlugin{
+    public static CustomNPCFixJavaPlugin plugin;
+    public CustomNPCFixJavaPlugin() {
+        
+    }
+    public static CustomNPCFixJavaPlugin getPlugin() {
+        plugin=new CustomNPCFixJavaPlugin();
+        return plugin;
+    }
+}

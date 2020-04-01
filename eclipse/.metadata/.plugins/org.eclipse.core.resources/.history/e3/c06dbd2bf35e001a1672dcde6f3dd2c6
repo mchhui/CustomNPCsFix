@@ -1,0 +1,30 @@
+package mchhui.customnpcsfix;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Field;
+import java.util.Date;
+
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
+import noppes.npcs.util.JsonException;
+
+public class TestMain {
+    public static void main(String[] args) throws FileNotFoundException{
+        File file = new File(
+                "E:\\java\\Minecraft-forge\\CustomNPCFix\\eclipse\\saves\\新的世界\\customnpcs\\playerdata\\0d077092-9045-3af8-b41e-a691f388e76a.json");
+        InputStream inputStream = new FileInputStream(file);
+        JSONObject json=new JSONObject(new JSONTokener(inputStream));
+        System.out.println("");
+    }
+    /*public static void main(String[] args) {
+        NBTTagCompound nbt=new NBTTagCompound();
+        nbt.setShort("test", (short)1);
+        nbt.setIntArray("testArr",new int[] {1,2,3});
+        System.out.println(mchhui.customnpcsfix.util.NBTJsonUtil.Convert(nbt));
+    }*/
+}

@@ -1,0 +1,126 @@
+---- Minecraft Crash Report ----
+// Don't be sad. I'll do better next time, I promise!
+
+Time: 20-3-30 下午12:57
+Description: Rendering entity in world
+
+java.lang.NoSuchMethodError: mchhui.customnpcsfix.api.EventHook.onPreRenderNPCHumanMale(Lnoppes/npcs/client/renderer/RenderNPCHumanMale;Lnoppes/npcs/entity/EntityNPCInterface;)Z
+	at noppes.npcs.client.renderer.RenderNPCHumanMale.renderPlayer(RenderNPCHumanMale.java:113)
+	at noppes.npcs.client.renderer.RenderCustomNpc.renderPlayer(RenderCustomNpc.java:73)
+	at noppes.npcs.client.renderer.RenderNPCHumanMale.doRender(RenderNPCHumanMale.java:411)
+	at net.minecraft.client.renderer.entity.RenderManager.func_147939_a(RenderManager.java:300)
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntityStatic(RenderManager.java:278)
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntitySimple(RenderManager.java:251)
+	at net.minecraft.client.renderer.RenderGlobal.renderEntities(RenderGlobal.java:527)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1300)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1087)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at noppes.npcs.client.renderer.RenderNPCHumanMale.renderPlayer(RenderNPCHumanMale.java:113)
+	at noppes.npcs.client.renderer.RenderCustomNpc.renderPlayer(RenderCustomNpc.java:73)
+	at noppes.npcs.client.renderer.RenderNPCHumanMale.doRender(RenderNPCHumanMale.java:411)
+
+-- Entity being rendered --
+Details:
+	Entity Type: customnpcs.CustomNpc (noppes.npcs.entity.EntityCustomNpc)
+	Entity ID: 130
+	Entity Name: Raven
+	Entity's Exact location: -1048.50, 4.00, -556.50
+	Entity's Block location: World: (-1049,4,-557), Chunk: (at 7,0,3 in -66,-35; contains blocks -1056,0,-560 to -1041,255,-545), Region: (-3,-2; contains chunks -96,-64 to -65,-33, blocks -1536,0,-1024 to -1025,255,-513)
+	Entity's Momentum: 0.00, -0.08, 0.00
+
+-- Renderer details --
+Details:
+	Assigned renderer: noppes.npcs.client.renderer.RenderCustomNpc@6b82ce26
+	Location: -0.00,-1.62,2.66 - World: (-1,-2,2), Chunk: (at 15,-1,2 in -1,0; contains blocks -16,0,0 to -1,255,15), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Rotation: 11.25
+	Delta: 0.06838679
+Stacktrace:
+	at net.minecraft.client.renderer.entity.RenderManager.func_147939_a(RenderManager.java:300)
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntityStatic(RenderManager.java:278)
+	at net.minecraft.client.renderer.entity.RenderManager.renderEntitySimple(RenderManager.java:251)
+	at net.minecraft.client.renderer.RenderGlobal.renderEntities(RenderGlobal.java:527)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1300)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['mchhui'/257, l='MpServer', x=-1048.50, y=5.62, z=-559.16]]
+	Chunk stats: MultiplayerChunkCache: 210, 210
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-1042,4,-554), Chunk: (at 14,0,6 in -66,-35; contains blocks -1056,0,-560 to -1041,255,-545), Region: (-3,-2; contains chunks -96,-64 to -65,-33, blocks -1536,0,-1024 to -1025,255,-513)
+	Level time: 10191 game time, 10191 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 137 total; [EntitySlime['史莱姆'/23, l='MpServer', x=-1128.27, y=4.23, z=-613.79], EntitySlime['史莱姆'/24, l='MpServer', x=-1123.29, y=4.00, z=-612.60], EntitySheep['羊'/27, l='MpServer', x=-1127.78, y=4.00, z=-497.53], EntitySheep['羊'/29, l='MpServer', x=-1121.16, y=4.00, z=-503.16], EntityPig['猪'/30, l='MpServer', x=-1124.84, y=4.00, z=-501.84], EntityChicken['鸡'/31, l='MpServer', x=-1128.81, y=4.00, z=-485.56], EntitySlime['史莱姆'/35, l='MpServer', x=-1108.22, y=4.19, z=-632.00], EntitySlime['史莱姆'/36, l='MpServer', x=-1108.04, y=4.00, z=-636.27], EntityPig['猪'/37, l='MpServer', x=-1113.22, y=4.00, z=-599.84], EntitySheep['羊'/38, l='MpServer', x=-1107.45, y=4.00, z=-592.91], EntitySlime['史莱姆'/39, l='MpServer', x=-1111.04, y=4.00, z=-608.53], EntitySlime['史莱姆'/40, l='MpServer', x=-1104.86, y=4.59, z=-593.24], EntitySlime['史莱姆'/41, l='MpServer', x=-1114.35, y=4.47, z=-578.69], EntitySheep['羊'/42, l='MpServer', x=-1104.22, y=4.00, z=-575.69], EntityHorse['马'/43, l='MpServer', x=-1107.38, y=4.00, z=-562.41], EntitySlime['史莱姆'/44, l='MpServer', x=-1109.91, y=5.00, z=-549.46], EntitySlime['史莱姆'/45, l='MpServer', x=-1107.16, y=4.33, z=-543.80], EntitySlime['史莱姆'/46, l='MpServer', x=-1117.65, y=4.00, z=-504.89], EntitySheep['羊'/55, l='MpServer', x=-1089.16, y=4.00, z=-611.31], EntitySheep['羊'/56, l='MpServer', x=-1089.50, y=4.00, z=-609.97], EntityPig['猪'/57, l='MpServer', x=-1101.63, y=4.00, z=-592.44], EntitySheep['羊'/58, l='MpServer', x=-1090.69, y=4.00, z=-607.72], EntitySheep['羊'/59, l='MpServer', x=-1095.56, y=4.00, z=-584.03], EntitySheep['羊'/60, l='MpServer', x=-1102.44, y=4.00, z=-583.56], EntityHorse['马'/61, l='MpServer', x=-1095.50, y=4.00, z=-587.72], EntityHorse['马'/62, l='MpServer', x=-1092.75, y=4.00, z=-583.53], EntityPig['猪'/63, l='MpServer', x=-1103.31, y=4.00, z=-578.69], EntitySheep['羊'/64, l='MpServer', x=-1091.94, y=4.00, z=-561.94], EntityPig['猪'/65, l='MpServer', x=-1096.09, y=4.00, z=-567.76], EntitySheep['羊'/66, l='MpServer', x=-1098.13, y=4.00, z=-556.13], EntitySheep['羊'/67, l='MpServer', x=-1095.19, y=4.00, z=-551.94], EntitySheep['羊'/68, l='MpServer', x=-1093.75, y=4.00, z=-551.81], EntityHorse['马'/69, l='MpServer', x=-1097.84, y=4.00, z=-553.94], EntityHorse['马'/70, l='MpServer', x=-1097.97, y=4.00, z=-551.97], EntityPig['猪'/71, l='MpServer', x=-1091.70, y=4.00, z=-550.58], EntitySlime['史莱姆'/72, l='MpServer', x=-1089.30, y=4.00, z=-549.60], EntitySlime['史莱姆'/73, l='MpServer', x=-1096.02, y=4.55, z=-482.15], EntityHorse['马'/79, l='MpServer', x=-1079.22, y=4.00, z=-609.09], EntitySheep['羊'/80, l='MpServer', x=-1080.09, y=4.00, z=-617.84], EntitySheep['羊'/81, l='MpServer', x=-1082.59, y=4.00, z=-609.94], EntitySheep['羊'/82, l='MpServer', x=-1082.64, y=4.00, z=-602.51], EntitySheep['羊'/83, l='MpServer', x=-1088.60, y=4.00, z=-601.66], EntitySheep['羊'/84, l='MpServer', x=-1085.75, y=4.00, z=-607.94], EntitySlime['史莱姆'/85, l='MpServer', x=-1084.52, y=4.92, z=-601.66], EntitySlime['史莱姆'/86, l='MpServer', x=-1088.80, y=4.00, z=-585.11], EntityPig['猪'/87, l='MpServer', x=-1085.69, y=4.00, z=-548.03], EntityPig['猪'/88, l='MpServer', x=-1087.91, y=4.00, z=-555.25], EntityCow['牛'/89, l='MpServer', x=-1076.50, y=4.00, z=-531.13], EntitySlime['史莱姆'/90, l='MpServer', x=-1078.28, y=4.00, z=-532.33], EntityCow['牛'/91, l='MpServer', x=-1074.34, y=4.00, z=-526.16], EntitySheep['羊'/92, l='MpServer', x=-1077.25, y=4.00, z=-521.56], EntitySlime['史莱姆'/93, l='MpServer', x=-1077.21, y=4.00, z=-513.29], EntitySlime['史莱姆'/94, l='MpServer', x=-1076.86, y=5.14, z=-498.72], EntitySlime['史莱姆'/95, l='MpServer', x=-1073.49, y=4.69, z=-504.85], EntitySlime['史莱姆'/96, l='MpServer', x=-1073.82, y=4.97, z=-501.69], EntityHorse['马'/97, l='MpServer', x=-1079.84, y=4.00, z=-511.84], EntitySlime['史莱姆'/98, l='MpServer', x=-1075.55, y=4.00, z=-495.82], EntitySlime['史莱姆'/101, l='MpServer', x=-1058.39, y=4.00, z=-637.59], EntitySlime['史莱姆'/102, l='MpServer', x=-1059.90, y=4.00, z=-635.23], EntitySlime['史莱姆'/103, l='MpServer', x=-1061.08, y=5.14, z=-608.83], EntitySlime['史莱姆'/104, l='MpServer', x=-1060.16, y=4.00, z=-602.22], EntitySlime['史莱姆'/105, l='MpServer', x=-1070.99, y=4.50, z=-574.77], EntityCow['牛'/106, l='MpServer', x=-1070.72, y=4.00, z=-529.38], EntitySlime['史莱姆'/107, l='MpServer', x=-1068.04, y=4.47, z=-532.48], EntityHorse['马'/108, l='MpServer', x=-1070.50, y=4.00, z=-523.56], EntityCow['牛'/109, l='MpServer', x=-1062.25, y=4.00, z=-517.88], EntityHorse['马'/110, l='MpServer', x=-1071.41, y=4.00, z=-516.53], EntityHorse['马'/111, l='MpServer', x=-1071.63, y=4.00, z=-525.66], EntitySlime['史莱姆'/112, l='MpServer', x=-1057.29, y=4.00, z=-509.85], EntitySlime['史莱姆'/124, l='MpServer', x=-1053.72, y=4.69, z=-627.28], EntityChicken['鸡'/125, l='MpServer', x=-1049.53, y=4.00, z=-595.44], EntitySlime['史莱姆'/126, l='MpServer', x=-1046.70, y=4.00, z=-598.84], EntitySlime['史莱姆'/127, l='MpServer', x=-1043.02, y=4.00, z=-603.99], EntitySlime['史莱姆'/128, l='MpServer', x=-1044.61, y=5.00, z=-591.21], EntitySlime['史莱姆'/129, l='MpServer', x=-1054.06, y=4.50, z=-592.40], EntityCustomNpc['Raven'/130, l='MpServer', x=-1048.50, y=4.00, z=-556.50], EntitySlime['史莱姆'/131, l='MpServer', x=-1057.36, y=4.41, z=-495.93], EntityCow['牛'/132, l='MpServer', x=-1049.88, y=4.00, z=-485.88], EntityCow['牛'/133, l='MpServer', x=-1049.26, y=4.00, z=-490.82], EntityCow['牛'/134, l='MpServer', x=-1053.22, y=4.00, z=-493.19], EntityCow['牛'/135, l='MpServer', x=-1048.28, y=4.00, z=-493.56], EntitySheep['羊'/136, l='MpServer', x=-1048.69, y=4.00, z=-485.84], EntitySheep['羊'/137, l='MpServer', x=-1045.69, y=4.00, z=-484.09], EntitySheep['羊'/138, l='MpServer', x=-1041.81, y=4.00, z=-491.78], EntityCow['牛'/139, l='MpServer', x=-1044.31, y=4.00, z=-482.28], EntityCow['牛'/140, l='MpServer', x=-1043.19, y=4.00, z=-482.31], EntitySlime['史莱姆'/141, l='MpServer', x=-1051.03, y=5.27, z=-490.00], EntityPig['猪'/150, l='MpServer', x=-1029.22, y=4.00, z=-603.84], EntityPig['猪'/151, l='MpServer', x=-1035.12, y=4.00, z=-594.93], EntityPig['猪'/152, l='MpServer', x=-1030.22, y=4.00, z=-594.97], EntitySheep['羊'/153, l='MpServer', x=-1032.41, y=4.00, z=-604.50], EntitySheep['羊'/154, l='MpServer', x=-1031.66, y=4.00, z=-606.72], EntitySheep['羊'/155, l='MpServer', x=-1028.03, y=4.00, z=-604.34], EntitySheep['羊'/156, l='MpServer', x=-1026.44, y=4.00, z=-604.19], EntityHorse['马'/157, l='MpServer', x=-1027.81, y=4.00, z=-602.63], EntityHorse['马'/158, l='MpServer', x=-1034.03, y=4.00, z=-605.63], EntityPig['猪'/159, l='MpServer', x=-1032.84, y=4.00, z=-599.38], EntitySlime['史莱姆'/160, l='MpServer', x=-1037.35, y=4.44, z=-598.07], EntitySlime['史莱姆'/161, l='MpServer', x=-1038.63, y=4.59, z=-565.41], EntitySheep['羊'/162, l='MpServer', x=-1031.78, y=4.00, z=-524.22], EntitySheep['羊'/163, l='MpServer', x=-1036.50, y=4.00, z=-527.91], EntitySheep['羊'/164, l='MpServer', x=-1028.09, y=4.00, z=-514.38], EntityChicken['鸡'/165, l='MpServer', x=-1026.52, y=4.00, z=-524.92], EntityChicken['鸡'/166, l='MpServer', x=-1030.10, y=4.00, z=-526.87], EntitySheep['羊'/167, l='MpServer', x=-1032.91, y=4.00, z=-523.31], EntitySheep['羊'/168, l='MpServer', x=-1031.78, y=4.00, z=-525.56], EntitySheep['羊'/169, l='MpServer', x=-1030.42, y=4.00, z=-525.71], EntityChicken['鸡'/170, l='MpServer', x=-1028.41, y=4.00, z=-520.59], EntitySheep['羊'/171, l='MpServer', x=-1039.59, y=4.00, z=-485.19], EntitySlime['史莱姆'/172, l='MpServer', x=-1031.04, y=5.24, z=-495.02], EntitySlime['史莱姆'/177, l='MpServer', x=-1014.92, y=4.37, z=-576.21], EntitySlime['史莱姆'/178, l='MpServer', x=-1010.05, y=4.00, z=-536.05], EntityChicken['鸡'/179, l='MpServer', x=-1021.63, y=4.00, z=-526.91], EntitySheep['羊'/180, l='MpServer', x=-1013.38, y=4.00, z=-520.88], EntitySheep['羊'/181, l='MpServer', x=-1022.91, y=4.00, z=-525.69], EntitySlime['史莱姆'/185, l='MpServer', x=-1004.44, y=4.77, z=-606.14], EntitySheep['羊'/186, l='MpServer', x=-998.97, y=4.00, z=-579.03], EntitySheep['羊'/187, l='MpServer', x=-993.81, y=4.00, z=-578.16], EntitySlime['史莱姆'/188, l='MpServer', x=-1007.09, y=4.69, z=-591.41], EntitySheep['羊'/189, l='MpServer', x=-1000.16, y=4.00, z=-575.03], EntitySheep['羊'/190, l='MpServer', x=-997.13, y=4.00, z=-575.09], EntitySheep['羊'/191, l='MpServer', x=-1005.63, y=4.00, z=-571.13], EntitySheep['羊'/192, l='MpServer', x=-996.53, y=4.00, z=-569.16], EntityPig['猪'/193, l='MpServer', x=-1002.97, y=4.00, z=-574.28], EntityPig['猪'/194, l='MpServer', x=-1001.41, y=4.00, z=-574.16], EntityPig['猪'/195, l='MpServer', x=-995.31, y=4.00, z=-567.72], EntityPig['猪'/196, l='MpServer', x=-997.09, y=4.00, z=-565.13], EntitySheep['羊'/197, l='MpServer', x=-1004.94, y=4.00, z=-566.38], EntitySlime['史莱姆'/198, l='MpServer', x=-1003.76, y=4.00, z=-559.51], EntitySlime['史莱姆'/199, l='MpServer', x=-1000.18, y=4.00, z=-489.48], EntitySheep['羊'/201, l='MpServer', x=-991.50, y=4.00, z=-569.28], EntityChicken['鸡'/202, l='MpServer', x=-984.84, y=4.00, z=-530.94], EntitySlime['史莱姆'/203, l='MpServer', x=-985.89, y=4.59, z=-532.91], EntityChicken['鸡'/204, l='MpServer', x=-984.43, y=4.00, z=-521.56], EntitySlime['史莱姆'/205, l='MpServer', x=-983.43, y=5.00, z=-484.90], EntityChicken['鸡'/208, l='MpServer', x=-970.85, y=4.00, z=-525.57], EntityClientPlayerMP['mchhui'/257, l='MpServer', x=-1048.50, y=5.62, z=-559.16]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:984)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_231, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 671531616 bytes (640 MB) / 1299709952 bytes (1239 MB) up to 3808428032 bytes (3632 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 6 mods loaded, 6 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1614} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAA	customnpcs{1.7.10d} [CustomNpcs] (npc-deobf.jar) 
+	UCHIJAAAA	customnpcsfix{1.1} [CustomNPCs Fix] (bin) 
+	UCHIJAAAA	NBTEdit{1.7.2.2} [In-game NBTEdit] (NBTEdit-deobf.jar) 
+	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '4.6.13543 Compatibility Profile Context 25.20.15003.5010' Renderer: 'Radeon RX 580 Series'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Radeon RX 580 Series GL version 4.6.13543 Compatibility Profile Context 25.20.15003.5010, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: 简体中文 (中国)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

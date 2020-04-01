@@ -1,0 +1,7 @@
+package mchhui.customnpcsfix.coremod.noppes.npcs.client.gui;
+
+import net.minecraft.launchwrapper.IClassTransformer;
+
+public class GuiScriptTransfromer implements IClassTransformer{
+
+}

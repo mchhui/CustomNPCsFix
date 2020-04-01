@@ -1,0 +1,15 @@
+package mchhui.customnpcsfix.coremod.noppes.npcs.util;
+
+import net.minecraft.launchwrapper.IClassTransformer;
+
+public class NBTJsonUtilTransformer implements IClassTransformer{
+
+    @Override
+    public byte[] transform(String name, String transformedName, byte[] basicClass) {
+        if(transformedName.equals("noppes.npcs.util.NBTJsonUtil")) {
+            
+        }
+        return basicClass;
+    }
+
+}

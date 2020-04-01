@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="Load" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="load"/>
+			<item value="open"/>
+			<item value="actionPerformed"/>
+			<item value="108"/>
+			<item value="buttons."/>
+			<item value="buttons.d"/>
+			<item value="buttons.c"/>
+			<item value="buttons.r"/>
+			<item value="GuiJTextArea"/>
+			<item value="sendm"/>
+			<item value="client.PacketHandlerClient"/>
+			<item value="npcs.client"/>
+			<item value="npc.sclient"/>
+			<item value="noppes.npcs.cleint.PacketHandlerClient"/>
+			<item value="cleint"/>
+		</list>
+		<list key="replacehistory">
+			<item value="scripted.ScriptPlayer"/>
+			<item value="client"/>
+			<item value="cleint.PacketHandlerClient"/>
+			<item value="entity.EntityNPCInterface"/>
+			<item value="Serializer extends"/>
+			<item value=" extends NBTBaseSerializer{}"/>
+			<item value=" implements JsonSerializer&lt;NBTBase&gt; {}"/>
+			<item value=" implements JsonSerializer&lt;NBTBase&gt;"/>
+			<item value="implements JsonSerializer&lt;NBTBase&gt; {}"/>
+			<item value=""/>
+			<item value="private static class"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="276" key="DIALOG_WIDTH"/>
+		<item value="1|Comic Sans MS|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Comic Sans MS" key="DIALOG_FONT_NAME"/>
+		<item value="409" key="DIALOG_HEIGHT"/>
+		<item value="1175" key="DIALOG_X_ORIGIN"/>
+		<item value="241" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

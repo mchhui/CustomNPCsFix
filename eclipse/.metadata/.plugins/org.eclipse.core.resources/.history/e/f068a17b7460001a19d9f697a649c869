@@ -1,0 +1,7 @@
+package mchhui.customnpcsfix;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class CustomNPCFixJavaPlugin extends JavaPlugin{
+
+}

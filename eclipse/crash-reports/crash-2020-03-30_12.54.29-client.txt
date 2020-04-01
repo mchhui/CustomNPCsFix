@@ -1,0 +1,178 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 20-3-30 下午12:54
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+cpw.mods.fml.common.LoaderException: java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    noppes/npcs/client/renderer/RenderNPCHumanMale.renderPlayer(Lnoppes/npcs/entity/EntityNPCInterface;DDDFF)V @2: invokestatic
+  Reason:
+    Type 'noppes/npcs/entity/EntityNPCInterface' (current frame, stack[1]) is not assignable to 'noppes/npcs/entity/EntityCustomNpc'
+  Current Frame:
+    bci: @2
+    flags: { }
+    locals: { 'noppes/npcs/client/renderer/RenderNPCHumanMale', 'noppes/npcs/entity/EntityNPCInterface', double, double_2nd, double, double_2nd, double, double_2nd, float, float }
+    stack: { 'noppes/npcs/client/renderer/RenderNPCHumanMale', 'noppes/npcs/entity/EntityNPCInterface' }
+  Bytecode:
+    0x0000000: 2a2b b800 aa99 0004 b12b b600 b03a 0a2a
+    0x0000010: b400 1b2a b400 1d2a b400 1919 0ac7 0007
+    0x0000020: 03a7 000f 2bb4 00b3 9e00 0706 a700 0404
+    0x0000030: 5ab5 00b6 5ab5 00b6 b500 b62a b400 1b2a
+    0x0000040: b400 1d2a b400 192b b600 b9c7 0007 03a7
+    0x0000050: 000f 2bb4 00b3 9e00 0706 a700 0404 5ab5
+    0x0000060: 00bc 5ab5 00bc b500 bc2a b400 1b2a b400
+    0x0000070: 1d2a b400 192b b600 bf5a b500 c25a b500
+    0x0000080: c2b5 00c2 2ab4 001b 2ab4 001d 2ab4 0019
+    0x0000090: 2bb6 00c5 5ab5 00c8 5ab5 00c8 b500 c82a
+    0x00000a0: b400 1b2a b400 1d2a b400 192b b400 ccb2
+    0x00000b0: 00d1 a600 0704 a700 0403 5ab5 00d4 5ab5
+    0x00000c0: 00d4 b500 d42a b400 1b2a b400 1d2a b400
+    0x00000d0: 192b b400 ccb2 00d7 a600 0704 a700 0403
+    0x00000e0: 5ab5 00da 5ab5 00da b500 da2a b400 1b2a
+    0x00000f0: b400 1d2a b400 192b b600 dc5a b500 dd5a
+    0x0000100: b500 ddb5 00dd 1804 2bb4 00e0 8d67 390b
+    0x0000110: 2bb6 00bf 9900 0b18 0b14 00e1 6739 0b2a
+    0x0000120: 2b28 180b 1806 1708 1709 b700 e62a b400
+    0x0000130: 1b2a b400 1d2a b400 1903 5ab5 00da 5ab5
+    0x0000140: 00da b500 da2a b400 1b2a b400 1d2a b400
+    0x0000150: 1903 5ab5 00c2 5ab5 00c2 b500 c22a b400
+    0x0000160: 1b2a b400 1d2a b400 1903 5ab5 00b6 5ab5
+    0x0000170: 00b6 b500 b62a b400 1b2a b400 1d2a b400
+    0x0000180: 1903 5ab5 00bc 5ab5 00bc b500 bc2a 2bb8
+    0x0000190: 00ea b1                                
+  Stackmap Table:
+    same_frame(@9)
+    full_frame(@36,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64]})
+    full_frame(@47,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64]})
+    full_frame(@48,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64],Integer})
+    full_frame(@82,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64]})
+    full_frame(@93,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64]})
+    full_frame(@94,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64],Integer})
+    full_frame(@185,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64]})
+    full_frame(@186,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64],Integer})
+    full_frame(@223,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64]})
+    full_frame(@224,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64],Integer})
+    append_frame(@287,Double)
+
+	at cpw.mods.fml.common.LoadController.transition(LoadController.java:163)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:559)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:243)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:522)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:942)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+Caused by: java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    noppes/npcs/client/renderer/RenderNPCHumanMale.renderPlayer(Lnoppes/npcs/entity/EntityNPCInterface;DDDFF)V @2: invokestatic
+  Reason:
+    Type 'noppes/npcs/entity/EntityNPCInterface' (current frame, stack[1]) is not assignable to 'noppes/npcs/entity/EntityCustomNpc'
+  Current Frame:
+    bci: @2
+    flags: { }
+    locals: { 'noppes/npcs/client/renderer/RenderNPCHumanMale', 'noppes/npcs/entity/EntityNPCInterface', double, double_2nd, double, double_2nd, double, double_2nd, float, float }
+    stack: { 'noppes/npcs/client/renderer/RenderNPCHumanMale', 'noppes/npcs/entity/EntityNPCInterface' }
+  Bytecode:
+    0x0000000: 2a2b b800 aa99 0004 b12b b600 b03a 0a2a
+    0x0000010: b400 1b2a b400 1d2a b400 1919 0ac7 0007
+    0x0000020: 03a7 000f 2bb4 00b3 9e00 0706 a700 0404
+    0x0000030: 5ab5 00b6 5ab5 00b6 b500 b62a b400 1b2a
+    0x0000040: b400 1d2a b400 192b b600 b9c7 0007 03a7
+    0x0000050: 000f 2bb4 00b3 9e00 0706 a700 0404 5ab5
+    0x0000060: 00bc 5ab5 00bc b500 bc2a b400 1b2a b400
+    0x0000070: 1d2a b400 192b b600 bf5a b500 c25a b500
+    0x0000080: c2b5 00c2 2ab4 001b 2ab4 001d 2ab4 0019
+    0x0000090: 2bb6 00c5 5ab5 00c8 5ab5 00c8 b500 c82a
+    0x00000a0: b400 1b2a b400 1d2a b400 192b b400 ccb2
+    0x00000b0: 00d1 a600 0704 a700 0403 5ab5 00d4 5ab5
+    0x00000c0: 00d4 b500 d42a b400 1b2a b400 1d2a b400
+    0x00000d0: 192b b400 ccb2 00d7 a600 0704 a700 0403
+    0x00000e0: 5ab5 00da 5ab5 00da b500 da2a b400 1b2a
+    0x00000f0: b400 1d2a b400 192b b600 dc5a b500 dd5a
+    0x0000100: b500 ddb5 00dd 1804 2bb4 00e0 8d67 390b
+    0x0000110: 2bb6 00bf 9900 0b18 0b14 00e1 6739 0b2a
+    0x0000120: 2b28 180b 1806 1708 1709 b700 e62a b400
+    0x0000130: 1b2a b400 1d2a b400 1903 5ab5 00da 5ab5
+    0x0000140: 00da b500 da2a b400 1b2a b400 1d2a b400
+    0x0000150: 1903 5ab5 00c2 5ab5 00c2 b500 c22a b400
+    0x0000160: 1b2a b400 1d2a b400 1903 5ab5 00b6 5ab5
+    0x0000170: 00b6 b500 b62a b400 1b2a b400 1d2a b400
+    0x0000180: 1903 5ab5 00bc 5ab5 00bc b500 bc2a 2bb8
+    0x0000190: 00ea b1                                
+  Stackmap Table:
+    same_frame(@9)
+    full_frame(@36,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64]})
+    full_frame(@47,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64]})
+    full_frame(@48,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64],Integer})
+    full_frame(@82,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64]})
+    full_frame(@93,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64]})
+    full_frame(@94,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64],Integer})
+    full_frame(@185,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64]})
+    full_frame(@186,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64],Integer})
+    full_frame(@223,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64]})
+    full_frame(@224,{Object[#2],Object[#172],Double,Double,Double,Float,Float,Object[#44]},{Object[#64],Object[#64],Object[#64],Integer})
+    append_frame(@287,Double)
+
+	at noppes.npcs.client.ClientProxy.load(ClientProxy.java:201)
+	at noppes.npcs.CustomNpcs.load(CustomNpcs.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:532)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:556)
+	... 12 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_231, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 633099856 bytes (603 MB) / 866123776 bytes (826 MB) up to 3808428032 bytes (3632 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 6 mods loaded, 6 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCH	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCH	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCH	Forge{10.13.4.1614} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCE	customnpcs{1.7.10d} [CustomNpcs] (npc-deobf.jar) 
+	UCH	customnpcsfix{1.1} [CustomNPCs Fix] (bin) 
+	UCH	NBTEdit{1.7.2.2} [In-game NBTEdit] (NBTEdit-deobf.jar) 
+	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '4.6.13543 Compatibility Profile Context 25.20.15003.5010' Renderer: 'Radeon RX 580 Series'

@@ -1,0 +1,7 @@
+package mchhui.customnpcsfix.util;
+
+public class NPCUtil {
+    public static String onSay(String text) {
+        return text.replace("%", "%%");
+    }
+}

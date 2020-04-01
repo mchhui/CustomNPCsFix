@@ -1,0 +1,18 @@
+package mchhui.customnpcsfix.util;
+
+import org.bukkit.craftbukkit.libs.com.google.gson.Gson;
+
+import com.google.gson.internal.LinkedTreeMap;
+
+import dk.mrspring.nbtjson.NBTJsonCompile;
+import dk.mrspring.nbtjson.NBTJsonDecompile;
+import net.minecraft.nbt.NBTTagCompound;
+
+public class NBTJsonHelper {
+    public static String compile(NBTTagCompound nbt) {
+        return NBTJsonCompile.createJsonStringFromCompound(nbt);
+    }
+    public static NBTTagCompound decompile(String json) {
+        return NBTJsonDecompile.createFromJsonObject(new Gson().fromJson(json, LinkedTreeMap.class));
+    }
+}

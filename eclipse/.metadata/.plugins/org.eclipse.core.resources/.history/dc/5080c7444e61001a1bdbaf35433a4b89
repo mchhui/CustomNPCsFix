@@ -1,0 +1,45 @@
+package mchhui.customnpcsfix;
+
+import org.apache.logging.log4j.Logger;
+
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.config.Configuration;
+
+public class Config {
+    private static Configuration config;
+
+    private static Logger logger;
+
+    public static boolean FastJsonDeserialize;
+    public static boolean NoMsgPercentSymbolBug;
+    public static boolean DeleteScriptEditor;
+
+    public Config(FMLPreInitializationEvent event) {
+        logger = event.getModLog();
+        config = new Configuration(event.getSuggestedConfigurationFile());
+
+        config.load();
+        load();
+    }
+
+    public static void load() {
+        logger.info("Started loading config. ");
+        String comment;
+
+        comment = "更快的JSON反序列化 虽然不是特别快 但是比NPC自带的快的多";
+        FastJsonDeserialize = config.get(Configuration.CATEGORY_GENERAL, "FastJsonDeserialize", false, comment)
+                .getBoolean();
+        comment = "NPC的say方法说出%不再崩溃";
+        NoMsgPercentSymbolBug = config.get(Configuration.CATEGORY_GENERAL, "NoMsgPercentSymbolBug", false, comment)
+                .getBoolean();
+        comment = "删除脚本编辑器";
+        DeleteScriptEditor = config.get(Configuration.CATEGORY_GENERAL, "DeleteScriptEditor", false, comment)
+                .getBoolean();
+        config.save();
+        logger.info("Finished loading config. ");
+    }
+
+    public static Logger logger() {
+        return logger;
+    }
+}

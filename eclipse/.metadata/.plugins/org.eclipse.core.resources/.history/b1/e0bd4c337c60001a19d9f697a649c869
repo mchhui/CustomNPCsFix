@@ -1,0 +1,3 @@
+name: CustomNPCFix #插件名
+main: mchhui.customnpcsfix.JavaPlugin #插件主类路径
+version: 1.0 #插件版本号

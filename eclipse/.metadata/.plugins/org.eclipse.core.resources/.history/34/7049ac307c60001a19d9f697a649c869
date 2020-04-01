@@ -1,0 +1,24 @@
+package mchhui.customnpcsfix.proxy;
+
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import mchhui.customnpcsfix.Config;
+
+public class CommonProxy {
+    public void onPreInit(FMLPreInitializationEvent event) {
+        new Config(event);
+    }
+    
+    public void onInit(FMLInitializationEvent event) {
+        
+        
+        try {
+            if(Class.forName("org.bukkit.Bukkit") != null) {
+                
+            }
+        } catch (ClassNotFoundException e) {
+            // TODO 自动生成的 catch 块
+            e.printStackTrace();
+        }
+    }
+}

@@ -1,0 +1,55 @@
+package mchhui.customnpcsfix;
+
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.Field;
+import java.util.Date;
+
+import com.google.gson.FieldNamingStrategy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonParser;
+import com.google.gson.internal.LinkedTreeMap;
+
+import dk.mrspring.nbtjson.NBTJsonCompile;
+import dk.mrspring.nbtjson.NBTJsonDecompile;
+import net.minecraft.nbt.JsonToNBT;
+import net.minecraft.nbt.NBTException;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import noppes.npcs.util.JsonException;
+import noppes.npcs.util.NBTJsonUtil;
+
+public class TestMain {
+    public static void main(String[] args) throws IOException, JsonException, NBTException {
+        File file = new File(
+                "E:\\java\\Minecraft-forge\\CustomNPCFix\\eclipse\\saves\\新的世界\\customnpcs\\playerdata\\ba25db16-299f-3ae9-adf4-505df8532915.json");
+        NBTTagCompound nbt = NBTJsonUtil.LoadFile(file);
+        String json = null;
+        long time;
+        time = new Date().getTime();
+        nbt = new NBTTagCompound();
+        nbt.setBoolean("testBool", true);
+        nbt.setString("testStr", "hello");
+        nbt.setIntArray("testIARR", new int[] { 1, 2, 3 });
+        nbt.setInteger("testInt", 1);
+        //nbt.setByteArray("testByteARR",new byte[] {1,2,3});
+        nbt.setShort("testShort", (short) 1);
+        nbt.setTag("testco", nbt.copy());
+        NBTTagList list= new NBTTagList();
+        list.appendTag(nbt.copy());
+        nbt.setTag("testList",list);
+        list= new NBTTagList();
+        list.appendTag(nbt.getTag("testList").copy());
+        nbt.setTag("testList2",list);
+        json=mchhui.customnpcsfix.util.NBTJsonUtil.Convert(nbt);
+        System.out.println(json);
+        System.out.println(mchhui.customnpcsfix.util.NBTJsonUtil.Convert(json).getTagList("testList2",9).getCompoundTagAt(0));
+    }
+    /*public static void main(String[] args) {
+        NBTTagCompound nbt=new NBTTagCompound();
+        nbt.setShort("test", (short)1);
+        nbt.setIntArray("testArr",new int[] {1,2,3});
+        System.out.println(mchhui.customnpcsfix.util.NBTJsonUtil.Convert(nbt));
+    }*/
+}

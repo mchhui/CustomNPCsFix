@@ -1,0 +1,15 @@
+package mchhui.customnpcsfix.proxy;
+
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import mchhui.customnpcsfix.Config;
+
+public class CommonProxy {
+    public void onPreInit(FMLPreInitializationEvent event) {
+        new Config(event);
+    }
+    
+    public void onInit(FMLInitializationEvent event) {
+        
+    }
+}

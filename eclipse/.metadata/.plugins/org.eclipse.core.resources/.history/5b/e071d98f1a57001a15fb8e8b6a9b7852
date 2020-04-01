@@ -1,0 +1,46 @@
+package mchhui.customnpcsfix.coremod.noppes.npcs;
+
+import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.Opcodes;
+import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.tree.InsnList;
+import org.objectweb.asm.tree.InsnNode;
+import org.objectweb.asm.tree.MethodInsnNode;
+import org.objectweb.asm.tree.MethodNode;
+
+import cpw.mods.fml.common.FMLLog;
+import net.minecraft.launchwrapper.IClassTransformer;
+
+public class NoppesUtilServerTransformer implements IClassTransformer {
+
+    @Override
+    public byte[] transform(String name, String transformedName, byte[] basicClass) {
+        if (transformedName.equals("noppes.npcs.NoppesUtilServer")) {
+            FMLLog.getLogger().info("[Transforming:noppes.npcs.NoppesUtilServer]");
+            ClassNode classNode = new ClassNode(Opcodes.ASM5);
+            ClassReader classReader = new ClassReader(basicClass);
+            classReader.accept(classNode, ClassReader.SKIP_DEBUG);
+            MethodNode sendPlayerData = null;
+            for (MethodNode method : classNode.methods) {
+                if (method.name.equals("sendPlayerData")) {
+                    method.name = "sendPlayerDataRealize";
+                }
+                sendPlayerData = new MethodNode(method.access, "sendPlayerData", method.desc, method.signature,
+                        method.exceptions.toArray(new String[1]));
+                InsnList list = new InsnList();
+                list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "mchhui/customnpcsfix/Server", method.name,
+                        method.desc, false));
+                list.add(new InsnNode(Opcodes.RETURN));
+                sendPlayerData.instructions.insert(list);
+            }
+            //classNode.methods.add(sendPlayerData);
+            ClassWriter classWriter = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
+            classNode.accept(classWriter);
+            FMLLog.getLogger().info("[Transformed:noppes.npcs.NoppesUtilServer]");
+            return classWriter.toByteArray();
+        }
+        return basicClass;
+    }
+
+}

@@ -1,0 +1,13 @@
+package mchhui.customnpcsfix.listener.bukkit;
+
+import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityDamageEvent;
+
+import cpw.mods.fml.common.Mod.EventHandler;
+
+public class EntityHurtListener implements Listener{
+    @EventHandler
+    public void onEntityHurt(EntityDamageEvent event) {
+        
+    }
+}
