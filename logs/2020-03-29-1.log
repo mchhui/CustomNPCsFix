@@ -1,0 +1,4 @@
+[23:29:04] [main/INFO] [GradleStart]: username: mchhui@foxmail.com
+[23:29:04] [main/INFO] [GradleStart]: Extra: []
+[23:29:04] [main/INFO] [GradleStart]: Password found, attempting login
+[23:29:04] [main/INFO] [com.mojang.authlib.yggdrasil.YggdrasilUserAuthentication]: Logging in with username & password

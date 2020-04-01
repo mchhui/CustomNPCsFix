@@ -1,0 +1,17 @@
+[
+{
+  "modid": "customnpcsfix",
+  "name": "CustomNPCs Fix",
+  "description": "The mod fixs some bug of NPC mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Hueihuea"],
+  "credits": "The Forge and FML guys",
+  "logoFile": "assets/customnpcsfix/logo.png",
+  "useDependencyInformation": true;
+  "screenshots": [],
+  "dependencies": ["customnpcs"]
+}
+]

@@ -1,0 +1,863 @@
+[23:29:04] [main/INFO] [GradleStart]: username: mchhui@foxmail.com
+[23:29:04] [main/INFO] [GradleStart]: Extra: []
+[23:29:04] [main/INFO] [GradleStart]: Password found, attempting login
+[23:29:04] [main/INFO] [com.mojang.authlib.yggdrasil.YggdrasilUserAuthentication]: Logging in with username & password
+[23:29:14] [main/INFO] [GradleStart]: Login Succesful!
+[23:29:14] [main/INFO] [GradleStart]: Found and added coremod: mchhui.customnpcsfix.coremod.CustomNPCFixPlugin
+[23:29:14] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, [{"name":"preferredLanguage","value":"zh-cn"}], --assetsDir,[23:29:38] [main/ERROR] [GradleStart]: -- Login failed!  Cannot contact authentication server
+ccessToken{REDACTED}, --version, 1.12.2, --uuid, 5cbba4e0bb0549a795ecad3f8a079c7a, --username, mchhui, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[23:29:14] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[23:29:14] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[23:29:14] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[23:29:14] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[23:29:14] [main/DEBUG] [FML]: Injecting tracing printstreams for STDOUT/STDERR.
+[23:29:14] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2768 for Minecraft 1.12.2 loading
+[23:29:14] [main/INFO] [FML]: Java is OpenJDK 64-Bit Server VM, version 1.8.0_232, running on Windows 7:amd64:6.1, installed at D:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-hotspot\jre
+[23:29:14] [main/DEBUG] [FML]: Java classpath at launch is:
+[23:29:14] [main/DEBUG] [FML]:     E:\java\Minecraft-forge\CustomNPCFix 1.12.2\bin
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\minecraft\net\minecraftforge\forge\1.12.2-14.23.5.2768\snapshot\20171003\forgeSrc-1.12.2-14.23.5.2768.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.1\f7be08ec23c21485b9b5a1cf1654c2ec8c58168d\jsr305-3.0.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.mojang\patchy\1.1\aef610b34a1be37fa851825f12372b78424d8903\patchy-1.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\oshi-project\oshi-core\1.1\9ddf7b048a8d701be231c0f4f95fd986198fd2d8\oshi-core-1.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\4.4.0\cb208278274bf12ebdb56c61bd7407e6f774d65a\jna-4.4.0.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\platform\3.4.0\e3f70017be8100d3d6923f50b3d2ee17714e9c13\platform-3.4.0.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\5.0.3\cdd846cfc4e0f7eefafc02c0f5dce32b9303aa2a\jopt-simple-5.0.3.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.1.9.Final\97860965d6a0a6b98e7f569f3f966727b8db75\netty-all-4.1.9.Final.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\21.0\3a3d111be1be1b745edfa7d91678a12d7ed38709\guava-21.0.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.5\6c6c702c89bfff3cd9e80b04d668c5e190d588c6\commons-lang3-3.5.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.5\2852e6e05fbb95076fc091f6d1780f1f8fe35e0f\commons-io-2.5.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.10\4b95f4897fa13f2cd904aee711aeafc0c5295cd8\commons-codec-1.10.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.25\9834cdf236c22e84b946bba989e2f94ef5897c3c\authlib-1.5.25.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.10.22\bd0dccebdf3744c75f1ca20063f16e8f7d5e663f\realms-1.10.22.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.3\f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f\commons-logging-1.1.3.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\it.unimi.dsi\fastutil\7.1.0\9835253257524c1be7ab50c057aa2d418fb72082\fastutil-7.1.0.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.8.1\e801d13612e22cad62a3f4f3fe7fdbe6334a8e72\log4j-api-2.8.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.8.1\4ac28ff2f1ddf05dae3043a190451e8c46b73c31\log4j-core-2.8.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.mojang\text2speech\1.10.3\48fd510879dff266c3815947de66e3d4809f8668\text2speech-1.10.3.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.12\111e7bea9c968cdb3d06ef4632bf7ff0824d0f36\launchwrapper-1.12.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.jline\jline\3.5.1\51800e9d7a13608894a5a28eed0f5c7fa2f300fb\jline-3.5.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.2\3354e11e2b34215f06dab629ab88e06aca477c19\asm-debug-all-5.2.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.11\2.3.3\ed62e9fc709ca0f2ff1a3220daa8b70a2870078e\akka-actor_2.11-2.3.3.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.typesafe\config\1.2.1\f771f71fdae3df231bcd54d5ca2d57f0bf93f467\config-1.2.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors-migration_2.11\1.1.0\dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f\scala-actors-migration_2.11-1.1.0.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-compiler\2.11.1\56ea2e6c025e0821f28d73ca271218b8dd04926a\scala-compiler-2.11.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-library_2.11\1.0.2\e517c53a7e9acd6b1668c5a35eccbaa3bab9aac\scala-continuations-library_2.11-1.0.2.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-plugin_2.11.1\1.0.2\f361a3283452c57fa30c1ee69448995de23c60f7\scala-continuations-plugin_2.11.1-1.0.2.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-reflect\2.11.1\6580347e61cc7f8e802941e7fde40fa83b8badeb\scala-reflect-2.11.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-swing_2.11\1.0.1\b1cdd92bd47b1e1837139c1c53020e86bb9112ae\scala-swing_2.11-1.0.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-xml_2.11\1.0.2\820fbca7e524b530fdadc594c39d49a21ea0337e\scala-xml_2.11-1.0.2.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\lzma\lzma\0.0.1\521616dc7487b42bef0e803bd2fa3faf668101d7\lzma-0.0.1.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.sf.trove4j\trove4j\3.0.3\42ccaf4761f0dfdfa805c9e340d99a755907e2dd\trove4j-3.0.3.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.4-nightly-20150209\697517568c68e78ae0b4544145af031c81082dfe\lwjgl-2.9.4-nightly-20150209.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.4-nightly-20150209\d51a7c040a721d13efdfbd34f8b257b2df882ad0\lwjgl_util-2.9.4-nightly-20150209.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\java3d\vecmath\1.5.2\79846ba34cbd89e2422d74d53752f993dcc2ccaf\vecmath-1.5.2.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\ca.weblite\java-objc-bridge\1.0.0\6ef160c3133a78de015830860197602ca1c855d3\java-objc-bridge-1.0.0.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors\2.11.0\8ccfb6541de179bb1c4d45cf414acee069b7f78b\scala-actors-2.11.0.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.codehaus.plexus\plexus-utils\3.1.0\60eecb6f15abdb1c653ad80abaac6fe188b3feaa\plexus-utils-3.1.0.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.4-nightly-20150209\b84d5102b9dbfabfeb5e43c7e2828d98a7fc80e0\lwjgl-platform-2.9.4-nightly-20150209-natives-windows.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.4-nightly-20150209\931074f46c795d2f7b30ed6395df5715cfd7675b\lwjgl-platform-2.9.4-nightly-20150209-natives-linux.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.4-nightly-20150209\bcab850f8f487c3f4c4dbabde778bb82bd1a40ed\lwjgl-platform-2.9.4-nightly-20150209-natives-osx.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\minecraft\deobfedDeps\compileDummy.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\minecraft\deobfedDeps\providedDummy.jar
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\.gradle\caches\minecraft\net\minecraftforge\forge\1.12.2-14.23.5.2768\start
+[23:29:14] [main/DEBUG] [FML]:     E:\java\Minecraft-forge\CustomNPCFix 1.12.2\lib\CustomNPCs_1.12.2-30May19snapshot-deobf.jar
+[23:29:14] [main/DEBUG] [FML]:     E:\java\Minecraft-forge\CustomNPCFix 1.12.2\lib\Spigot-1.12.2-forge.jar
+[23:29:14] [main/DEBUG] [FML]: Java library path at launch is:
+[23:29:14] [main/DEBUG] [FML]:     D:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-hotspot\bin
+[23:29:14] [main/DEBUG] [FML]:     D:\Windows\Sun\Java\bin
+[23:29:14] [main/DEBUG] [FML]:     D:\Windows\system32
+[23:29:14] [main/DEBUG] [FML]:     D:\Windows
+[23:29:14] [main/DEBUG] [FML]:     D:/Program Files/Java/jre1.8.0_231/bin/server
+[23:29:14] [main/DEBUG] [FML]:     D:/Program Files/Java/jre1.8.0_231/bin
+[23:29:14] [main/DEBUG] [FML]:     D:/Program Files/Java/jre1.8.0_231/lib/amd64
+[23:29:14] [main/DEBUG] [FML]:     D:\Program Files (x86)\Common Files\Oracle\Java\javapath
+[23:29:14] [main/DEBUG] [FML]:     D:\Windows\system32
+[23:29:14] [main/DEBUG] [FML]:     D:\Windows
+[23:29:14] [main/DEBUG] [FML]:     D:\Windows\System32\Wbem
+[23:29:14] [main/DEBUG] [FML]:     D:\Windows\System32\WindowsPowerShell\v1.0\
+[23:29:14] [main/DEBUG] [FML]:     D:\Program Files\Git\cmd
+[23:29:14] [main/DEBUG] [FML]:     D:\Program Files\nodejs\
+[23:29:14] [main/DEBUG] [FML]:     
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\AppData\Local\Programs\Microsoft VS Code\bin
+[23:29:14] [main/DEBUG] [FML]:     D:\Program Files\Java\jdk1.8.0_231/bin
+[23:29:14] [main/DEBUG] [FML]:     D:\Program Files\Java\jdk1.8.0_231/jre/bin
+[23:29:14] [main/DEBUG] [FML]:     D:\Users\Hueihuea\AppData\Roaming\npm
+[23:29:14] [main/DEBUG] [FML]:     E:\eclipse-committers-2018-09-win32-x86_64\eclipse
+[23:29:14] [main/DEBUG] [FML]:     
+[23:29:14] [main/DEBUG] [FML]:     .
+[23:29:14] [main/DEBUG] [FML]:     D:/Users/Hueihuea/.gradle/caches/minecraft/net/minecraft/natives/1.12.2
+[23:29:14] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[23:29:14] [main/ERROR] [FML]: Full: D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[23:29:14] [main/ERROR] [FML]: Trimmed: d:/users/hueihuea/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[23:29:14] [main/DEBUG] [FML]: Determined Minecraft Libraries Root: .\libraries
+[23:29:14] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[23:29:14] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
+[23:29:15] [main/DEBUG] [FML]: Instantiating coremod class FMLCorePlugin
+[23:29:15] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[23:29:15] [main/DEBUG] [FML]: Added access transformer class net.minecraftforge.fml.common.asm.transformers.AccessTransformer to enqueued access transformers
+[23:29:15] [main/DEBUG] [FML]: Enqueued coremod FMLCorePlugin
+[23:29:15] [main/DEBUG] [FML]: Instantiating coremod class FMLForgePlugin
+[23:29:15] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[23:29:15] [main/DEBUG] [FML]: Enqueued coremod FMLForgePlugin
+[23:29:15] [main/DEBUG] [FML]: All fundamental core mods are successfully located
+[23:29:15] [main/INFO] [FML]: Found a command line coremod : mchhui.customnpcsfix.coremod.CustomNPCFixPlugin
+[23:29:15] [main/DEBUG] [FML]: Instantiating coremod class CustomNPCFixPlugin
+[23:29:15] [main/TRACE] [FML]: coremod named CustomNPCFixPlugin is loading
+[23:29:15] [main/DEBUG] [FML]: The coremod mchhui.customnpcsfix.coremod.CustomNPCFixPlugin requested minecraft version 1.12.2 and minecraft is 1.12.2. It will be loaded.
+[23:29:15] [main/INFO] [FML]: Ignoring missing certificate for coremod CustomNPCFixPlugin (mchhui.customnpcsfix.coremod.CustomNPCFixPlugin), as this is probably a dev workspace
+[23:29:15] [main/DEBUG] [FML]: Enqueued coremod CustomNPCFixPlugin
+[23:29:15] [main/DEBUG] [FML]: Discovering coremods
+[23:29:15] [main/INFO] [FML]: Searching E:\java\Minecraft-forge\CustomNPCFix 1.12.2\.\mods for mods
+[23:29:15] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[23:29:15] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
+[23:29:15] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[23:29:15] [main/INFO] [GradleStart]: Injecting location in coremod mchhui.customnpcsfix.coremod.CustomNPCFixPlugin
+[23:29:15] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:29:15] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[23:29:15] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[23:29:15] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:29:15] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:29:15] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:29:15] [main/DEBUG] [FML]: Injecting coremod FMLCorePlugin \{net.minecraftforge.fml.relauncher.FMLCorePlugin\} class transformers
+[23:29:15] [main/TRACE] [FML]: Registering transformer net.minecraftforge.fml.common.asm.transformers.SideTransformer
+[23:29:16] [main/TRACE] [FML]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriptionTransformer
+[23:29:16] [main/TRACE] [FML]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriberTransformer
+[23:29:16] [main/TRACE] [FML]: Registering transformer net.minecraftforge.fml.common.asm.transformers.SoundEngineFixTransformer
+[23:29:16] [main/DEBUG] [FML]: Injection complete
+[23:29:16] [main/DEBUG] [FML]: Running coremod plugin for FMLCorePlugin \{net.minecraftforge.fml.relauncher.FMLCorePlugin\}
+[23:29:16] [main/DEBUG] [FML]: Running coremod plugin FMLCorePlugin
+[23:29:16] [main/DEBUG] [FML]: Loading deobfuscation resource D:\Users\Hueihuea\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20171003\1.12.2\srgs\srg-mcp.srg with 36076 records
+[23:29:17] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[23:29:17] [main/DEBUG] [FML]: Coremod plugin class FMLCorePlugin run successfully
+[23:29:17] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:29:17] [main/DEBUG] [FML]: Injecting coremod FMLForgePlugin \{net.minecraftforge.classloading.FMLForgePlugin\} class transformers
+[23:29:17] [main/DEBUG] [FML]: Injection complete
+[23:29:17] [main/DEBUG] [FML]: Running coremod plugin for FMLForgePlugin \{net.minecraftforge.classloading.FMLForgePlugin\}
+[23:29:17] [main/DEBUG] [FML]: Running coremod plugin FMLForgePlugin
+[23:29:17] [main/DEBUG] [FML]: Coremod plugin class FMLForgePlugin run successfully
+[23:29:17] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[23:29:17] [main/DEBUG] [FML]: Loaded 213 rules from AccessTransformer config file forge_at.cfg
+[23:29:17] [main/DEBUG] [FML]: Loaded 9 rules from AccessTransformer mod jar file E:\java\Minecraft-forge\CustomNPCFix 1.12.2\lib\CustomNPCs_1.12.2-30May19snapshot-deobf.jar!META-INF/cnpcs_at.cfg
+
+[23:29:17] [main/DEBUG] [FML]: Validating minecraft
+[23:29:18] [main/DEBUG] [FML]: Minecraft validated, launching...
+[23:29:18] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:29:18] [main/DEBUG] [FML]: Injecting coremod CustomNPCFixPlugin \{mchhui.customnpcsfix.coremod.CustomNPCFixPlugin\} class transformers
+[23:29:18] [main/TRACE] [FML]: Registering transformer mchhui.customnpcsfix.coremod.noppes.npcs.util.NBTJsonUtilTransformer
+[23:29:18] [main/TRACE] [FML]: Registering transformer mchhui.customnpcsfix.coremod.noppes.npcs.roles.RoleCompanionTransfromer
+[23:29:18] [main/TRACE] [FML]: Registering transformer mchhui.customnpcsfix.coremod.noppes.npcs.client.PacketHandlerClientTransfromer
+[23:29:18] [main/TRACE] [FML]: Registering transformer mchhui.customnpcsfix.coremod.noppes.npcs.controllers.data.TransportLocationTransfromer
+[23:29:18] [main/TRACE] [FML]: Registering transformer mchhui.customnpcsfix.coremod.noppes.npcs.client.renderer.RenderCustomNpcTansfromer
+[23:29:18] [main/TRACE] [FML]: Registering transformer mchhui.customnpcsfix.coremod.noppes.npcs.api.wrapper.PlayerWrapperTransfromer
+[23:29:18] [main/DEBUG] [FML]: Injection complete
+[23:29:18] [main/DEBUG] [FML]: Running coremod plugin for CustomNPCFixPlugin \{mchhui.customnpcsfix.coremod.CustomNPCFixPlugin\}
+[23:29:18] [main/DEBUG] [FML]: Running coremod plugin CustomNPCFixPlugin
+[23:29:18] [main/DEBUG] [FML]: Coremod plugin class CustomNPCFixPlugin run successfully
+[23:29:18] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[23:29:18] [main/DEBUG] [GradleStart]: Reading CSV file: D:\Users\Hueihuea\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20171003\fields.csv
+[23:29:18] [main/DEBUG] [GradleStart]: Reading CSV file: D:\Users\Hueihuea\.gradle\caches\minecraft\de\oceanlabs\mcp\mcp_snapshot\20171003\methods.csv
+[23:29:18] [main/INFO] [GradleStart]: Remapping AccessTransformer rules...
+[23:29:18] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[23:29:18] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[23:29:18] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[23:29:19] [main/INFO] [net.minecraft.client.Minecraft]: Setting user: mchhui
+[23:29:24] [main/DEBUG] [FML]: Creating vanilla freeze snapshot
+[23:29:24] [main/DEBUG] [FML]: Vanilla freeze snapshot created
+[23:29:24] [main/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
+[23:29:25] [main/DEBUG] [FML]: Bar Finished: Loading Resource - LanguageManager took 0.002s
+[23:29:25] [main/INFO] [FML]: Could not load splash.properties, will create a default one
+[23:29:25] [main/INFO] [FML]: -- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_232, AdoptOpenJDK
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), 
+	Memory: 7792767736 bytes (7431 MB) / 8274313216 bytes (7891 MB) up to 8274313216 bytes (7891 MB)
+	JVM Flags: 2 total; -Xmx8233M -Xms8233M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+CustomNPCFixPlugin (bin)
+  mchhui.customnpcsfix.coremod.noppes.npcs.util.NBTJsonUtilTransformer
+  mchhui.customnpcsfix.coremod.noppes.npcs.roles.RoleCompanionTransfromer
+  mchhui.customnpcsfix.coremod.noppes.npcs.client.PacketHandlerClientTransfromer
+  mchhui.customnpcsfix.coremod.noppes.npcs.controllers.data.TransportLocationTransfromer
+  mchhui.customnpcsfix.coremod.noppes.npcs.client.renderer.RenderCustomNpcTansfromer
+  mchhui.customnpcsfix.coremod.noppes.npcs.api.wrapper.PlayerWrapperTransfromer
+	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '4.6.13543 Compatibility Profile Context 25.20.15003.5010' Renderer: 'Radeon RX 580 Series'
+[23:29:25] [main/INFO] [FML]: MinecraftForge v14.23.5.2768 Initialized
+[23:29:25] [main/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[23:29:25] [main/INFO] [FML]: Replaced 1036 ore ingredients
+[23:29:25] [main/DEBUG] [FML]: File E:\java\Minecraft-forge\CustomNPCFix 1.12.2\config\injectedDependencies.json not found. No dependencies injected
+[23:29:26] [main/DEBUG] [FML]: Building injected Mod Containers [net.minecraftforge.fml.common.FMLContainer, net.minecraftforge.common.ForgeModContainer]
+[23:29:26] [main/DEBUG] [FML]: Attempting to load mods contained in the minecraft jar file and associated classes
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related directory at E:\java\Minecraft-forge\CustomNPCFix 1.12.2\bin, examining for mod candidates
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related file at D:\Users\Hueihuea\.gradle\caches\minecraft\net\minecraftforge\forge\1.12.2-14.23.5.2768\snapshot\20171003\forgeSrc-1.12.2-14.23.5.2768.jar, examining for mod candidates
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related file at D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.1\f7be08ec23c21485b9b5a1cf1654c2ec8c58168d\jsr305-3.0.1.jar, examining for mod candidates
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related file at D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.mojang\patchy\1.1\aef610b34a1be37fa851825f12372b78424d8903\patchy-1.1.jar, examining for mod candidates
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\oshi-project\oshi-core\1.1\9ddf7b048a8d701be231c0f4f95fd986198fd2d8\oshi-core-1.1.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\4.4.0\cb208278274bf12ebdb56c61bd7407e6f774d65a\jna-4.4.0.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\platform\3.4.0\e3f70017be8100d3d6923f50b3d2ee17714e9c13\platform-3.4.0.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\5.0.3\cdd846cfc4e0f7eefafc02c0f5dce32b9303aa2a\jopt-simple-5.0.3.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.1.9.Final\97860965d6a0a6b98e7f569f3f966727b8db75\netty-all-4.1.9.Final.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\21.0\3a3d111be1be1b745edfa7d91678a12d7ed38709\guava-21.0.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.5\6c6c702c89bfff3cd9e80b04d668c5e190d588c6\commons-lang3-3.5.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.5\2852e6e05fbb95076fc091f6d1780f1f8fe35e0f\commons-io-2.5.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.10\4b95f4897fa13f2cd904aee711aeafc0c5295cd8\commons-codec-1.10.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.25\9834cdf236c22e84b946bba989e2f94ef5897c3c\authlib-1.5.25.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.10.22\bd0dccebdf3744c75f1ca20063f16e8f7d5e663f\realms-1.10.22.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.3\f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f\commons-logging-1.1.3.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\it.unimi.dsi\fastutil\7.1.0\9835253257524c1be7ab50c057aa2d418fb72082\fastutil-7.1.0.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.8.1\e801d13612e22cad62a3f4f3fe7fdbe6334a8e72\log4j-api-2.8.1.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.8.1\4ac28ff2f1ddf05dae3043a190451e8c46b73c31\log4j-core-2.8.1.jar
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related file at D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.mojang\text2speech\1.10.3\48fd510879dff266c3815947de66e3d4809f8668\text2speech-1.10.3.jar, examining for mod candidates
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.12\111e7bea9c968cdb3d06ef4632bf7ff0824d0f36\launchwrapper-1.12.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.jline\jline\3.5.1\51800e9d7a13608894a5a28eed0f5c7fa2f300fb\jline-3.5.1.jar
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related file at D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.2\3354e11e2b34215f06dab629ab88e06aca477c19\asm-debug-all-5.2.jar, examining for mod candidates
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.11\2.3.3\ed62e9fc709ca0f2ff1a3220daa8b70a2870078e\akka-actor_2.11-2.3.3.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.typesafe\config\1.2.1\f771f71fdae3df231bcd54d5ca2d57f0bf93f467\config-1.2.1.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors-migration_2.11\1.1.0\dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f\scala-actors-migration_2.11-1.1.0.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-compiler\2.11.1\56ea2e6c025e0821f28d73ca271218b8dd04926a\scala-compiler-2.11.1.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-library_2.11\1.0.2\e517c53a7e9acd6b1668c5a35eccbaa3bab9aac\scala-continuations-library_2.11-1.0.2.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-plugin_2.11.1\1.0.2\f361a3283452c57fa30c1ee69448995de23c60f7\scala-continuations-plugin_2.11.1-1.0.2.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-reflect\2.11.1\6580347e61cc7f8e802941e7fde40fa83b8badeb\scala-reflect-2.11.1.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-swing_2.11\1.0.1\b1cdd92bd47b1e1837139c1c53020e86bb9112ae\scala-swing_2.11-1.0.1.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-xml_2.11\1.0.2\820fbca7e524b530fdadc594c39d49a21ea0337e\scala-xml_2.11-1.0.2.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\lzma\lzma\0.0.1\521616dc7487b42bef0e803bd2fa3faf668101d7\lzma-0.0.1.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.sf.trove4j\trove4j\3.0.3\42ccaf4761f0dfdfa805c9e340d99a755907e2dd\trove4j-3.0.3.jar
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related file at D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar, examining for mod candidates
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.4-nightly-20150209\697517568c68e78ae0b4544145af031c81082dfe\lwjgl-2.9.4-nightly-20150209.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.4-nightly-20150209\d51a7c040a721d13efdfbd34f8b257b2df882ad0\lwjgl_util-2.9.4-nightly-20150209.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\java3d\vecmath\1.5.2\79846ba34cbd89e2422d74d53752f993dcc2ccaf\vecmath-1.5.2.jar
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related file at D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\ca.weblite\java-objc-bridge\1.0.0\6ef160c3133a78de015830860197602ca1c855d3\java-objc-bridge-1.0.0.jar, examining for mod candidates
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors\2.11.0\8ccfb6541de179bb1c4d45cf414acee069b7f78b\scala-actors-2.11.0.jar
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related file at D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.codehaus.plexus\plexus-utils\3.1.0\60eecb6f15abdb1c653ad80abaac6fe188b3feaa\plexus-utils-3.1.0.jar, examining for mod candidates
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.4-nightly-20150209\b84d5102b9dbfabfeb5e43c7e2828d98a7fc80e0\lwjgl-platform-2.9.4-nightly-20150209-natives-windows.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.4-nightly-20150209\931074f46c795d2f7b30ed6395df5715cfd7675b\lwjgl-platform-2.9.4-nightly-20150209-natives-linux.jar
+[23:29:26] [main/TRACE] [FML]: Skipping known library file D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.4-nightly-20150209\bcab850f8f487c3f4c4dbabde778bb82bd1a40ed\lwjgl-platform-2.9.4-nightly-20150209-natives-osx.jar
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related file at D:\Users\Hueihuea\.gradle\caches\minecraft\deobfedDeps\compileDummy.jar, examining for mod candidates
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related file at D:\Users\Hueihuea\.gradle\caches\minecraft\deobfedDeps\providedDummy.jar, examining for mod candidates
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related directory at D:\Users\Hueihuea\.gradle\caches\minecraft\net\minecraftforge\forge\1.12.2-14.23.5.2768\start, examining for mod candidates
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related file at E:\java\Minecraft-forge\CustomNPCFix 1.12.2\lib\CustomNPCs_1.12.2-30May19snapshot-deobf.jar, examining for mod candidates
+[23:29:26] [main/DEBUG] [FML]: Found a minecraft related file at E:\java\Minecraft-forge\CustomNPCFix 1.12.2\lib\Spigot-1.12.2-forge.jar, examining for mod candidates
+[23:29:26] [main/DEBUG] [FML]: Minecraft jar mods loaded successfully
+[23:29:26] [main/INFO] [FML]: Searching E:\java\Minecraft-forge\CustomNPCFix 1.12.2\.\mods for mods
+[23:29:26] [main/DEBUG] [FML]: Examining directory bin for potential mods
+[23:29:26] [main/DEBUG] [FML]: Found an mcmod.info file in directory bin
+[23:29:26] [main/TRACE] [FML]: Recursing into package assets
+[23:29:26] [main/TRACE] [FML]: Recursing into package assets/customnpcsfix
+[23:29:26] [main/TRACE] [FML]: Recursing into package assets/customnpcsfix/textures
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/api
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/api/event
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/command
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/coremod
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/coremod/noppes
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/coremod/noppes/npcs
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/coremod/noppes/npcs/api
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/coremod/noppes/npcs/api/wrapper
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/coremod/noppes/npcs/client
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/coremod/noppes/npcs/client/renderer
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/coremod/noppes/npcs/controllers
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/coremod/noppes/npcs/controllers/data
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/coremod/noppes/npcs/roles
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/coremod/noppes/npcs/util
+[23:29:26] [main/DEBUG] [FML]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (mchhui.customnpcsfix.CustomNPCsFix) - loading
+[23:29:26] [main/TRACE] [FML]: Using mcmod dependency info for customnpcsfix: [] [customnpcs] []
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/event
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/listener
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/listener/client
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/network
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/proxy
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/customnpcsfix/util
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/org
+[23:29:26] [main/TRACE] [FML]: Recursing into package mchhui/org/json
+[23:29:26] [main/TRACE] [FML]: Recursing into package META-INF
+[23:29:26] [main/DEBUG] [FML]: Examining file forgeSrc-1.12.2-14.23.5.2768.jar for potential mods
+[23:29:26] [main/DEBUG] [FML]: The mod container forgeSrc-1.12.2-14.23.5.2768.jar appears to be missing an mcmod.info file
+[23:29:27] [main/DEBUG] [FML]: Examining file jsr305-3.0.1.jar for potential mods
+[23:29:27] [main/DEBUG] [FML]: The mod container jsr305-3.0.1.jar appears to be missing an mcmod.info file
+[23:29:27] [main/DEBUG] [FML]: Examining file patchy-1.1.jar for potential mods
+[23:29:27] [main/DEBUG] [FML]: The mod container patchy-1.1.jar appears to be missing an mcmod.info file
+[23:29:27] [main/DEBUG] [FML]: Examining file text2speech-1.10.3.jar for potential mods
+[23:29:27] [main/DEBUG] [FML]: The mod container text2speech-1.10.3.jar appears to be missing an mcmod.info file
+[23:29:27] [main/DEBUG] [FML]: Examining file asm-debug-all-5.2.jar for potential mods
+[23:29:27] [main/DEBUG] [FML]: The mod container asm-debug-all-5.2.jar appears to be missing an mcmod.info file
+[23:29:27] [main/DEBUG] [FML]: Examining file maven-artifact-3.5.3.jar for potential mods
+[23:29:27] [main/DEBUG] [FML]: The mod container maven-artifact-3.5.3.jar appears to be missing an mcmod.info file
+[23:29:27] [main/DEBUG] [FML]: Examining file java-objc-bridge-1.0.0.jar for potential mods
+[23:29:27] [main/DEBUG] [FML]: The mod container java-objc-bridge-1.0.0.jar appears to be missing an mcmod.info file
+[23:29:27] [main/DEBUG] [FML]: Examining file plexus-utils-3.1.0.jar for potential mods
+[23:29:27] [main/DEBUG] [FML]: The mod container plexus-utils-3.1.0.jar appears to be missing an mcmod.info file
+[23:29:27] [main/DEBUG] [FML]: Examining file compileDummy.jar for potential mods
+[23:29:27] [main/DEBUG] [FML]: The mod container compileDummy.jar appears to be missing an mcmod.info file
+[23:29:27] [main/DEBUG] [FML]: Examining file providedDummy.jar for potential mods
+[23:29:27] [main/DEBUG] [FML]: The mod container providedDummy.jar appears to be missing an mcmod.info file
+[23:29:27] [main/DEBUG] [FML]: Examining directory start for potential mods
+[23:29:27] [main/DEBUG] [FML]: No mcmod.info file found in directory start
+[23:29:27] [main/TRACE] [FML]: Recursing into package net
+[23:29:27] [main/TRACE] [FML]: Recursing into package net/minecraftforge
+[23:29:27] [main/TRACE] [FML]: Recursing into package net/minecraftforge/gradle
+[23:29:27] [main/TRACE] [FML]: Recursing into package net/minecraftforge/gradle/tweakers
+[23:29:27] [main/DEBUG] [FML]: Examining file CustomNPCs_1.12.2-30May19snapshot-deobf.jar for potential mods
+[23:29:27] [main/TRACE] [FML]: Located mcmod.info file in file CustomNPCs_1.12.2-30May19snapshot-deobf.jar
+[23:29:27] [main/DEBUG] [FML]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (noppes.npcs.CustomNpcs) - loading
+[23:29:27] [main/TRACE] [FML]: Parsed dependency info for customnpcs: Requirements: [] After:[] Before:[]
+[23:29:27] [main/DEBUG] [FML]: Examining file Spigot-1.12.2-forge.jar for potential mods
+[23:29:27] [main/DEBUG] [FML]: The mod container Spigot-1.12.2-forge.jar appears to be missing an mcmod.info file
+[23:29:27] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 338186593 nanos
+[23:29:29] [main/INFO] [FML]: Forge Mod Loader has identified 6 mods to load
+[23:29:29] [main/DEBUG] [FML]: Found API noppes.npcs.api.entity.data (owned by customnpcs providing Core|Entities|Data|Role) embedded in customnpcs
+[23:29:29] [main/DEBUG] [FML]: Found API noppes.npcs.api (owned by customnpcs providing Core) embedded in customnpcs
+[23:29:29] [main/DEBUG] [FML]: Found API noppes.npcs.api.entity.data.role (owned by customnpcs providing Core|Entities|Data) embedded in customnpcs
+[23:29:29] [main/DEBUG] [FML]: Found API noppes.npcs.api.event (owned by customnpcs providing Core|Events) embedded in customnpcs
+[23:29:29] [main/DEBUG] [FML]: Found API noppes.npcs.api.handler (owned by customnpcs providing Core|Handlers) embedded in customnpcs
+[23:29:29] [main/DEBUG] [FML]: Found API noppes.npcs.api.block (owned by customnpcs providing Core|Blocks) embedded in customnpcs
+[23:29:29] [main/DEBUG] [FML]: Found API noppes.npcs.api.constants (owned by customnpcs providing Core|Constants) embedded in customnpcs
+[23:29:29] [main/DEBUG] [FML]: Found API noppes.npcs.api.handler.data (owned by customnpcs providing Core|Handlers|Data) embedded in customnpcs
+[23:29:29] [main/DEBUG] [FML]: Found API noppes.npcs.api.entity (owned by customnpcs providing Core|Entities) embedded in customnpcs
+[23:29:29] [main/DEBUG] [FML]: Creating API container dummy for API Core|Events: owner: customnpcs, dependents: []
+[23:29:29] [main/DEBUG] [FML]: Creating API container dummy for API Core|Handlers: owner: customnpcs, dependents: []
+[23:29:29] [main/DEBUG] [FML]: Creating API container dummy for API Core|Handlers|Data: owner: customnpcs, dependents: []
+[23:29:29] [main/DEBUG] [FML]: Creating API container dummy for API Core|Constants: owner: customnpcs, dependents: []
+[23:29:29] [main/DEBUG] [FML]: Creating API container dummy for API Core|Entities: owner: customnpcs, dependents: []
+[23:29:29] [main/DEBUG] [FML]: Creating API container dummy for API Core|Entities|Data|Role: owner: customnpcs, dependents: []
+[23:29:29] [main/DEBUG] [FML]: Creating API container dummy for API Core|Entities|Data: owner: customnpcs, dependents: []
+[23:29:29] [main/DEBUG] [FML]: Creating API container dummy for API Core|Blocks: owner: customnpcs, dependents: []
+[23:29:29] [main/DEBUG] [FML]: Creating API container dummy for API Core: owner: customnpcs, dependents: []
+[23:29:29] [main/TRACE] [FML]: Received a system property request ''
+[23:29:29] [main/TRACE] [FML]: System property request managing the state of 0 mods
+[23:29:29] [main/DEBUG] [FML]: After merging, found state information for 0 mods
+[23:29:29] [main/DEBUG] [FML]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
+[23:29:29] [main/DEBUG] [FML]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
+[23:29:29] [main/DEBUG] [FML]: Enabling mod customnpcsfix
+[23:29:29] [main/DEBUG] [FML]: Mod CustomNPCs Fix is missing a pack.mcmeta file, substituting a dummy one
+[23:29:29] [main/DEBUG] [FML]: Enabling mod customnpcs
+[23:29:29] [main/DEBUG] [FML]: Mod CustomNPCs is missing a pack.mcmeta file, substituting a dummy one
+[23:29:29] [main/TRACE] [FML]: Verifying mod requirements are satisfied
+[23:29:29] [main/TRACE] [FML]: All mod requirements are satisfied
+[23:29:29] [main/TRACE] [FML]: Sorting mods into an ordered list
+[23:29:29] [main/TRACE] [FML]: Mod sorting completed successfully
+[23:29:29] [main/DEBUG] [FML]: Mod sorting data
+[23:29:29] [main/DEBUG] [FML]: 	customnpcs(CustomNPCs:1.12): CustomNPCs_1.12.2-30May19snapshot-deobf.jar ()
+[23:29:29] [main/DEBUG] [FML]: 	customnpcsfix(CustomNPCs Fix:1.1.1): bin ()
+[23:29:29] [main/DEBUG] [FML]: 	Core|Events(API: Core|Events:0.1): CustomNPCs_1.12.2-30May19snapshot-deobf.jar ()
+[23:29:29] [main/DEBUG] [FML]: 	Core|Handlers(API: Core|Handlers:0.1): CustomNPCs_1.12.2-30May19snapshot-deobf.jar ()
+[23:29:29] [main/DEBUG] [FML]: 	Core|Handlers|Data(API: Core|Handlers|Data:0.1): CustomNPCs_1.12.2-30May19snapshot-deobf.jar ()
+[23:29:29] [main/DEBUG] [FML]: 	Core|Constants(API: Core|Constants:0.1): CustomNPCs_1.12.2-30May19snapshot-deobf.jar ()
+[23:29:29] [main/DEBUG] [FML]: 	Core|Entities(API: Core|Entities:0.1): CustomNPCs_1.12.2-30May19snapshot-deobf.jar ()
+[23:29:29] [main/DEBUG] [FML]: 	Core|Entities|Data|Role(API: Core|Entities|Data|Role:0.1): CustomNPCs_1.12.2-30May19snapshot-deobf.jar ()
+[23:29:29] [main/DEBUG] [FML]: 	Core|Entities|Data(API: Core|Entities|Data:0.1): CustomNPCs_1.12.2-30May19snapshot-deobf.jar ()
+[23:29:29] [main/DEBUG] [FML]: 	Core|Blocks(API: Core|Blocks:0.1): CustomNPCs_1.12.2-30May19snapshot-deobf.jar ()
+[23:29:29] [main/DEBUG] [FML]: 	Core(API: Core:0.1): CustomNPCs_1.12.2-30May19snapshot-deobf.jar ()
+[23:29:29] [main/DEBUG] [FML]: Loading @Config anotation data
+[23:29:29] [main/TRACE] [FML]: Sending event FMLConstructionEvent to mod minecraft
+[23:29:29] [main/TRACE] [FML]: Sent event FMLConstructionEvent to mod minecraft
+[23:29:29] [main/DEBUG] [FML]: Bar Step: Construction - Minecraft took 0.046s
+[23:29:29] [main/TRACE] [FML]: Sending event FMLConstructionEvent to mod mcp
+[23:29:29] [main/TRACE] [FML]: Sent event FMLConstructionEvent to mod mcp
+[23:29:29] [main/DEBUG] [FML]: Bar Step: Construction - Minecraft Coder Pack took 0.000s
+[23:29:29] [main/TRACE] [FML]: Sending event FMLConstructionEvent to mod FML
+[23:29:29] [main/TRACE] [FML]: Mod FML is using network checker : Invoking method checkModLists
+[23:29:29] [main/TRACE] [FML]: Testing mod FML to verify it accepts its own version in a remote connection
+[23:29:29] [main/TRACE] [FML]: The mod FML accepts its own version (8.0.99.99)
+[23:29:29] [main/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, customnpcsfix, customnpcs] at CLIENT
+[23:29:29] [main/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, customnpcsfix, customnpcs] at SERVER
+[23:29:30] [main/TRACE] [FML]: Sent event FMLConstructionEvent to mod FML
+[23:29:30] [main/DEBUG] [FML]: Bar Step: Construction - Forge Mod Loader took 0.532s
+[23:29:30] [main/TRACE] [FML]: Sending event FMLConstructionEvent to mod forge
+[23:29:30] [main/DEBUG] [forge]: Loading Vanilla annotations: null
+[23:29:30] [main/DEBUG] [forge]: Preloading CrashReport Classes
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/Minecraft$10
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/Minecraft$11
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/Minecraft$12
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/Minecraft$13
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/Minecraft$14
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/Minecraft$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/Minecraft$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/Minecraft$4
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/Minecraft$5
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/Minecraft$6
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/Minecraft$7
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/Minecraft$8
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/Minecraft$9
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/multiplayer/WorldClient$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/multiplayer/WorldClient$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/multiplayer/WorldClient$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/multiplayer/WorldClient$4
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/particle/ParticleManager$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/particle/ParticleManager$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/particle/ParticleManager$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/particle/ParticleManager$4
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/renderer/EntityRenderer$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/renderer/EntityRenderer$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/renderer/EntityRenderer$4
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/renderer/RenderGlobal$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/renderer/RenderItem$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/renderer/RenderItem$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/renderer/RenderItem$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/renderer/RenderItem$4
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/renderer/texture/TextureAtlasSprite$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/renderer/texture/TextureManager$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/renderer/texture/TextureMap$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/renderer/texture/TextureMap$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/client/renderer/texture/TextureMap$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/crash/CrashReport$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/crash/CrashReport$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/crash/CrashReport$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/crash/CrashReport$4
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/crash/CrashReport$5
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/crash/CrashReport$6
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/crash/CrashReport$7
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/crash/CrashReportCategory$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/crash/CrashReportCategory$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/crash/CrashReportCategory$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/crash/CrashReportCategory$4
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/crash/CrashReportCategory$5
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/entity/Entity$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/entity/Entity$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/entity/Entity$4
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/entity/Entity$5
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/entity/EntityTracker$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/entity/player/InventoryPlayer$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/nbt/NBTTagCompound$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/nbt/NBTTagCompound$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/network/NetHandlerPlayServer$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/network/NetworkSystem$6
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/server/MinecraftServer$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/server/MinecraftServer$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/server/dedicated/DedicatedServer$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/server/dedicated/DedicatedServer$4
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/server/integrated/IntegratedServer$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/server/integrated/IntegratedServer$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/tileentity/CommandBlockBaseLogic$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/tileentity/CommandBlockBaseLogic$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/tileentity/TileEntity$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/tileentity/TileEntity$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/tileentity/TileEntity$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/World$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/World$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/World$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/World$4
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/World$5
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/chunk/Chunk$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/gen/structure/MapGenStructure$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/gen/structure/MapGenStructure$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/gen/structure/MapGenStructure$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/storage/WorldInfo$10
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/storage/WorldInfo$2
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/storage/WorldInfo$3
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/storage/WorldInfo$4
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/storage/WorldInfo$5
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/storage/WorldInfo$6
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/storage/WorldInfo$7
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/storage/WorldInfo$8
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraft/world/storage/WorldInfo$9
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraftforge/common/util/TextTable
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraftforge/common/util/TextTable$Alignment
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraftforge/common/util/TextTable$Column
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraftforge/common/util/TextTable$Row
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraftforge/fml/client/SplashProgress$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraftforge/fml/common/FMLCommonHandler$1
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraftforge/fml/common/ICrashCallable
+[23:29:30] [main/DEBUG] [forge]: 	net/minecraftforge/fml/common/Loader$1
+[23:29:30] [main/TRACE] [FML]: Mod forge is using network checker : No network checking performed
+[23:29:30] [main/TRACE] [FML]: Testing mod forge to verify it accepts its own version in a remote connection
+[23:29:30] [main/TRACE] [FML]: The mod forge accepts its own version (14.23.5.2768)
+[23:29:30] [main/DEBUG] [FML]: Attempting to inject @Config classes into forge for type INSTANCE
+[23:29:30] [main/TRACE] [FML]: Sent event FMLConstructionEvent to mod forge
+[23:29:30] [main/DEBUG] [FML]: Bar Step: Construction - Minecraft Forge took 0.119s
+[23:29:30] [main/TRACE] [FML]: Sending event FMLConstructionEvent to mod customnpcs
+[23:29:31] [main/TRACE] [FML]: Mod customnpcs is using network checker : Accepting version 1.12
+[23:29:31] [main/TRACE] [FML]: Testing mod customnpcs to verify it accepts its own version in a remote connection
+[23:29:31] [main/TRACE] [FML]: The mod customnpcs accepts its own version (1.12)
+[23:29:31] [main/DEBUG] [FML]: Attempting to inject @SidedProxy classes into customnpcs
+[23:29:31] [main/WARN] [FML]: [Transforming:noppes.npcs.client.renderer.RenderCustomNpc]
+[23:29:31] [main/WARN] [FML]: [Transformed:noppes.npcs.client.renderer.RenderCustomNpc]
+[23:29:32] [main/DEBUG] [FML]: Attempting to inject @EventBusSubscriber classes into the eventbus for customnpcs
+[23:29:32] [main/DEBUG] [FML]: Attempting to inject @Config classes into customnpcs for type INSTANCE
+[23:29:32] [main/TRACE] [FML]: Sent event FMLConstructionEvent to mod customnpcs
+[23:29:32] [main/DEBUG] [FML]: Bar Step: Construction - CustomNPCs took 2.336s
+[23:29:32] [main/TRACE] [FML]: Sending event FMLConstructionEvent to mod customnpcsfix
+[23:29:32] [main/TRACE] [FML]: Mod customnpcsfix is using network checker : No network checking performed
+[23:29:32] [main/TRACE] [FML]: Testing mod customnpcsfix to verify it accepts its own version in a remote connection
+[23:29:32] [main/TRACE] [FML]: The mod customnpcsfix accepts its own version (1.1.1)
+[23:29:32] [main/DEBUG] [FML]: Attempting to inject @SidedProxy classes into customnpcsfix
+[23:29:32] [main/DEBUG] [FML]: Attempting to inject @EventBusSubscriber classes into the eventbus for customnpcsfix
+[23:29:32] [main/DEBUG] [FML]: Attempting to inject @Config classes into customnpcsfix for type INSTANCE
+[23:29:32] [main/TRACE] [FML]: Sent event FMLConstructionEvent to mod customnpcsfix
+[23:29:32] [main/DEBUG] [FML]: Bar Step: Construction - CustomNPCs Fix took 0.016s
+[23:29:32] [main/DEBUG] [FML]: Bar Finished: Construction took 3.050s
+[23:29:32] [main/DEBUG] [FML]: Mod signature data
+[23:29:32] [main/DEBUG] [FML]:  	Valid Signatures:
+[23:29:32] [main/DEBUG] [FML]:  	Missing Signatures:
+[23:29:32] [main/DEBUG] [FML]: 		minecraft	(Minecraft	1.12.2)	minecraft.jar
+[23:29:32] [main/DEBUG] [FML]: 		mcp	(Minecraft Coder Pack	9.42)	minecraft.jar
+[23:29:32] [main/DEBUG] [FML]: 		FML	(Forge Mod Loader	8.0.99.99)	forgeSrc-1.12.2-14.23.5.2768.jar
+[23:29:32] [main/DEBUG] [FML]: 		forge	(Minecraft Forge	14.23.5.2768)	forgeSrc-1.12.2-14.23.5.2768.jar
+[23:29:32] [main/DEBUG] [FML]: 		customnpcs	(CustomNPCs	1.12)	CustomNPCs_1.12.2-30May19snapshot-deobf.jar
+[23:29:32] [main/DEBUG] [FML]: 		customnpcsfix	(CustomNPCs Fix	1.1.1)	bin
+[23:29:32] [main/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:CustomNPCs Fix, FMLFileResourcePack:CustomNPCs
+[23:29:32] [main/DEBUG] [FML]: Bar Step: Loading Resources - Default took 0.008s
+[23:29:32] [main/DEBUG] [FML]: Bar Step: Loading Resources - FMLFileResourcePack:Forge Mod Loader took 0.016s
+[23:29:32] [main/DEBUG] [FML]: Bar Step: Loading Resources - FMLFileResourcePack:Minecraft Forge took 0.017s
+[23:29:32] [main/DEBUG] [FML]: Bar Step: Loading Resources - FMLFileResourcePack:CustomNPCs Fix took 0.006s
+[23:29:32] [main/DEBUG] [FML]: Bar Step: Loading Resources - FMLFileResourcePack:CustomNPCs took 0.006s
+[23:29:32] [main/DEBUG] [FML]: Bar Finished: Reloading - LanguageManager took 0.234s
+[23:29:32] [main/DEBUG] [FML]: Bar Step: Loading Resources - Reloading listeners took 0.235s
+[23:29:32] [main/DEBUG] [FML]: Bar Finished: Loading Resources took 0.288s
+[23:29:32] [main/DEBUG] [FML]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
+[23:29:32] [main/DEBUG] [FML]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
+[23:29:32] [main/DEBUG] [FML]: Mod CustomNPCs Fix is missing a pack.mcmeta file, substituting a dummy one
+[23:29:32] [main/DEBUG] [FML]: Mod CustomNPCs is missing a pack.mcmeta file, substituting a dummy one
+[23:29:32] [main/INFO] [FML]: Processing ObjectHolder annotations
+[23:29:33] [main/INFO] [FML]: Found 1188 ObjectHolder annotations
+[23:29:33] [main/INFO] [FML]: Identifying ItemStackHolder annotations
+[23:29:33] [main/INFO] [FML]: Found 0 ItemStackHolder annotations
+[23:29:33] [main/TRACE] [FML]: Sending event FMLPreInitializationEvent to mod minecraft
+[23:29:33] [main/TRACE] [FML]: Sent event FMLPreInitializationEvent to mod minecraft
+[23:29:33] [main/DEBUG] [FML]: Bar Step: PreInitialization - Minecraft took 0.001s
+[23:29:33] [main/TRACE] [FML]: Sending event FMLPreInitializationEvent to mod mcp
+[23:29:33] [main/TRACE] [FML]: Sent event FMLPreInitializationEvent to mod mcp
+[23:29:33] [main/DEBUG] [FML]: Bar Step: PreInitialization - Minecraft Coder Pack took 0.000s
+[23:29:33] [main/TRACE] [FML]: Sending event FMLPreInitializationEvent to mod FML
+[23:29:33] [main/TRACE] [FML]: Sent event FMLPreInitializationEvent to mod FML
+[23:29:33] [main/DEBUG] [FML]: Bar Step: PreInitialization - Forge Mod Loader took 0.000s
+[23:29:33] [main/TRACE] [FML]: Sending event FMLPreInitializationEvent to mod forge
+[23:29:33] [main/INFO] [FML]: Configured a dormant chunk cache size of 0
+[23:29:33] [main/TRACE] [FML]: Sent event FMLPreInitializationEvent to mod forge
+[23:29:33] [main/DEBUG] [FML]: Bar Step: PreInitialization - Minecraft Forge took 0.086s
+[23:29:33] [main/TRACE] [FML]: Sending event FMLPreInitializationEvent to mod customnpcs
+[23:29:33] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[23:29:34] [main/DEBUG] [FML]: Bar Finished: Loading Resource - CustomNpcResourceListener took 0.033s
+[23:29:35] [main/WARN] [FML]: [Transforming:noppes.npcs.client.PacketHandlerClient]
+[23:29:35] [main/WARN] [FML]: [Transformed:noppes.npcs.client.PacketHandlerClient]
+[23:29:35] [main/TRACE] [FML]: Sent event FMLPreInitializationEvent to mod customnpcs
+[23:29:35] [main/DEBUG] [FML]: Bar Step: PreInitialization - CustomNPCs took 1.935s
+[23:29:35] [main/TRACE] [FML]: Sending event FMLPreInitializationEvent to mod customnpcsfix
+[23:29:35] [main/INFO] [customnpcsfix]: Started loading config. 
+[23:29:35] [main/INFO] [customnpcsfix]: Finished loading config. 
+[23:29:35] [main/TRACE] [FML]: Sent event FMLPreInitializationEvent to mod customnpcsfix
+[23:29:35] [main/DEBUG] [FML]: Bar Step: PreInitialization - CustomNPCs Fix took 0.026s
+[23:29:35] [main/DEBUG] [FML]: Bar Finished: PreInitialization took 2.049s
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tileredstoneblock`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tileblockanvil`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilemailbox`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilewaypoint`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilenpcscripted`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilenpcscripteddoor`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilenpcbuilder`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilenpccopy`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilenpcborder`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/INFO] [FML]: Applying holder lookups
+[23:29:35] [main/DEBUG] [FML]: Unable to lookup customnpcs:npcscripteddoortool for public static net.minecraft.item.Item noppes.npcs.CustomItems.scriptedDoorTool. This means the object wasn't registered. It's likely just mod options.
+[23:29:35] [main/DEBUG] [FML]: Unable to lookup customnpcs:npcwand for public static net.minecraft.item.Item noppes.npcs.CustomItems.wand. This means the object wasn't registered. It's likely just mod options.
+[23:29:35] [main/DEBUG] [FML]: Unable to lookup customnpcs:npcmounter for public static net.minecraft.item.Item noppes.npcs.CustomItems.mount. This means the object wasn't registered. It's likely just mod options.
+[23:29:35] [main/DEBUG] [FML]: Unable to lookup customnpcs:npcscripter for public static net.minecraft.item.Item noppes.npcs.CustomItems.scripter. This means the object wasn't registered. It's likely just mod options.
+[23:29:35] [main/DEBUG] [FML]: Unable to lookup customnpcs:npcmobcloner for public static net.minecraft.item.Item noppes.npcs.CustomItems.cloner. This means the object wasn't registered. It's likely just mod options.
+[23:29:35] [main/DEBUG] [FML]: Unable to lookup customnpcs:npcsoulstoneempty for public static net.minecraft.item.Item noppes.npcs.CustomItems.soulstoneEmpty. This means the object wasn't registered. It's likely just mod options.
+[23:29:35] [main/DEBUG] [FML]: Unable to lookup customnpcs:npcmovingpath for public static net.minecraft.item.Item noppes.npcs.CustomItems.moving. This means the object wasn't registered. It's likely just mod options.
+[23:29:35] [main/DEBUG] [FML]: Unable to lookup customnpcs:npcsoulstonefilled for public static net.minecraft.item.Item noppes.npcs.CustomItems.soulstoneFull. This means the object wasn't registered. It's likely just mod options.
+[23:29:35] [main/DEBUG] [FML]: Unable to lookup customnpcs:nbt_book for public static noppes.npcs.items.ItemNbtBook noppes.npcs.CustomItems.nbt_book. This means the object wasn't registered. It's likely just mod options.
+[23:29:35] [main/DEBUG] [FML]: Unable to lookup customnpcs:scripted_item for public static noppes.npcs.items.ItemScripted noppes.npcs.CustomItems.scripted_item. This means the object wasn't registered. It's likely just mod options.
+[23:29:35] [main/DEBUG] [FML]: Unable to lookup customnpcs:npcteleporter for public static net.minecraft.item.Item noppes.npcs.CustomItems.teleporter. This means the object wasn't registered. It's likely just mod options.
+[23:29:35] [main/INFO] [FML]: Holder lookups applied
+[23:29:35] [main/INFO] [FML]: Applying holder lookups
+[23:29:35] [main/INFO] [FML]: Holder lookups applied
+[23:29:35] [main/INFO] [FML]: Applying holder lookups
+[23:29:35] [main/INFO] [FML]: Holder lookups applied
+[23:29:35] [main/INFO] [FML]: Applying holder lookups
+[23:29:35] [main/INFO] [FML]: Holder lookups applied
+[23:29:35] [main/INFO] [FML]: Injecting itemstacks
+[23:29:35] [main/INFO] [FML]: Itemstack injection complete
+[23:29:35] [main/DEBUG] [FML]: Bar Finished: Loading Resource - TextureManager took 0.000s
+[23:29:38] [Forge Version Check/DEBUG] [forge.VersionCheck]: [forge] Received version check data:
+{
+  "homepage": "http://files.minecraftforge.net/maven/net/minecraftforge/forge/",
+  "promos": {
+    "1.1-latest": "1.3.2.6",
+    "1.10-latest": "12.18.0.2000",
+    "1.10.2-latest": "12.18.3.2511",
+    "1.10.2-recommended": "12.18.3.2185",
+    "1.11-latest": "13.19.1.2199",
+    "1.11-recommended": "13.19.1.2189",
+    "1.11.2-latest": "13.20.1.2588",
+    "1.11.2-recommended": "13.20.1.2386",
+    "1.12-latest": "14.21.1.2443",
+    "1.12-recommended": "14.21.1.2387",
+    "1.12.1-latest": "14.22.1.2485",
+    "1.12.1-recommended": "14.22.1.2478",
+    "1.12.2-latest": "14.23.5.2847",
+    "1.12.2-recommended": "14.23.5.2768",
+    "1.13.2-latest": "25.0.219",
+    "1.14.2-latest": "26.0.63",
+    "1.14.3-latest": "27.0.60",
+    "1.14.4-latest": "28.2.3",
+    "1.14.4-recommended": "28.2.0",
+    "1.15-latest": "29.0.4",
+    "1.15.1-latest": "30.0.51",
+    "1.15.2-latest": "31.1.30",
+    "1.15.2-recommended": "31.1.0",
+    "1.5.2-latest": "7.8.1.738",
+    "1.5.2-recommended": "7.8.1.737",
+    "1.6.1-latest": "8.9.0.775",
+    "1.6.2-latest": "9.10.1.871",
+    "1.6.2-recommended": "9.10.1.871",
+    "1.6.3-latest": "9.11.0.878",
+    "1.6.4-latest": "9.11.1.1345",
+    "1.6.4-recommended": "9.11.1.1345",
+    "1.7.10-latest": "10.13.4.1614",
+    "1.7.10-latest-1.7.10": "10.13.2.1343",
+    "1.7.10-recommended": "10.13.4.1558",
+    "1.7.2-latest": "10.12.2.1147",
+    "1.7.2-recommended": "10.12.2.1121",
+    "1.8-latest": "11.14.4.1577",
+    "1.8-recommended": "11.14.4.1563",
+    "1.8.8-latest": "11.15.0.1655",
+    "1.8.9-latest": "11.15.1.2318",
+    "1.8.9-recommended": "11.15.1.1722",
+    "1.9-latest": "12.16.0.1942",
+    "1.9-recommended": "12.16.1.1887",
+    "1.9.4-latest": "12.17.0.2051",
+    "1.9.4-recommended": "12.17.0.1976",
+    "latest-1.7.10": "10.13.2.1343"
+  }
+}
+[23:29:38] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: UP_TO_DATE Target: null
+[23:29:41] [main/DEBUG] [FML]: Bar Finished: Loading sounds took 5.886s
+[23:29:41] [main/DEBUG] [FML]: Bar Finished: Loading Resource - SoundHandler took 5.920s
+[23:29:41] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
+[23:29:42] [main/DEBUG] [FML]: Bar Finished: Loading Resource - FontRenderer took 0.002s
+[23:29:42] [main/DEBUG] [FML]: Bar Finished: Loading Resource - FontRenderer took 0.002s
+[23:29:42] [main/DEBUG] [FML]: Bar Finished: Loading Resource - GrassColorReloadListener took 0.008s
+[23:29:42] [main/DEBUG] [FML]: Bar Finished: Loading Resource - FoliageColorReloadListener took 0.006s
+[23:29:42] [main/DEBUG] [FML]: Bar Step: Rendering Setup - GL Setup took 0.001s
+[23:29:42] [main/DEBUG] [FML]: Bar Step: Rendering Setup - Loading Texture Map took 0.009s
+[23:29:42] [main/DEBUG] [FML]: Bar Finished: Loading Resource - B3DLoader took 0.000s
+[23:29:42] [main/DEBUG] [FML]: Bar Finished: Loading Resource - OBJLoader took 0.000s
+[23:29:42] [main/DEBUG] [FML]: Bar Finished: Loading Resource - ModelFluid$FluidLoader took 0.000s
+[23:29:42] [main/DEBUG] [FML]: Bar Finished: Loading Resource - ItemLayerModel$Loader took 0.000s
+[23:29:42] [main/DEBUG] [FML]: Bar Finished: Loading Resource - MultiLayerModel$Loader took 0.000s
+[23:29:42] [main/DEBUG] [FML]: Bar Finished: Loading Resource - ModelDynBucket$LoaderDynBucket took 0.000s
+[23:29:42] [Thread-8/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
+[23:29:42] [Thread-8/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[23:29:42] [Thread-8/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
+[23:29:42] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
+[23:29:48] [main/DEBUG] [FML]: Bar Finished: ModelLoader: blocks took 5.905s
+[23:29:51] [main/DEBUG] [FML]: Bar Finished: ModelLoader: items took 3.195s
+[23:29:51] [main/INFO] [FML]: Max texture size: 16384
+[23:29:51] [main/DEBUG] [FML]: Bar Finished: Texture stitching took 0.397s
+[23:29:51] [main/DEBUG] [FML]: Bar Finished: Texture stitching took 0.045s
+[23:29:51] [main/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
+[23:29:51] [main/DEBUG] [FML]: Bar Finished: Texture creation took 0.049s
+[23:29:51] [main/DEBUG] [FML]: Bar Finished: Texture mipmap and upload took 0.207s
+[23:29:52] [main/DEBUG] [FML]: Bar Finished: ModelLoader: baking took 0.651s
+[23:29:52] [main/DEBUG] [FML]: Bar Finished: Loading Resource - ModelManager took 10.637s
+[23:29:52] [main/DEBUG] [FML]: Bar Step: Rendering Setup - Loading Model Manager took 10.695s
+[23:29:53] [main/DEBUG] [FML]: Bar Finished: Loading Resource - RenderItem took 0.021s
+[23:29:53] [main/DEBUG] [FML]: Bar Step: Rendering Setup - Loading Item Renderer took 0.427s
+[23:29:53] [main/DEBUG] [FML]: Bar Finished: Loading Resource - EntityRenderer took 0.000s
+[23:29:53] [main/DEBUG] [FML]: Bar Finished: Loading Resource - BlockRendererDispatcher took 0.000s
+[23:29:53] [main/DEBUG] [FML]: Bar Finished: Loading Resource - RenderGlobal took 0.000s
+[23:29:53] [main/DEBUG] [FML]: Bar Finished: Loading Resource - SearchTreeManager took 0.111s
+[23:29:54] [main/DEBUG] [FML]: Bar Step: Rendering Setup - Loading Entity Renderer took 0.869s
+[23:29:54] [main/DEBUG] [FML]: Bar Finished: Rendering Setup took 12.002s
+[23:29:54] [main/INFO] [FML]: Applying holder lookups
+[23:29:54] [main/INFO] [FML]: Holder lookups applied
+[23:29:54] [main/TRACE] [FML]: Sending event FMLInitializationEvent to mod minecraft
+[23:29:54] [main/TRACE] [FML]: Sent event FMLInitializationEvent to mod minecraft
+[23:29:54] [main/DEBUG] [FML]: Bar Step: Initialization - Minecraft took 0.000s
+[23:29:54] [main/TRACE] [FML]: Sending event FMLInitializationEvent to mod mcp
+[23:29:54] [main/TRACE] [FML]: Sent event FMLInitializationEvent to mod mcp
+[23:29:54] [main/DEBUG] [FML]: Bar Step: Initialization - Minecraft Coder Pack took 0.000s
+[23:29:54] [main/TRACE] [FML]: Sending event FMLInitializationEvent to mod FML
+[23:29:54] [main/TRACE] [FML]: Sent event FMLInitializationEvent to mod FML
+[23:29:54] [main/DEBUG] [FML]: Bar Step: Initialization - Forge Mod Loader took 0.000s
+[23:29:54] [main/TRACE] [FML]: Sending event FMLInitializationEvent to mod forge
+[23:29:54] [main/TRACE] [FML]: Sent event FMLInitializationEvent to mod forge
+[23:29:54] [main/DEBUG] [FML]: Bar Step: Initialization - Minecraft Forge took 0.000s
+[23:29:54] [main/TRACE] [FML]: Sending event FMLInitializationEvent to mod customnpcs
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: CustomNPC Permissions available:
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.edit.blocks
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.edit.villager
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.bank
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.dialog
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.faction
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.linked
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.naturalspawn
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.playerdata
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.quest
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.recipe
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.transport
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.advanced
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.ai
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.clone
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.create
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.delete
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.display
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.freeze
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.gui
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.inventory
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.reset
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.stats
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.scenes
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.soulstone.all
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.spawner.create
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.spawner.mob
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.tool.mounter
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.tool.nbtbook
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.tool.pather
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.tool.scripter
+[23:29:59] [main/TRACE] [FML]: Sent event FMLInitializationEvent to mod customnpcs
+[23:29:59] [main/DEBUG] [FML]: Bar Step: Initialization - CustomNPCs took 5.099s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLInitializationEvent to mod customnpcsfix
+[23:29:59] [main/TRACE] [FML]: Sent event FMLInitializationEvent to mod customnpcsfix
+[23:29:59] [main/DEBUG] [FML]: Bar Step: Initialization - CustomNPCs Fix took 0.059s
+[23:29:59] [main/DEBUG] [FML]: Bar Finished: Initialization took 5.159s
+[23:29:59] [main/TRACE] [FML]: Attempting to deliver 0 IMC messages to mod minecraft
+[23:29:59] [main/TRACE] [FML]: Sending event IMCEvent to mod minecraft
+[23:29:59] [main/TRACE] [FML]: Sent event IMCEvent to mod minecraft
+[23:29:59] [main/DEBUG] [FML]: Bar Step: InterModComms$IMC - Minecraft took 0.004s
+[23:29:59] [main/TRACE] [FML]: Attempting to deliver 0 IMC messages to mod mcp
+[23:29:59] [main/TRACE] [FML]: Sending event IMCEvent to mod mcp
+[23:29:59] [main/TRACE] [FML]: Sent event IMCEvent to mod mcp
+[23:29:59] [main/DEBUG] [FML]: Bar Step: InterModComms$IMC - Minecraft Coder Pack took 0.000s
+[23:29:59] [main/TRACE] [FML]: Attempting to deliver 0 IMC messages to mod FML
+[23:29:59] [main/TRACE] [FML]: Sending event IMCEvent to mod FML
+[23:29:59] [main/TRACE] [FML]: Sent event IMCEvent to mod FML
+[23:29:59] [main/DEBUG] [FML]: Bar Step: InterModComms$IMC - Forge Mod Loader took 0.000s
+[23:29:59] [main/TRACE] [FML]: Attempting to deliver 0 IMC messages to mod forge
+[23:29:59] [main/TRACE] [FML]: Sending event IMCEvent to mod forge
+[23:29:59] [main/TRACE] [FML]: Sent event IMCEvent to mod forge
+[23:29:59] [main/DEBUG] [FML]: Bar Step: InterModComms$IMC - Minecraft Forge took 0.000s
+[23:29:59] [main/TRACE] [FML]: Attempting to deliver 0 IMC messages to mod customnpcs
+[23:29:59] [main/TRACE] [FML]: Sending event IMCEvent to mod customnpcs
+[23:29:59] [main/TRACE] [FML]: Sent event IMCEvent to mod customnpcs
+[23:29:59] [main/DEBUG] [FML]: Bar Step: InterModComms$IMC - CustomNPCs took 0.000s
+[23:29:59] [main/TRACE] [FML]: Attempting to deliver 0 IMC messages to mod customnpcsfix
+[23:29:59] [main/TRACE] [FML]: Sending event IMCEvent to mod customnpcsfix
+[23:29:59] [main/TRACE] [FML]: Sent event IMCEvent to mod customnpcsfix
+[23:29:59] [main/DEBUG] [FML]: Bar Step: InterModComms$IMC - CustomNPCs Fix took 0.000s
+[23:29:59] [main/DEBUG] [FML]: Bar Finished: InterModComms$IMC took 0.006s
+[23:29:59] [main/INFO] [FML]: Injecting itemstacks
+[23:29:59] [main/INFO] [FML]: Itemstack injection complete
+[23:29:59] [main/TRACE] [FML]: Sending event FMLPostInitializationEvent to mod minecraft
+[23:29:59] [main/TRACE] [FML]: Sent event FMLPostInitializationEvent to mod minecraft
+[23:29:59] [main/DEBUG] [FML]: Bar Step: PostInitialization - Minecraft took 0.000s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLPostInitializationEvent to mod mcp
+[23:29:59] [main/TRACE] [FML]: Sent event FMLPostInitializationEvent to mod mcp
+[23:29:59] [main/DEBUG] [FML]: Bar Step: PostInitialization - Minecraft Coder Pack took 0.000s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLPostInitializationEvent to mod FML
+[23:29:59] [main/TRACE] [FML]: Sent event FMLPostInitializationEvent to mod FML
+[23:29:59] [main/DEBUG] [FML]: Bar Step: PostInitialization - Forge Mod Loader took 0.000s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLPostInitializationEvent to mod forge
+[23:29:59] [main/TRACE] [FML]: Sent event FMLPostInitializationEvent to mod forge
+[23:29:59] [main/DEBUG] [FML]: Bar Step: PostInitialization - Minecraft Forge took 0.009s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLPostInitializationEvent to mod customnpcs
+[23:29:59] [main/TRACE] [FML]: Sent event FMLPostInitializationEvent to mod customnpcs
+[23:29:59] [main/DEBUG] [FML]: Bar Step: PostInitialization - CustomNPCs took 0.000s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLPostInitializationEvent to mod customnpcsfix
+[23:29:59] [main/TRACE] [FML]: Sent event FMLPostInitializationEvent to mod customnpcsfix
+[23:29:59] [main/DEBUG] [FML]: Bar Step: PostInitialization - CustomNPCs Fix took 0.000s
+[23:29:59] [main/DEBUG] [FML]: Bar Finished: PostInitialization took 0.010s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLLoadCompleteEvent to mod minecraft
+[23:29:59] [main/TRACE] [FML]: Sent event FMLLoadCompleteEvent to mod minecraft
+[23:29:59] [main/DEBUG] [FML]: Bar Step: LoadComplete - Minecraft took 0.000s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLLoadCompleteEvent to mod mcp
+[23:29:59] [main/TRACE] [FML]: Sent event FMLLoadCompleteEvent to mod mcp
+[23:29:59] [main/DEBUG] [FML]: Bar Step: LoadComplete - Minecraft Coder Pack took 0.000s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLLoadCompleteEvent to mod FML
+[23:29:59] [main/TRACE] [FML]: Sent event FMLLoadCompleteEvent to mod FML
+[23:29:59] [main/DEBUG] [FML]: Bar Step: LoadComplete - Forge Mod Loader took 0.000s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLLoadCompleteEvent to mod forge
+[23:29:59] [main/DEBUG] [FML]: Forge RecipeSorter Baking:
+[23:29:59] [main/DEBUG] [FML]:   16: RecipeEntry("Before", UNKNOWN, )
+[23:29:59] [main/DEBUG] [FML]:   15: RecipeEntry("minecraft:shaped", SHAPED, net.minecraft.item.crafting.ShapedRecipes) Before: minecraft:shapeless
+[23:29:59] [main/DEBUG] [FML]:   14: RecipeEntry("forge:shapedore", SHAPED, net.minecraftforge.oredict.ShapedOreRecipe) Before: minecraft:shapeless After: minecraft:shaped
+[23:29:59] [main/DEBUG] [FML]:   13: RecipeEntry("minecraft:mapextending", SHAPED, net.minecraft.item.crafting.RecipesMapExtending) Before: minecraft:shapeless After: minecraft:shaped
+[23:29:59] [main/DEBUG] [FML]:   12: RecipeEntry("minecraft:shapeless", SHAPELESS, net.minecraft.item.crafting.ShapelessRecipes) After: minecraft:shaped
+[23:29:59] [main/DEBUG] [FML]:   11: RecipeEntry("minecraft:repair", SHAPELESS, net.minecraft.item.crafting.RecipeRepairItem) After: minecraft:shapeless
+[23:29:59] [main/DEBUG] [FML]:   10: RecipeEntry("minecraft:shield_deco", SHAPELESS, net.minecraft.item.crafting.ShieldRecipes$Decoration) After: minecraft:shapeless
+[23:29:59] [main/DEBUG] [FML]:   9: RecipeEntry("minecraft:armordyes", SHAPELESS, net.minecraft.item.crafting.RecipesArmorDyes) After: minecraft:shapeless
+[23:29:59] [main/DEBUG] [FML]:   8: RecipeEntry("minecraft:fireworks", SHAPELESS, net.minecraft.item.crafting.RecipeFireworks) After: minecraft:shapeless
+[23:29:59] [main/DEBUG] [FML]:   7: RecipeEntry("minecraft:pattern_dupe", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeDuplicatePattern) After: minecraft:shapeless
+[23:29:59] [main/DEBUG] [FML]:   6: RecipeEntry("minecraft:tippedarrow", SHAPELESS, net.minecraft.item.crafting.RecipeTippedArrow) After: minecraft:shapeless
+[23:29:59] [main/DEBUG] [FML]:   5: RecipeEntry("minecraft:mapcloning", SHAPELESS, net.minecraft.item.crafting.RecipesMapCloning) After: minecraft:shapeless
+[23:29:59] [main/DEBUG] [FML]:   4: RecipeEntry("forge:shapelessore", SHAPELESS, net.minecraftforge.oredict.ShapelessOreRecipe) After: minecraft:shapeless
+[23:29:59] [main/DEBUG] [FML]:   3: RecipeEntry("minecraft:pattern_add", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeAddPattern) After: minecraft:shapeless
+[23:29:59] [main/DEBUG] [FML]:   2: RecipeEntry("minecraft:bookcloning", SHAPELESS, net.minecraft.item.crafting.RecipeBookCloning) After: minecraft:shapeless
+[23:29:59] [main/DEBUG] [FML]:   1: RecipeEntry("After", UNKNOWN, )
+[23:29:59] [main/DEBUG] [FML]: Sorting recipes
+[23:29:59] [main/TRACE] [FML]: Sent event FMLLoadCompleteEvent to mod forge
+[23:29:59] [main/DEBUG] [FML]: Bar Step: LoadComplete - Minecraft Forge took 0.008s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLLoadCompleteEvent to mod customnpcs
+[23:29:59] [main/TRACE] [FML]: Sent event FMLLoadCompleteEvent to mod customnpcs
+[23:29:59] [main/DEBUG] [FML]: Bar Step: LoadComplete - CustomNPCs took 0.000s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLLoadCompleteEvent to mod customnpcsfix
+[23:29:59] [main/TRACE] [FML]: Sent event FMLLoadCompleteEvent to mod customnpcsfix
+[23:29:59] [main/DEBUG] [FML]: Bar Step: LoadComplete - CustomNPCs Fix took 0.000s
+[23:29:59] [main/DEBUG] [FML]: Bar Finished: LoadComplete took 0.009s
+[23:29:59] [main/DEBUG] [FML]: Freezing registries
+[23:29:59] [main/TRACE] [FML]: Sending event FMLModIdMappingEvent to mod minecraft
+[23:29:59] [main/TRACE] [FML]: Sent event FMLModIdMappingEvent to mod minecraft
+[23:29:59] [main/DEBUG] [FML]: Bar Step: ModIdMapping - Minecraft took 0.001s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLModIdMappingEvent to mod mcp
+[23:29:59] [main/TRACE] [FML]: Sent event FMLModIdMappingEvent to mod mcp
+[23:29:59] [main/DEBUG] [FML]: Bar Step: ModIdMapping - Minecraft Coder Pack took 0.000s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLModIdMappingEvent to mod FML
+[23:29:59] [main/TRACE] [FML]: Sent event FMLModIdMappingEvent to mod FML
+[23:29:59] [main/DEBUG] [FML]: Bar Step: ModIdMapping - Forge Mod Loader took 0.000s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLModIdMappingEvent to mod forge
+[23:29:59] [main/TRACE] [FML]: Sent event FMLModIdMappingEvent to mod forge
+[23:29:59] [main/DEBUG] [FML]: Bar Step: ModIdMapping - Minecraft Forge took 0.153s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLModIdMappingEvent to mod customnpcs
+[23:29:59] [main/TRACE] [FML]: Sent event FMLModIdMappingEvent to mod customnpcs
+[23:29:59] [main/DEBUG] [FML]: Bar Step: ModIdMapping - CustomNPCs took 0.001s
+[23:29:59] [main/TRACE] [FML]: Sending event FMLModIdMappingEvent to mod customnpcsfix
+[23:29:59] [main/TRACE] [FML]: Sent event FMLModIdMappingEvent to mod customnpcsfix
+[23:29:59] [main/DEBUG] [FML]: Bar Step: ModIdMapping - CustomNPCs Fix took 0.002s
+[23:29:59] [main/DEBUG] [FML]: Bar Finished: ModIdMapping took 0.157s
+[23:29:59] [main/DEBUG] [FML]: All registries frozen
+[23:29:59] [main/INFO] [FML]: Forge Mod Loader has successfully loaded 6 mods
+[23:29:59] [main/DEBUG] [FML]: Bar Finished: Loading took 33.574s
+[23:29:59] [main/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
+[23:29:59] [main/DEBUG] [FML]: Bar Finished: Loading Resource - CloudRenderer took 0.011s
+[23:30:54] [main/INFO] [net.minecraft.client.Minecraft]: Stopping!
+[23:30:54] [main/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
+[23:30:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com

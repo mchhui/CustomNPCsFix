@@ -1,0 +1,152 @@
+[23:29:06] [main/INFO] [GradleStart]: username: mchhui@foxmail.com
+[23:29:06] [main/INFO] [GradleStart]: Extra: []
+[23:29:06] [main/INFO] [GradleStart]: Password found, attempting login
+[23:29:06] [main/INFO] [com.mojang.authlib.yggdrasil.YggdrasilUserAuthentication]: Logging in with username & password
+[23:29:38] [main/ERROR] [GradleStart]: -- Login failed!  Cannot contact authentication server
+ound and added coremod: mchhui.customnpcsfix.coremod.CustomNPCFixPlugin
+[23:29:14] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, [{"name":"preferredLanguage","value":"zh-cn"}], --assetsDir, D:/Users/Hueihuea/.gradle/caches/minecraft/assets, --assetIndex, 1.12, --userType, mojang, --accessToken{REDACTED}, --version, 1.12.2, --uuid, 5cbba4e0bb0549a795ecad3f8a079c7a, --username, mchhui, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[23:29:14] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[23:29:14] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[23:29:14] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[23:29:14] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[23:29:14] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2768 for Minecraft 1.12.2 loading
+[23:29:14] [main/INFO] [FML]: Java is OpenJDK 64-Bit Server VM, version 1.8.0_232, running on Windows 7:amd64:6.1, installed at D:\Program Files\AdoptOpenJDK\jdk-8.0.232.09-hotspot\jre
+[23:29:14] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[23:29:14] [main/ERROR] [FML]: Full: D:\Users\Hueihuea\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[23:29:14] [main/ERROR] [FML]: Trimmed: d:/users/hueihuea/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[23:29:14] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[23:29:14] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
+[23:29:15] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[23:29:15] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[23:29:15] [main/INFO] [FML]: Found a command line coremod : mchhui.customnpcsfix.coremod.CustomNPCFixPlugin
+[23:29:15] [main/INFO] [FML]: Ignoring missing certificate for coremod CustomNPCFixPlugin (mchhui.customnpcsfix.coremod.CustomNPCFixPlugin), as this is probably a dev workspace
+[23:29:15] [main/INFO] [FML]: Searching E:\java\Minecraft-forge\CustomNPCFix 1.12.2\.\mods for mods
+[23:29:15] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[23:29:15] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
+[23:29:15] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[23:29:15] [main/INFO] [GradleStart]: Injecting location in coremod mchhui.customnpcsfix.coremod.CustomNPCFixPlugin
+[23:29:15] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:29:15] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[23:29:15] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[23:29:15] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:29:15] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:29:15] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:29:17] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[23:29:17] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:29:17] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[23:29:18] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:29:18] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[23:29:18] [main/INFO] [GradleStart]: Remapping AccessTransformer rules...
+[23:29:18] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[23:29:18] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[23:29:18] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[23:29:19] [main/INFO] [net.minecraft.client.Minecraft]: Setting user: mchhui
+[23:29:24] [main/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
+[23:29:25] [main/INFO] [FML]: Could not load splash.properties, will create a default one
+[23:29:25] [main/INFO] [FML]: -- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_232, AdoptOpenJDK
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), 
+	Memory: 7792767736 bytes (7431 MB) / 8274313216 bytes (7891 MB) up to 8274313216 bytes (7891 MB)
+	JVM Flags: 2 total; -Xmx8233M -Xms8233M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+CustomNPCFixPlugin (bin)
+  mchhui.customnpcsfix.coremod.noppes.npcs.util.NBTJsonUtilTransformer
+  mchhui.customnpcsfix.coremod.noppes.npcs.roles.RoleCompanionTransfromer
+  mchhui.customnpcsfix.coremod.noppes.npcs.client.PacketHandlerClientTransfromer
+  mchhui.customnpcsfix.coremod.noppes.npcs.controllers.data.TransportLocationTransfromer
+  mchhui.customnpcsfix.coremod.noppes.npcs.client.renderer.RenderCustomNpcTansfromer
+  mchhui.customnpcsfix.coremod.noppes.npcs.api.wrapper.PlayerWrapperTransfromer
+	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '4.6.13543 Compatibility Profile Context 25.20.15003.5010' Renderer: 'Radeon RX 580 Series'
+[23:29:25] [main/INFO] [FML]: MinecraftForge v14.23.5.2768 Initialized
+[23:29:25] [main/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[23:29:25] [main/INFO] [FML]: Replaced 1036 ore ingredients
+[23:29:26] [main/INFO] [FML]: Searching E:\java\Minecraft-forge\CustomNPCFix 1.12.2\.\mods for mods
+[23:29:27] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 338186593 nanos
+[23:29:29] [main/INFO] [FML]: Forge Mod Loader has identified 6 mods to load
+[23:29:29] [main/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, customnpcsfix, customnpcs] at CLIENT
+[23:29:29] [main/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, customnpcsfix, customnpcs] at SERVER
+[23:29:31] [main/WARN] [FML]: [Transforming:noppes.npcs.client.renderer.RenderCustomNpc]
+[23:29:31] [main/WARN] [FML]: [Transformed:noppes.npcs.client.renderer.RenderCustomNpc]
+[23:29:32] [main/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:CustomNPCs Fix, FMLFileResourcePack:CustomNPCs
+[23:29:32] [main/INFO] [FML]: Processing ObjectHolder annotations
+[23:29:33] [main/INFO] [FML]: Found 1188 ObjectHolder annotations
+[23:29:33] [main/INFO] [FML]: Identifying ItemStackHolder annotations
+[23:29:33] [main/INFO] [FML]: Found 0 ItemStackHolder annotations
+[23:29:33] [main/INFO] [FML]: Configured a dormant chunk cache size of 0
+[23:29:33] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[23:29:35] [main/WARN] [FML]: [Transforming:noppes.npcs.client.PacketHandlerClient]
+[23:29:35] [main/WARN] [FML]: [Transformed:noppes.npcs.client.PacketHandlerClient]
+[23:29:35] [main/INFO] [customnpcsfix]: Started loading config. 
+[23:29:35] [main/INFO] [customnpcsfix]: Finished loading config. 
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tileredstoneblock`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tileblockanvil`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilemailbox`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilewaypoint`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilenpcscripted`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilenpcscripteddoor`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilenpcbuilder`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilenpccopy`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `tilenpcborder`, expected `customnpcs`. This could be a intended override, but in most cases indicates a broken mod.
+[23:29:35] [main/INFO] [FML]: Applying holder lookups
+[23:29:35] [main/INFO] [FML]: Holder lookups applied
+[23:29:35] [main/INFO] [FML]: Applying holder lookups
+[23:29:35] [main/INFO] [FML]: Holder lookups applied
+[23:29:35] [main/INFO] [FML]: Applying holder lookups
+[23:29:35] [main/INFO] [FML]: Holder lookups applied
+[23:29:35] [main/INFO] [FML]: Applying holder lookups
+[23:29:35] [main/INFO] [FML]: Holder lookups applied
+[23:29:35] [main/INFO] [FML]: Injecting itemstacks
+[23:29:35] [main/INFO] [FML]: Itemstack injection complete
+[23:29:38] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: UP_TO_DATE Target: null
+[23:29:41] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
+[23:29:42] [Thread-8/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
+[23:29:42] [Thread-8/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[23:29:42] [Thread-8/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
+[23:29:42] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
+[23:29:51] [main/INFO] [FML]: Max texture size: 16384
+[23:29:51] [main/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
+[23:29:54] [main/INFO] [FML]: Applying holder lookups
+[23:29:54] [main/INFO] [FML]: Holder lookups applied
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: CustomNPC Permissions available:
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.edit.blocks
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.edit.villager
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.bank
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.dialog
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.faction
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.linked
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.naturalspawn
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.playerdata
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.quest
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.recipe
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.global.transport
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.advanced
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.ai
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.clone
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.create
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.delete
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.display
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.freeze
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.gui
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.inventory
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.reset
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.npc.stats
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.scenes
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.soulstone.all
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.spawner.create
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.spawner.mob
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.tool.mounter
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.tool.nbtbook
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.tool.pather
+[23:29:59] [main/INFO] [noppes.npcs.CustomNpcs]: customnpcs.tool.scripter
+[23:29:59] [main/INFO] [FML]: Injecting itemstacks
+[23:29:59] [main/INFO] [FML]: Itemstack injection complete
+[23:29:59] [main/INFO] [FML]: Forge Mod Loader has successfully loaded 6 mods
+[23:29:59] [main/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
+[23:30:54] [main/INFO] [net.minecraft.client.Minecraft]: Stopping!
+[23:30:54] [main/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
+[23:30:54] [main/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com
