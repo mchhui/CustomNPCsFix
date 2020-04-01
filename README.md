@@ -1,0 +1,2 @@
+# CustomNPCsFix
+一个minecraft的mod 修复与优化CustomNPCsMOD
