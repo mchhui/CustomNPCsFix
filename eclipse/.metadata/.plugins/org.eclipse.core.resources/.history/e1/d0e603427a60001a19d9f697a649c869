@@ -1,5 +1,0 @@
-package mchhui.customnpcsfix.listener.bukkit;
-
-public class EntityHurtListener {
-
-}

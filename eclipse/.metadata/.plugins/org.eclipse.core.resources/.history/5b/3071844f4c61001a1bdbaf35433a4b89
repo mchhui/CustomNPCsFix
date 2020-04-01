@@ -1,7 +1,0 @@
-package mchhui.customnpcsfix.util;
-
-public class GUIHelper {
-    public static void postInit(GuiNPCInterface gui) {
-        
-    }
-}

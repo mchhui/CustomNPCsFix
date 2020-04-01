@@ -1,9 +1,0 @@
-package mchhui.customnpcsfix.util;
-
-import noppes.npcs.controllers.Line;
-
-public class NPCUtil {
-    public static String onSay(String line) {
-        return line.replace("%", "%%");
-    }
-}

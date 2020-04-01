@@ -1,7 +1,0 @@
-package mchhui.customnpcsfix.coremod.noppes.npcs.client;
-
-import net.minecraft.launchwrapper.IClassTransformer;
-
-public class PacketHandlerClientTransfromer implements IClassTransformer{
-
-}

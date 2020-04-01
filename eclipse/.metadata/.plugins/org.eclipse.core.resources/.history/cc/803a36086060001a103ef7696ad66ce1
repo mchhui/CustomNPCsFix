@@ -1,9 +1,0 @@
-package mchhui.customnpcsfix.fixer;
-
-public class DamagedFireSlowerThanBukkit extends Fixer{
-    @Override
-    public void fix() {
-        super.fix();
-        
-    }
-}

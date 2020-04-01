@@ -1,9 +1,0 @@
-package mchhui.customnpcsfix.util;
-
-import noppes.npcs.client.gui.util.GuiNPCInterface;
-
-public class GUIHelper {
-    public static void postInit(GuiNPCInterface gui) {
-        
-    }
-}
