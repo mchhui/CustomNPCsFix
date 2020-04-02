@@ -10,7 +10,7 @@
   "authorList": ["Hueihuea"],
   "credits": "The Forge and FML guys",
   "logoFile": "assets/customnpcsfix/logo.png",
-  "useDependencyInformation": true;
+  "useDependencyInformation": true,
   "screenshots": [],
   "dependencies": ["customnpcs"]
 }
