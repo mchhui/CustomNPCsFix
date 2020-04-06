@@ -5,8 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-import org.apache.commons.lang.time.DateFormatUtils;
-import org.apache.commons.lang.time.DateUtils;
+import org.apache.commons.lang3.time.DateFormatUtils;
 
 import com.ibm.icu.text.SimpleDateFormat;
 
@@ -68,12 +67,7 @@ public class NetListener {
         }
         String time=DateFormatUtils.format(new Date(), "hh:mm:ss:SSSS");
         String sender = event.player.getName();
-        ByteBuf buffer = event.packet.payload().copy();
-        String type = null;
-        try {
-            type = EnumPacketClient.values()[buffer.readInt()].toString();
-        } catch (Exception err) {
-        }
+        String type = event.enu.toString();
         List<EntityPlayer> list = getListeningPlayers();
         for (EntityPlayer player : list) {
             player.sendMessage(new TextComponentString("[" + time + "] Server > " + sender + " " + type));

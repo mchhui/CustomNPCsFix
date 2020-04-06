@@ -1,6 +1,5 @@
 package mchhui.customnpcsfix.proxy;
 
-import mchhui.customnpcsfix.ChannelHandler;
 import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.EnumHandler;
 import mchhui.customnpcsfix.command.CommandHueihuea;
@@ -29,7 +28,6 @@ public class CommonProxy {
 
     public void onPostInit(FMLPostInitializationEvent event) {
         new EnumHandler(event);
-        new ChannelHandler(event);
     }
     
     public void onServerStart(FMLServerStartingEvent event) {

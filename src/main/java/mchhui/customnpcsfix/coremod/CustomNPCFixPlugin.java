@@ -18,6 +18,7 @@ public class CustomNPCFixPlugin implements IFMLLoadingPlugin {
                 "mchhui.customnpcsfix.coremod.noppes.npcs.client.ClientTransFromer",
                 "mchhui.customnpcsfix.coremod.noppes.npcs.controllers.data.TransportLocationTransfromer",
                 "mchhui.customnpcsfix.coremod.noppes.npcs.client.renderer.RenderCustomNpcTansfromer",
+                "mchhui.customnpcsfix.coremod.noppes.npcs.ServerTransfromer",
                 "mchhui.customnpcsfix.coremod.noppes.npcs.api.wrapper.PlayerWrapperTransfromer", };
 
     }
