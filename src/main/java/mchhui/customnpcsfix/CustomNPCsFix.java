@@ -4,6 +4,7 @@ import mchhui.customnpcsfix.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -29,5 +30,10 @@ public class CustomNPCsFix {
     @EventHandler
     public void onServerStart(FMLServerStartingEvent event) {
         proxy.onServerStart(event);
+    }
+    
+    @EventHandler
+    public void onPostInit(FMLPostInitializationEvent event) {
+        proxy.onPostInit(event);
     }
 }

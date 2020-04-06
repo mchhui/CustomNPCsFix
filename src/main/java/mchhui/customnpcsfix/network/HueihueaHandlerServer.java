@@ -5,6 +5,7 @@ import java.io.IOException;
 import io.netty.buffer.ByteBuf;
 import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.EnumHandler;
+import mchhui.customnpcsfix.NetListener;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
@@ -37,9 +38,16 @@ public class HueihueaHandlerServer {
                     }
                 }
             } catch (IOException e) {
-                
+
             }
 
+        }
+    }
+
+    public static class FixHandler {
+        @SubscribeEvent(priority = EventPriority.HIGH)
+        public void onHandle(ServerCustomPacketEvent event) {
+            NetListener.onPacketHandle(event);
         }
     }
 }

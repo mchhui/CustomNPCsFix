@@ -5,9 +5,11 @@ import java.io.IOException;
 import java.util.List;
 
 import mchhui.customnpcsfix.Config;
+import mchhui.customnpcsfix.NetListener;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.server.MinecraftServer;
@@ -35,11 +37,11 @@ public class CommandHueihuea extends CommandBase {
             BlockPos targetPos) {
         switch (args.length) {
         case 1:
-            return this.getListOfStringsMatchingLastWord(args, "help","reload");
+            return this.getListOfStringsMatchingLastWord(args, "help", "reload", "listennet");
         }
         return super.getTabCompletions(server, sender, args, targetPos);
     }
-    
+
     @Override
     public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
         if (args.length == 0) {
@@ -47,13 +49,30 @@ public class CommandHueihuea extends CommandBase {
         }
         if (args.length == 1) {
             if (args[0].equals("help")) {
+                sender.sendMessage(new TextComponentString("/hueihuea listennet 监听NPC收发包活动"));
                 sender.sendMessage(new TextComponentString("/hueihuea reload 重载配置"));
                 return;
             }
-            if(args[0].equals("reload")) {
+            if (args[0].equals("reload")) {
                 Config.reload();
                 sender.sendMessage(new TextComponentString("已重载配置"));
                 return;
+            }
+            if (args[0].equals("listennet")) {
+                EntityPlayerMP player = null;
+                if (!(sender instanceof EntityPlayerMP)) {
+                    sender.sendMessage(new TextComponentString("该指令仅玩家使用"));
+                    return;
+                }
+                player = (EntityPlayerMP) sender;
+                boolean flag = NetListener.isListening(player);
+                if (flag) {
+                    sender.sendMessage(new TextComponentString("停止监听网络活动"));
+                    NetListener.unListen(player);
+                } else {
+                    sender.sendMessage(new TextComponentString("开始监听网络活动"));
+                    NetListener.listen(player);
+                }
             }
         }
     }
