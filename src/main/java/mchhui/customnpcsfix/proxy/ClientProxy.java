@@ -1,8 +1,10 @@
 package mchhui.customnpcsfix.proxy;
 
+import mchhui.customnpcsfix.listener.PlayerListener;
 import mchhui.customnpcsfix.listener.client.ClientListener;
 import mchhui.customnpcsfix.listener.client.NPCRenderListener;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
@@ -17,5 +19,6 @@ public class ClientProxy extends CommonProxy{
         super.onInit(event);
         MinecraftForge.EVENT_BUS.register(new NPCRenderListener());
         MinecraftForge.EVENT_BUS.register(new ClientListener());
+        FMLCommonHandler.instance().bus().register(new ClientListener());
     }
 }

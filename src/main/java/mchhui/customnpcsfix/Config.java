@@ -21,6 +21,7 @@ public class Config {
     //Client
     public static boolean DontSendDubiousScript;
     public static boolean SafeRenderNoTexNPC;
+    public static boolean LimitedScriptGuiAddButton;
 
     public Config(FMLPreInitializationEvent event) {
         logger = event.getModLog();
@@ -58,6 +59,8 @@ public class Config {
         DontSendDubiousScript= config.get(Configuration.CATEGORY_CLIENT, "DontSendDubiousScript", false, comment).getBoolean();
         comment = "会为无材质的NPC使用透明材质,这防止了此错误信息刷屏";
         SafeRenderNoTexNPC= config.get(Configuration.CATEGORY_CLIENT, "SafeRenderNoTexNPC", false, comment).getBoolean();
+        comment = "当脚本为11页时,隐藏添加按钮";
+        LimitedScriptGuiAddButton= config.get(Configuration.CATEGORY_CLIENT, "LimitedScriptGuiAddButton", false, comment).getBoolean();
         
         
         config.save();
