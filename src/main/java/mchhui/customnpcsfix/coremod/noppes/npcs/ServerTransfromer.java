@@ -1,6 +1,7 @@
 package mchhui.customnpcsfix.coremod.noppes.npcs;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
@@ -34,6 +35,9 @@ public class ServerTransfromer implements IClassTransformer {
                 if (method.name.equals("lambda$sendDataDelayed$0")) {
                     putListen(method, 2, 0, 1);
                 }
+                if (method.name.equals("sendDataChecked")) {
+                    putListen(method, 0, 1, 2,true);
+                }
                 if (method.name.equals("lambda$sendAssociatedData$1")) {
                     putListen(method, 5, 0, 1);
                 }
@@ -56,6 +60,10 @@ public class ServerTransfromer implements IClassTransformer {
     }
 
     private static void putListen(MethodNode method, int player, int enm, int obs) {
+        putListen(method, player, enm, obs, false);
+    }
+
+    private static void putListen(MethodNode method, int player, int enm, int obs, boolean isBoolean) {
         InsnList list = new InsnList();
         LabelNode label = new LabelNode();
         list.add(new VarInsnNode(Opcodes.ALOAD, player));
@@ -66,7 +74,12 @@ public class ServerTransfromer implements IClassTransformer {
                 "(Lnet/minecraft/entity/player/EntityPlayerMP;Lnoppes/npcs/constants/EnumPacketClient;[Ljava/lang/Object;)Z",
                 false));
         list.add(new JumpInsnNode(Opcodes.IFEQ, label));
-        list.add(new InsnNode(Opcodes.RETURN));
+        if (isBoolean) {
+            list.add(new InsnNode(Opcodes.ICONST_0));
+            list.add(new InsnNode(Opcodes.IRETURN));
+        }else {
+            list.add(new InsnNode(Opcodes.RETURN));
+        }
         list.add(label);
         for (AbstractInsnNode node : method.instructions.toArray()) {
             if (node.getOpcode() == Opcodes.GETSTATIC) {
@@ -76,5 +89,20 @@ public class ServerTransfromer implements IClassTransformer {
                 }
             }
         }
+        list = new InsnList();
+        label = new LabelNode();
+        list.add(new VarInsnNode(Opcodes.ALOAD, enm));
+        list.add(new VarInsnNode(Opcodes.ALOAD, obs));
+        list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "mchhui/customnpcsfix/api/EventHook",
+                "onCustomNPCsPreSendPacket", "(Lnoppes/npcs/constants/EnumPacketClient;[Ljava/lang/Object;)Z", false));
+        list.add(new JumpInsnNode(Opcodes.IFEQ, label));
+        if (isBoolean) {
+            list.add(new InsnNode(Opcodes.ICONST_0));
+            list.add(new InsnNode(Opcodes.IRETURN));
+        }else {
+            list.add(new InsnNode(Opcodes.RETURN));
+        }
+        list.add(label);
+        method.instructions.insert(method.instructions.getFirst(), list);
     }
 }

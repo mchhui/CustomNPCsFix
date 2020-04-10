@@ -25,7 +25,14 @@ public class ClientListener {
                 && type != EnumPacketServer.ScriptItemDataSave && type != EnumPacketServer.ScriptPlayerSave) {
             return;
         }
-        NBTTagCompound nbt = (NBTTagCompound) event.obs[0];
+        NBTTagCompound nbt = null;
+        if (type == EnumPacketServer.ScriptBlockDataSave) {
+            nbt = (NBTTagCompound) event.obs[3];
+        } else if (type == EnumPacketServer.ScriptDoorDataSave) {
+            nbt = (NBTTagCompound) event.obs[3];
+        } else {
+            nbt = (NBTTagCompound) event.obs[0];
+        }
         if (nbt.getTagList("Scripts", 10).hasNoTags()) {
             event.setCanceled(true);
         }

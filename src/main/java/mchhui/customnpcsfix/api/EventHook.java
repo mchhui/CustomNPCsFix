@@ -1,6 +1,7 @@
 package mchhui.customnpcsfix.api;
 
 import mchhui.customnpcsfix.NetListener;
+import mchhui.customnpcsfix.api.event.CustomNPCsPreSendPacketEvent;
 import mchhui.customnpcsfix.api.event.CustomNPCsSendPacketEvent;
 import mchhui.customnpcsfix.api.event.client.ClientSendDataEvent;
 import mchhui.customnpcsfix.api.event.client.RenderCustomNpcEvent;
@@ -27,6 +28,12 @@ public class EventHook {
     public static boolean onCustomNPCsSendPacket(EntityPlayerMP player, EnumPacketClient enu, Object... obs) {
         CustomNPCsSendPacketEvent event = new CustomNPCsSendPacketEvent(player, enu, obs);
         NetListener.onPacketSend(event);
+        return MinecraftForge.EVENT_BUS.post(event);
+    }
+    
+    public static boolean onCustomNPCsPreSendPacket(EnumPacketClient enu, Object... obs) {
+        CustomNPCsPreSendPacketEvent event = new CustomNPCsPreSendPacketEvent(enu, obs);
+        NetListener.onPrePacketSend(event);
         return MinecraftForge.EVENT_BUS.post(event);
     }
 }
