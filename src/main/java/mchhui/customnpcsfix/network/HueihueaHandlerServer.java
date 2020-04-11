@@ -18,29 +18,7 @@ public class HueihueaHandlerServer {
     public static class NPCHandler {
         @SubscribeEvent(priority = EventPriority.HIGH)
         public void onServerPacket(ServerCustomPacketEvent event) {
-            ByteBuf buffer = event.getPacket().payload().copy();
-            EnumPacketServer type = EnumPacketServer.values()[buffer.readInt()];
-
-            if (type != EnumPacketServer.ScriptBlockDataSave && type != EnumPacketServer.ScriptDataSave
-                    && type != EnumPacketServer.ScriptDoorDataSave && type != EnumPacketServer.ScriptForgeSave
-                    && type != EnumPacketServer.ScriptItemDataSave && type != EnumPacketServer.ScriptPlayerSave) {
-                return;
-            }
-
-            try {
-                NBTTagCompound nbt = Server.readNBT(buffer);
-                if (!nbt.getBoolean("ScriptEnabled")) {
-                    if (nbt.getTagList("Scripts", 10).hasNoTags()) {
-                        if (Config.DontAccpetDubiousScript) {
-                            event.getPacket().payload().clear();
-                            event.getPacket().payload().writeInt(EnumHandler.NOTHING.ordinal());
-                        }
-                    }
-                }
-            } catch (IOException e) {
-
-            }
-
+            
         }
     }
 

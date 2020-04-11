@@ -3,6 +3,7 @@ package mchhui.customnpcsfix;
 import org.apache.logging.log4j.Logger;
 
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class Config {
@@ -15,7 +16,6 @@ public class Config {
     public static boolean NoMsgPercentSymbolBug;
     public static boolean TPLocUseWorldName;
     public static boolean TPUseBukkitAPI;
-    public static boolean DontAccpetDubiousScript;
     public static boolean AutoUseNPCDamageSource;
     
     //Client
@@ -49,8 +49,10 @@ public class Config {
                 .getBoolean();
         comment = "传送师使用BukkitAPI进行传送 这通常用于修复某些插件显示的世界和玩家所在的世界不同\n需TPLocUseWorldName";
         TPUseBukkitAPI = config.get(Configuration.CATEGORY_GENERAL, "TPUseBukkitAPI", false, comment).getBoolean();
-        comment = "*非常不建议启用\n不接受可疑的脚本保存请求 如果保存请求是无脚本内容且启动是关闭的 就过滤掉\n1.这会抛出Error with EnumPacketServer.null\n2.更加推荐在客户端开启DontSendDubiousScript";
-        DontAccpetDubiousScript= config.get(Configuration.CATEGORY_GENERAL, "DontAccpetDubiousScript", false, comment).getBoolean();
+        comment = "*已完全废弃 失效 \n不接受可疑的脚本保存请求 如果保存请求是无脚本内容且启动是关闭的 就过滤掉\n1.这会抛出Error with EnumPacketServer.null\n2.更加推荐在客户端开启DontSendDubiousScript";
+        if(config.get(Configuration.CATEGORY_GENERAL, "DontAccpetDubiousScript", false, comment).getBoolean()) {
+            FMLLog.log.warn("你在customnpcsfix.cfg内开启了一个已失效的选项 DontAccpetDubiousScript");
+        }
         comment = "在玩家受到来源npc的伤害自动将其类型转为NPCDamageSource";
         AutoUseNPCDamageSource= config.get(Configuration.CATEGORY_GENERAL, "AutoUseNPCDamageSource", false, comment).getBoolean();
         
