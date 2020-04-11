@@ -17,6 +17,7 @@ import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.tree.VarInsnNode;
 
+import mchhui.customnpcsfix.coremod.HueihueaClassWriter;
 import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraftforge.fml.common.FMLLog;
 
@@ -29,7 +30,7 @@ public class NBTJsonUtilTransformer implements IClassTransformer {
             ClassNode classNode = new ClassNode(Opcodes.ASM5);
             ClassReader classReader = new ClassReader(basicClass);
             classReader.accept(classNode, 0);
-           List<MethodNode> methods = classNode.methods;
+            List<MethodNode> methods = classNode.methods;
             for (MethodNode method : methods) {
                 if (method.name.equals("Convert")
                         && method.desc.equals("(Ljava/lang/String;)Lnet/minecraft/nbt/NBTTagCompound;")) {
@@ -43,12 +44,23 @@ public class NBTJsonUtilTransformer implements IClassTransformer {
                             "Convert", "(Ljava/lang/String;)Lnet/minecraft/nbt/NBTTagCompound;", false));
                     list.add(new InsnNode(Opcodes.ARETURN));
                     list.add(labelJumpOut);
-                    list.add(new FrameNode(Opcodes.F_FULL, 1,new String[] {"java/lang/String"}, 0,new Object[0]));
                     method.instructions.insert(method.instructions.getFirst(), list);
-                    break;
+                }
+                if (method.name.equals("ConvertList")) {
+                    LabelNode labelJumpOut = new LabelNode();
+                    InsnList list = new InsnList();
+                    list.add(new FieldInsnNode(Opcodes.GETSTATIC, "mchhui/customnpcsfix/Config", "FastJsonDeserialize",
+                            "Z"));
+                    list.add(new JumpInsnNode(Opcodes.IFEQ, labelJumpOut));
+                    list.add(new VarInsnNode(Opcodes.ALOAD, 0));
+                    list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "mchhui/customnpcsfix/util/NBTJsonUtil",
+                            "ConvertList", "(Ljava/util/List;)Ljava/lang/String;", false));
+                    list.add(new InsnNode(Opcodes.ARETURN));
+                    list.add(labelJumpOut);
+                    method.instructions.insert(method.instructions.getFirst(), list);
                 }
             }
-            ClassWriter classWriter = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+            ClassWriter classWriter = new HueihueaClassWriter(ClassWriter.COMPUTE_FRAMES);
             classNode.accept(classWriter);
             FMLLog.getLogger().warn("[Transformed:noppes.npcs.util.NBTJsonUtil]");
             return classWriter.toByteArray();
