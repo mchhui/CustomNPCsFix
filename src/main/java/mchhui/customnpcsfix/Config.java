@@ -36,7 +36,7 @@ public class Config {
         String comment;
 
         //General
-        comment = "更快的JSON反序列化 虽然不是特别快 但是比NPC自带的快的多";
+        comment = "更快的JSON(反)序列化 虽然不是特别快 但是比NPC自带的快的多";
         FastJsonDeserialize = config.get(Configuration.CATEGORY_GENERAL, "FastJsonDeserialize", false, comment)
                 .getBoolean();
         comment = "修复同伴的进食BUG";
