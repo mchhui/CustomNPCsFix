@@ -2,9 +2,12 @@ package mchhui.customnpcsfix.listener;
 
 import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.Server;
+import mchhui.customnpcsfix.api.event.OnPlayerGetAllQuestWaypointEvent;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 import noppes.npcs.api.NpcAPI;
 import noppes.npcs.api.entity.IPlayer;
 import noppes.npcs.api.event.QuestEvent.QuestCompletedEvent;
@@ -18,17 +21,14 @@ import noppes.npcs.controllers.data.*;
 public class QuestListener {
 
     @SubscribeEvent
-    public void onPlayerJoin(PlayerLoggedInEvent event) {
-        if (!(event.player instanceof EntityPlayerMP)) {
-            return;
-        }
-        Server.sendClearWaypoint((EntityPlayerMP) event.player);
+    public void onPlayerGetAll(OnPlayerGetAllQuestWaypointEvent event) {
+        Server.sendClearWaypoint(event.player);
         if (!Config.EnabledQuestWaypoint) {
             return;
         }
         IPlayer<EntityPlayerMP> player = (IPlayer<EntityPlayerMP>) NpcAPI.Instance().getIEntity(event.player);
         for (IQuest quest : player.getActiveQuests()) {
-            Server.sendAddWaypoint((EntityPlayerMP) event.player, (Quest) quest);
+            Server.sendAddWaypoint(event.player, (Quest) quest);
         }
     }
 
@@ -47,7 +47,7 @@ public class QuestListener {
         }
         Server.sendRemoveWaypoint(event.player.getMCEntity(), (Quest) event.quest);
     }
-    
+
     @SubscribeEvent
     public void onQuestTurnedIn(QuestTurnedInEvent event) {
         if (!Config.EnabledQuestWaypoint) {

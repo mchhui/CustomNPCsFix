@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ConcurrentSkipListSet;
 
+import mchhui.customnpcsfix.Client;
 import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.api.event.client.ClientSendDataEvent;
 import mchhui.customnpcsfix.client.gui.HueihueaGuiQuestEdit;
@@ -28,8 +29,13 @@ import noppes.npcs.constants.EnumPacketServer;
 import xaero.common.api.spigot.ServerWaypoint;
 import xaero.common.gui.GuiWaypoints;
 import xaero.common.minimap.waypoints.Waypoint;
+import xaero.common.minimap.waypoints.WaypointWorldContainer;
+import xaero.common.minimap.waypoints.WaypointsManager;
+import xaero.minimap.XaeroMinimap;
 
 public class ClientListener {
+    private static String lastAutoContainerID=null;
+    
     @SubscribeEvent
     public void onClientSendData(ClientSendDataEvent event) {
         if (!Config.DontSendDubiousScript) {
@@ -58,6 +64,17 @@ public class ClientListener {
     public void onTick(ClientTickEvent event) {
         if (event.phase != Phase.END) {
             return;
+        }
+        WaypointsManager manager = XaeroMinimap.instance.getWaypointsManager();
+        System.out.println(manager.getAutoContainerID());
+        if(lastAutoContainerID!=manager.getAutoContainerID()) {
+            if(manager.getAutoContainerID()!=null) {
+                Client.getAllQuestWaypoint();
+            }
+        }
+        lastAutoContainerID=manager.getAutoContainerID();
+        if(Minecraft.getMinecraft().world==null) {
+            lastAutoContainerID=null;
         }
         GuiScreen gui = Minecraft.getMinecraft().currentScreen;
         if (gui instanceof GuiWaypoints) {

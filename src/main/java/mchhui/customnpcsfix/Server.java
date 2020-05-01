@@ -3,7 +3,7 @@ package mchhui.customnpcsfix;
 import java.io.IOException;
 
 import io.netty.buffer.Unpooled;
-import mchhui.customnpcsfix.constants.EnumPacketServer;
+import mchhui.customnpcsfix.constants.EnumFixPacketClient;
 import mchhui.customnpcsfix.controllers.data.Waypoint;
 import mchhui.customnpcsfix.util.CustomNPCsFixScheduler;
 import mchhui.customnpcsfix.util.QuestHelper;
@@ -22,7 +22,7 @@ public class Server {
                 return;
             }
             try {
-                if (!noppes.npcs.Server.fillBuffer(buffer, EnumPacketServer.ADD_WAYPOINT,
+                if (!noppes.npcs.Server.fillBuffer(buffer, EnumFixPacketClient.ADD_WAYPOINT,
                         new Object[] { point.writeNBT() })) {
                     return;
                 }
@@ -38,7 +38,7 @@ public class Server {
         CustomNPCsFixScheduler.runTack(() -> {
             PacketBuffer buffer = new PacketBuffer(Unpooled.buffer());
             try {
-                if (!noppes.npcs.Server.fillBuffer(buffer, EnumPacketServer.REMOVE_WAYPOINT,
+                if (!noppes.npcs.Server.fillBuffer(buffer, EnumFixPacketClient.REMOVE_WAYPOINT,
                         new Object[] { QuestHelper.getQuestWaypoint(quest).writeNBT() })) {
                     return;
                 }
@@ -54,7 +54,7 @@ public class Server {
         CustomNPCsFixScheduler.runTack(() -> {
             PacketBuffer buffer = new PacketBuffer(Unpooled.buffer());
             try {
-                if (!noppes.npcs.Server.fillBuffer(buffer, EnumPacketServer.CLEAR_WAYPOINT)) {
+                if (!noppes.npcs.Server.fillBuffer(buffer, EnumFixPacketClient.CLEAR_WAYPOINT)) {
                     return;
                 }
                 CustomNPCsFix.Channel.sendTo(new FMLProxyPacket(buffer, "CustomNPCsFix"), player);

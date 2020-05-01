@@ -5,7 +5,7 @@ import java.io.IOException;
 import io.netty.buffer.ByteBuf;
 import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.EnumHandler;
-import mchhui.customnpcsfix.constants.EnumPacketServer;
+import mchhui.customnpcsfix.constants.EnumFixPacketClient;
 import mchhui.customnpcsfix.controllers.data.Waypoint;
 import mchhui.customnpcsfix.util.QuestHelper;
 import net.minecraft.nbt.NBTTagCompound;
@@ -21,8 +21,8 @@ public class HueihueaHandlerClient {
         @SubscribeEvent
         public void onServerPacket(ClientCustomPacketEvent event) {
             ByteBuf buffer = event.getPacket().payload().copy();
-            EnumPacketServer type = EnumPacketServer.values()[buffer.readInt()];
-            if (type == EnumPacketServer.ADD_WAYPOINT) {
+            EnumFixPacketClient type = EnumFixPacketClient.values()[buffer.readInt()];
+            if (type == EnumFixPacketClient.ADD_WAYPOINT) {
                 try {
                     NBTTagCompound nbt = Server.readNBT(buffer);
                     Waypoint waypoint = new Waypoint();
@@ -32,7 +32,7 @@ public class HueihueaHandlerClient {
                     e.printStackTrace();
                 }
             }
-            if (type == EnumPacketServer.REMOVE_WAYPOINT) {
+            if (type == EnumFixPacketClient.REMOVE_WAYPOINT) {
                 try {
                     NBTTagCompound nbt = Server.readNBT(buffer);
                     Waypoint waypoint = new Waypoint();
@@ -42,7 +42,7 @@ public class HueihueaHandlerClient {
                     e.printStackTrace();
                 }
             }
-            if (type == EnumPacketServer.CLEAR_WAYPOINT) {
+            if (type == EnumFixPacketClient.CLEAR_WAYPOINT) {
                 QuestHelper.clearAllWaypoint();
             }
             buffer.release();

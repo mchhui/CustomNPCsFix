@@ -28,6 +28,7 @@ public class CommonProxy {
         NpcAPI.Instance().events().register(new RoleListener());
         CustomNpcs.Channel.register(new HueihueaHandlerServer.NPCHandler());
         CustomNpcs.Channel.register(new HueihueaHandlerServer.FixHandler());
+        CustomNPCsFix.Channel.register(new HueihueaHandlerServer.WaypointHandler());
         MinecraftForge.EVENT_BUS.register(new QuestListener());
         NpcAPI.Instance().events().register(new QuestListener());
         MinecraftForge.EVENT_BUS.register(new PlayerListener());

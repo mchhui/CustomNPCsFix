@@ -3,6 +3,7 @@ package mchhui.customnpcsfix.api;
 import mchhui.customnpcsfix.NetListener;
 import mchhui.customnpcsfix.api.event.CustomNPCsPreSendPacketEvent;
 import mchhui.customnpcsfix.api.event.CustomNPCsSendPacketEvent;
+import mchhui.customnpcsfix.api.event.OnPlayerGetAllQuestWaypointEvent;
 import mchhui.customnpcsfix.api.event.client.ClientSendDataEvent;
 import mchhui.customnpcsfix.api.event.client.RenderCustomNpcEvent;
 import mchhui.customnpcsfix.api.event.xaerominimap.DrawIconOnGUIEvent;
@@ -60,5 +61,9 @@ public class EventHook {
         return MinecraftForge.EVENT_BUS.post(
                 new RenderWaypointIngameEvent(renderer, cameraAngleYaw, lookVector, lookVectorMultiplier, eyesX, eyesY,
                         eyesZ, waypoint, modMain, radius, d3, d4, d5, entity, bufferBuilder, tessellator, divideBy8));
+    }
+    
+    public static void OnPlayerGetAllQuestWaypoint(EntityPlayerMP player) {
+        MinecraftForge.EVENT_BUS.post(new OnPlayerGetAllQuestWaypointEvent(player));
     }
 }
