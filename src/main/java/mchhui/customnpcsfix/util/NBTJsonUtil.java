@@ -21,7 +21,6 @@ public class NBTJsonUtil {
     }
 
     public static String ConvertList(List list) {
-        FMLLog.log.info("test1");
         StringBuilder json = new StringBuilder();
         int tab = 0;
         Class classJsonLine;
