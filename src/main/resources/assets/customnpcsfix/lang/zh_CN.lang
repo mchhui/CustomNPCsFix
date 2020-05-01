@@ -1,0 +1,8 @@
+quest.waypoint=导航点
+quest.waypoint.worlddim=世界DIM
+quest.waypoint.setname=路径点集(设置)
+quest.waypoint.x=X坐标
+quest.waypoint.y=Y坐标
+quest.waypoint.z=Z坐标
+quest.waypoint.disable=禁用
+quest.waypoint.enable=启用
