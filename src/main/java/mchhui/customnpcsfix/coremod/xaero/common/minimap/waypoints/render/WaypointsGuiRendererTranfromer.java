@@ -17,7 +17,7 @@ import org.objectweb.asm.tree.VarInsnNode;
 import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraftforge.fml.common.FMLLog;
 
-public class WaypointsGuiRendererTranfromer implements IClassTransformer{
+public class WaypointsGuiRendererTranfromer implements IClassTransformer {
 
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {
@@ -29,6 +29,12 @@ public class WaypointsGuiRendererTranfromer implements IClassTransformer{
             List<MethodNode> methods = classNode.methods;
             for (MethodNode method : methods) {
                 if (method.name.equals("drawIconOnGUI")) {
+                    if (!method.desc.equals(
+                            "(Lxaero/common/minimap/waypoints/Waypoint;Lxaero/common/settings/ModSettings;II)V")) {
+                        FMLLog.log.warn(
+                                "CustomNPCsFix EnabledQuestWaypoint can't work in this version of xaero's minimap");
+                        return basicClass;
+                    }
                     InsnList list = new InsnList();
                     LabelNode label = new LabelNode();
                     list.add(new VarInsnNode(Opcodes.ALOAD, 0));
@@ -37,7 +43,8 @@ public class WaypointsGuiRendererTranfromer implements IClassTransformer{
                     list.add(new VarInsnNode(Opcodes.ILOAD, 3));
                     list.add(new VarInsnNode(Opcodes.ILOAD, 4));
                     list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "mchhui/customnpcsfix/api/EventHook",
-                            "onDrawIconOnGUI", "(Lxaero/common/minimap/waypoints/render/WaypointsGuiRenderer;Lxaero/common/minimap/waypoints/Waypoint;Lxaero/common/settings/ModSettings;II)Z",
+                            "onDrawIconOnGUI",
+                            "(Lxaero/common/minimap/waypoints/render/WaypointsGuiRenderer;Lxaero/common/minimap/waypoints/Waypoint;Lxaero/common/settings/ModSettings;II)Z",
                             false));
                     list.add(new JumpInsnNode(Opcodes.IFEQ, label));
                     list.add(new InsnNode(Opcodes.RETURN));

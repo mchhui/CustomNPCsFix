@@ -66,7 +66,6 @@ public class ClientListener {
             return;
         }
         WaypointsManager manager = XaeroMinimap.instance.getWaypointsManager();
-        System.out.println(manager.getAutoContainerID());
         if(lastAutoContainerID!=manager.getAutoContainerID()) {
             if(manager.getAutoContainerID()!=null) {
                 Client.getAllQuestWaypoint();

@@ -15,11 +15,12 @@ import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.tree.VarInsnNode;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper;
 
-public class WaypointsIngameRendererTranfromer implements IClassTransformer{
+public class WaypointsIngameRendererTranfromer implements IClassTransformer {
 
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {
@@ -31,9 +32,14 @@ public class WaypointsIngameRendererTranfromer implements IClassTransformer{
             List<MethodNode> methods = classNode.methods;
             for (MethodNode method : methods) {
                 if (method.name.equals("renderWaypointIngame")) {
-                    for(AbstractInsnNode node :method.instructions.toArray()) {
-                        if(node.getOpcode()==Opcodes.INVOKEVIRTUAL) {
-                            if(((MethodInsnNode)node).name.equals("drawIconInWorld")) {
+                    if (!method.desc.equals(
+                            "(FLnet/minecraft/util/math/Vec3d;IDDDLxaero/common/minimap/waypoints/Waypoint;Lxaero/common/IXaeroMinimap;DDDDLnet/minecraft/entity/Entity;Lnet/minecraft/client/renderer/BufferBuilder;Lnet/minecraft/client/renderer/Tessellator;Z)V")) {
+                        FMLLog.log.warn("CustomNPCsFix EnabledQuestWaypoint can't work in this version of xaero's minimap");
+                        return basicClass;
+                    }
+                    for (AbstractInsnNode node : method.instructions.toArray()) {
+                        if (node.getOpcode() == Opcodes.INVOKEVIRTUAL) {
+                            if (((MethodInsnNode) node).name.equals("drawIconInWorld")) {
                                 InsnList list = new InsnList();
                                 LabelNode label = new LabelNode();
                                 list.add(label);
@@ -55,7 +61,8 @@ public class WaypointsIngameRendererTranfromer implements IClassTransformer{
                                 list.add(new VarInsnNode(Opcodes.ALOAD, 22));//tessellator
                                 list.add(new VarInsnNode(Opcodes.ILOAD, 23));//divideBy8
                                 list.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "mchhui/customnpcsfix/api/EventHook",
-                                        "onRenderWaypointIngame", "(Lxaero/common/minimap/waypoints/render/WaypointsIngameRenderer;FLnet/minecraft/util/math/Vec3d;IDDDLxaero/common/minimap/waypoints/Waypoint;Lxaero/common/IXaeroMinimap;DDDDLnet/minecraft/entity/Entity;Lnet/minecraft/client/renderer/BufferBuilder;Lnet/minecraft/client/renderer/Tessellator;Z)Z",
+                                        "onRenderWaypointIngame",
+                                        "(Lxaero/common/minimap/waypoints/render/WaypointsIngameRenderer;FLnet/minecraft/util/math/Vec3d;IDDDLxaero/common/minimap/waypoints/Waypoint;Lxaero/common/IXaeroMinimap;DDDDLnet/minecraft/entity/Entity;Lnet/minecraft/client/renderer/BufferBuilder;Lnet/minecraft/client/renderer/Tessellator;Z)Z",
                                         false));
                                 method.instructions.insert(node, list);
                             }
