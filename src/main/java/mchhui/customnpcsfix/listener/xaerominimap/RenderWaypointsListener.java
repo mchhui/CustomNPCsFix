@@ -1,11 +1,15 @@
 package mchhui.customnpcsfix.listener.xaerominimap;
 
+import java.lang.reflect.Field;
+
 import mchhui.customnpcsfix.api.event.xaerominimap.DrawIconOnGUIEvent;
 import mchhui.customnpcsfix.api.event.xaerominimap.RenderWaypointIngameEvent;
 import mchhui.customnpcsfix.util.QuestHelper;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -27,7 +31,23 @@ public class RenderWaypointsListener {
         int c = event.waypoint.getColor();
         GlStateManager.color(c % 1000 / 255.0f, c % 1000000 / 1000 / 255.0f, c % 1000000000 / 1000000 / 255.0f);
         Minecraft.getMinecraft().getTextureManager().bindTexture(TEX);
-        Minecraft.getMinecraft().ingameGUI.drawTexturedModalRect(event.drawX-8, event.drawY-8, 0, 0, 16, 16);
+        //Minecraft.getMinecraft().ingameGUI.drawTexturedModalRect(event.drawX - 8, event.drawY - 8, 0, 0, 16, 16);
+        float f = 0.00390625F;
+        float f1 = 0.00390625F;
+        int x = event.drawX - 8;
+        int y = event.drawY - 8;
+        int textureX = 0;
+        int textureY = 0;
+        int height = 16;
+        int width = 16;
+        Tessellator tessellator = Tessellator.getInstance();
+        BufferBuilder bufferbuilder = tessellator.getBuffer();
+        bufferbuilder.begin(7, DefaultVertexFormats.POSITION_TEX);
+        bufferbuilder.pos(x, y, 0).tex(textureX * f, textureY * f1).endVertex();
+        bufferbuilder.pos(x, y + height, 0).tex(textureX * f, (textureY + height) * f1).endVertex();
+        bufferbuilder.pos(x + width, y + height, 0).tex((textureX + width) * f, (textureY + height) * f1).endVertex();
+        bufferbuilder.pos(x + width, y, 0).tex((textureX + width) * f, textureY * f1).endVertex();
+        tessellator.draw();
         GlStateManager.popMatrix();
     }
 
