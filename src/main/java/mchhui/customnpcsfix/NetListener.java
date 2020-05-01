@@ -76,6 +76,7 @@ public class NetListener {
             }
             player.sendMessage(new TextComponentString("[" + time + "] " + sender + " > Server " + type));
         }
+        buffer.release();
     }
 
     public static void onPacketSend(CustomNPCsSendPacketEvent event) {
