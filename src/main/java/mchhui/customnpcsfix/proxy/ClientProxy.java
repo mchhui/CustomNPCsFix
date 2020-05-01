@@ -10,6 +10,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import noppes.npcs.CustomNpcs;
 
 public class ClientProxy extends CommonProxy {
     @Override
@@ -23,7 +24,8 @@ public class ClientProxy extends CommonProxy {
         MinecraftForge.EVENT_BUS.register(new NPCRenderListener());
         MinecraftForge.EVENT_BUS.register(new ClientListener());
         MinecraftForge.EVENT_BUS.register(new RenderWaypointsListener());
-        FMLCommonHandler.instance().bus().register(new ClientListener());
+        MinecraftForge.EVENT_BUS.register(new ClientListener());
         CustomNPCsFix.Channel.register(new HueihueaHandlerClient.WaypointHandler());
+        CustomNpcs.Channel.register(new HueihueaHandlerClient.FixHandler());
     }
 }

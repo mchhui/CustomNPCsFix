@@ -14,6 +14,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientCustomPacketEvent;
 import net.minecraftforge.fml.common.network.FMLNetworkEvent.ServerCustomPacketEvent;
 import noppes.npcs.Server;
+import noppes.npcs.constants.EnumPacketClient;
 
 public class HueihueaHandlerClient {
     public static class WaypointHandler {
@@ -43,6 +44,28 @@ public class HueihueaHandlerClient {
             }
             if (type == EnumPacketServer.CLEAR_WAYPOINT) {
                 QuestHelper.clearAllWaypoint();
+            }
+            buffer.release();
+        }
+    }
+
+    public static class FixHandler {
+        @SubscribeEvent(priority = EventPriority.HIGH)
+        public void onHandle(ClientCustomPacketEvent event) {
+            ByteBuf buffer = event.getPacket().payload().copy();
+            EnumPacketClient type = EnumPacketClient.values()[buffer.readInt()];
+            if (Config.DontUseScriptItemTextures) {
+                if (type == EnumPacketClient.SYNC_ADD || type == EnumPacketClient.SYNC_END) {
+                    if (buffer.readInt() == 9) {
+                        event.getPacket().payload().clear();
+                        try {
+                            Server.fillBuffer(buffer, EnumHandler.NOTHING, new Object[] {});
+                        } catch (IOException e) {
+                            // TODO 自动生成的 catch 块
+                            e.printStackTrace();
+                        }
+                    }
+                }
             }
             buffer.release();
         }
