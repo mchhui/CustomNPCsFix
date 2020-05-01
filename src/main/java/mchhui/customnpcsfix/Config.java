@@ -31,19 +31,27 @@ public class Config {
         String comment;
 
         //GENERAL
-        comment = "更快的JSON反序列化 虽然不是特别快 但是比NPC自带的快的多";
+        comment = "更快的JSON反序列化 虽然不是特别快 但是比NPC自带的快的多\n"
+                + "这通常用来修复开启玩家档案卡顿";
         FastJsonDeserialize = config.get(Configuration.CATEGORY_GENERAL, "FastJsonDeserialize", false, comment)
                 .getBoolean();
-        comment = "慎用! Gson实现json(反)序列化 特大复杂数据比FastJsonDeserialize快 \n注:\n1.需先启用FastJsonDeserialize\n2.Gson序列化的文件原版NPC不可反序列化\n3.为了性能 放弃格式化";
+        comment = "慎用! Gson实现json(反)序列化 特大复杂数据比FastJsonDeserialize快 \n"
+                + "注:\n"
+                + "1.需先启用FastJsonDeserialize\n"
+                + "2.Gson序列化的文件原版NPC不可反序列化";
         UseNBTJson = config.get(Configuration.CATEGORY_GENERAL, "UseNBTJson", false, comment).getBoolean();
-        comment = "NPC的say方法说出%不再崩溃";
+        comment = "修复%信息崩溃bug\n"
+                + "这通常用于修复:\n"
+                + "1.NPC台词里使用%导致错误\n"
+                + "2.NPC脚本里NPC的say方法和玩家的message发送%导致错误";
         NoMsgPercentSymbolBug = config.get(Configuration.CATEGORY_GENERAL, "NoMsgPercentSymbolBug", false, comment)
                 .getBoolean();
 
         //Client
-        comment = "会为无材质的NPC使用透明材质,这防止了此错误信息刷屏";
+        comment = "会为无材质的NPC使用透明材质,这防止了此错误信息在客户端日志里刷屏\n"
+                + "这通常服务强迫症和开发者";
         SafeRenderNoTexNPC = config.get("client", "SafeRenderNoTexNPC", false, comment).getBoolean();
-        comment = "死亡自动把NPC补充到区块 修复不可互交BUG";
+        comment = "死亡自动把NPC补充到区块\n这通常用来修复死后不可互交BUG";
         AutoReaddNPCToChunk = config.get("client", "AutoReaddNPCToChunk", false, comment).getBoolean();
 
         config.save();

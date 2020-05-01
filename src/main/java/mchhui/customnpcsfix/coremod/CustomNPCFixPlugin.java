@@ -12,12 +12,10 @@ public class CustomNPCFixPlugin implements IFMLLoadingPlugin {
 
     @Override
     public String[] getASMTransformerClass() {
-        return new String[] { 
-                "mchhui.customnpcsfix.coremod.noppes.npcs.util.NBTJsonUtilTransformer",
+        return new String[] { "mchhui.customnpcsfix.coremod.noppes.npcs.util.NBTJsonUtilTransformer",
                 "mchhui.customnpcsfix.coremod.noppes.npcs.client.PacketHandlerClientTransfromer",
                 "mchhui.customnpcsfix.coremod.noppes.npcs.client.renderer.RenderNPCHumanMaleTansfromer",
-                "mchhui.customnpcsfix.coremod.noppes.npcs.scripted.ScriptPlayerTransfromer",
-                };
+                "mchhui.customnpcsfix.coremod.noppes.npcs.scripted.ScriptPlayerTransfromer", };
     }
 
     @Override
