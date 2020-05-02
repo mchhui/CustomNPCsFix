@@ -3,6 +3,7 @@ package mchhui.customnpcsfix.listener.client;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -17,13 +18,26 @@ import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.Waypoi
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.text.TextComponentString;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.resource.VanillaResourceType;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.client.FMLClientHandler;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.FMLLog;
+import net.minecraftforge.fml.common.LoadController;
+import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.ModContainer;
+import net.minecraftforge.fml.common.discovery.asm.ModAnnotation;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
+import net.minecraftforge.fml.relauncher.FMLLaunchHandler;
+import noppes.npcs.CustomItems;
 import noppes.npcs.client.gui.global.GuiNPCManageQuest;
 import noppes.npcs.client.gui.global.GuiQuestEdit;
 import noppes.npcs.client.gui.script.GuiScriptInterface;
@@ -82,9 +96,10 @@ public class ClientListener {
                 lastAutoContainerID = null;
             }
         }
+        
         if(Minecraft.getMinecraft().world!=null) {
             if(!initMessageSent) {
-                if (!WaypointsGuiRendererTranfromer.isSuccessful || !WaypointsIngameRendererTranfromer.isSuccessful) {
+                if (Loader.isModLoaded("Xaero's Minimap")&&(!WaypointsGuiRendererTranfromer.isSuccessful || !WaypointsIngameRendererTranfromer.isSuccessful)) {
                     Minecraft.getMinecraft().player.sendMessage(new TextComponentString(I18n.format("mod.xmap.unsupportedversion")));
                 }
                 initMessageSent=true;

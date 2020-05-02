@@ -19,55 +19,84 @@ import xaero.common.minimap.waypoints.render.WaypointsIngameRenderer;
 import xaero.minimap.XaeroMinimap;
 
 public class QuestHelper {
-    public static Map<Integer, xaero.common.minimap.waypoints.Waypoint> points = new HashMap<Integer, xaero.common.minimap.waypoints.Waypoint>();
-    public static Map<xaero.common.minimap.waypoints.Waypoint, WaypointSet> setFromPoint = new HashMap<xaero.common.minimap.waypoints.Waypoint, WaypointSet>();
-
     public static void addWaypoint(Waypoint point) {
-        if (!WaypointsGuiRendererTranfromer.isSuccessful || !WaypointsIngameRendererTranfromer.isSuccessful) {
-            return;
+        if (Config.QuestWaypointJMapMode) {
+
         }
-        WaypointsManager manager = XaeroMinimap.instance.getWaypointsManager();
-        WaypointWorldContainer container = manager.getWorldContainer(manager.getAutoContainerID().split("/")[0]);
-        container = container.addSubContainer(point.worldDIM);
-        WaypointSet set = container.addWorld("waypoints").getSets().get(point.setName);
-        xaero.common.minimap.waypoints.Waypoint waypoint = new xaero.common.minimap.waypoints.Waypoint(point.x, point.y,
-                point.z, point.displayName, "", ((int) (Math.random() * 255) * 1000000
-                        + (int) (Math.random() * 255) * 1000 + (int) (Math.random() * 255)),
-                1001, true);
-        points.put(point.questID, waypoint);
-        setFromPoint.put(waypoint, set);
-        set.getList().add(waypoint);
+        XMap.addWaypoint(point);
     }
 
     public static void removeWaypoint(Waypoint point) {
-        if (!WaypointsGuiRendererTranfromer.isSuccessful || !WaypointsIngameRendererTranfromer.isSuccessful) {
-            return;
+        if (Config.QuestWaypointJMapMode) {
+
         }
-        WaypointsManager manager = XaeroMinimap.instance.getWaypointsManager();
-        WaypointWorldContainer container = manager.getWorldContainer(manager.getAutoContainerID().split("/")[0]);
-        container = container.addSubContainer(point.worldDIM);
-        WaypointSet set = container.addWorld("waypoints").getSets().get(point.setName);
-        xaero.common.minimap.waypoints.Waypoint waypoint = (xaero.common.minimap.waypoints.Waypoint) points
-                .remove(point.questID);
-        if (waypoint == null) {
-            return;
-        }
-        set.getList().remove(waypoint);
-        setFromPoint.remove(waypoint);
+        XMap.removeWaypoint(point);
     }
 
     public static void clearAllWaypoint() {
-        if (!WaypointsGuiRendererTranfromer.isSuccessful || !WaypointsIngameRendererTranfromer.isSuccessful) {
-            return;
+        if (Config.QuestWaypointJMapMode) {
+
         }
-        points.clear();
-        for (Object point : setFromPoint.keySet().toArray()) {
-            setFromPoint.get((xaero.common.minimap.waypoints.Waypoint) point).getList()
-                    .remove(((xaero.common.minimap.waypoints.Waypoint) point));
-        }
-        setFromPoint.clear();
+        XMap.clearAllWaypoint();
     }
 
+    public static class XMap {
+        public static Map<Integer, xaero.common.minimap.waypoints.Waypoint> points = new HashMap<Integer, xaero.common.minimap.waypoints.Waypoint>();
+        public static Map<xaero.common.minimap.waypoints.Waypoint, WaypointSet> setFromPoint = new HashMap<xaero.common.minimap.waypoints.Waypoint, WaypointSet>();
+
+        public static void addWaypoint(Waypoint point) {
+            if (!WaypointsGuiRendererTranfromer.isSuccessful || !WaypointsIngameRendererTranfromer.isSuccessful) {
+                return;
+            }
+            WaypointsManager manager = XaeroMinimap.instance.getWaypointsManager();
+            WaypointWorldContainer container = manager.getWorldContainer(manager.getAutoContainerID().split("/")[0]);
+            container = container.addSubContainer(point.worldDIM);
+            WaypointSet set = container.addWorld("waypoints").getSets().get(point.setName);
+            xaero.common.minimap.waypoints.Waypoint waypoint = new xaero.common.minimap.waypoints.Waypoint(point.x,
+                    point.y, point.z, point.displayName, "", ((int) (Math.random() * 255) * 1000000
+                            + (int) (Math.random() * 255) * 1000 + (int) (Math.random() * 255)),
+                    1001, true);
+            points.put(point.questID, waypoint);
+            setFromPoint.put(waypoint, set);
+            set.getList().add(waypoint);
+        }
+
+        public static void removeWaypoint(Waypoint point) {
+            if (!WaypointsGuiRendererTranfromer.isSuccessful || !WaypointsIngameRendererTranfromer.isSuccessful) {
+                return;
+            }
+            WaypointsManager manager = XaeroMinimap.instance.getWaypointsManager();
+            WaypointWorldContainer container = manager.getWorldContainer(manager.getAutoContainerID().split("/")[0]);
+            container = container.addSubContainer(point.worldDIM);
+            WaypointSet set = container.addWorld("waypoints").getSets().get(point.setName);
+            xaero.common.minimap.waypoints.Waypoint waypoint = (xaero.common.minimap.waypoints.Waypoint) points
+                    .remove(point.questID);
+            if (waypoint == null) {
+                return;
+            }
+            set.getList().remove(waypoint);
+            setFromPoint.remove(waypoint);
+        }
+
+        public static void clearAllWaypoint() {
+            if (!WaypointsGuiRendererTranfromer.isSuccessful || !WaypointsIngameRendererTranfromer.isSuccessful) {
+                return;
+            }
+            points.clear();
+            for (Object point : setFromPoint.keySet().toArray()) {
+                setFromPoint.get((xaero.common.minimap.waypoints.Waypoint) point).getList()
+                        .remove(((xaero.common.minimap.waypoints.Waypoint) point));
+            }
+            setFromPoint.clear();
+        }
+
+    }
+
+    public static class WayPointHelper {
+        
+        
+    }
+    
     public static Waypoint getQuestWaypoint(Quest quest) {
         try {
             return ((Waypoint) Class.forName("noppes.npcs.controllers.data.Quest").getField("waypoint").get(quest))

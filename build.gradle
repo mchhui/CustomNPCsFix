@@ -57,6 +57,7 @@ dependencies {
     compile files ("lib/Spigot-1.12.2-forge.jar")
     compile files ("lib/[时装工坊]1.12.2-0.49.1-deobf.jar")
     compile files ("lib/Xaeros_Minimap_20.6.0_Forge_1.12-deobf.jar")
+    compile files ("lib/OptiFine_1.12.2_HD_U_F5-deobf.jar")
 }
 
 processResources {
