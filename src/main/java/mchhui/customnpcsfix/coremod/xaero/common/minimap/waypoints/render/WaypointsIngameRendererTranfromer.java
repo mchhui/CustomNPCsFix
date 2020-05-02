@@ -21,6 +21,7 @@ import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper;
 
 public class WaypointsIngameRendererTranfromer implements IClassTransformer {
+    public static boolean isSuccessful = false;
 
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {
@@ -34,7 +35,6 @@ public class WaypointsIngameRendererTranfromer implements IClassTransformer {
                 if (method.name.equals("renderWaypointIngame")) {
                     if (!method.desc.equals(
                             "(FLnet/minecraft/util/math/Vec3d;IDDDLxaero/common/minimap/waypoints/Waypoint;Lxaero/common/IXaeroMinimap;DDDDLnet/minecraft/entity/Entity;Lnet/minecraft/client/renderer/BufferBuilder;Lnet/minecraft/client/renderer/Tessellator;Z)V")) {
-                        FMLLog.log.warn("CustomNPCsFix EnabledQuestWaypoint can't work in this version of xaero's minimap");
                         return basicClass;
                     }
                     for (AbstractInsnNode node : method.instructions.toArray()) {
@@ -73,6 +73,7 @@ public class WaypointsIngameRendererTranfromer implements IClassTransformer {
             ClassWriter classWriter = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
             classNode.accept(classWriter);
             FMLLog.getLogger().warn("[Transformed:xaero.common.minimap.waypoints.render.WaypointsIngameRenderer]");
+            isSuccessful = true;
             return classWriter.toByteArray();
         }
         return basicClass;

@@ -2,6 +2,7 @@ package mchhui.customnpcsfix.listener.xaerominimap;
 
 import java.lang.reflect.Field;
 
+import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.api.event.xaerominimap.DrawIconOnGUIEvent;
 import mchhui.customnpcsfix.api.event.xaerominimap.RenderWaypointIngameEvent;
 import mchhui.customnpcsfix.util.QuestHelper;
@@ -34,8 +35,8 @@ public class RenderWaypointsListener {
         //Minecraft.getMinecraft().ingameGUI.drawTexturedModalRect(event.drawX - 8, event.drawY - 8, 0, 0, 16, 16);
         float f = 0.00390625F;
         float f1 = 0.00390625F;
-        int x = event.drawX - 8;
-        int y = event.drawY - 8;
+        int x = event.drawX - Config.OffestQuestWaypoint[0];
+        int y = event.drawY - Config.OffestQuestWaypoint[1];
         int textureX = 0;
         int textureY = 0;
         int height = 16;

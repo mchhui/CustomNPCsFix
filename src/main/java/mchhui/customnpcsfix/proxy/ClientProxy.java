@@ -1,11 +1,14 @@
 package mchhui.customnpcsfix.proxy;
 
 import mchhui.customnpcsfix.CustomNPCsFix;
+import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsGuiRendererTranfromer;
+import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsIngameRendererTranfromer;
 import mchhui.customnpcsfix.listener.PlayerListener;
 import mchhui.customnpcsfix.listener.client.ClientListener;
 import mchhui.customnpcsfix.listener.client.NPCRenderListener;
 import mchhui.customnpcsfix.listener.xaerominimap.RenderWaypointsListener;
 import mchhui.customnpcsfix.network.HueihueaHandlerClient;
+import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -23,7 +26,9 @@ public class ClientProxy extends CommonProxy {
         super.onInit(event);
         MinecraftForge.EVENT_BUS.register(new NPCRenderListener());
         MinecraftForge.EVENT_BUS.register(new ClientListener());
-        MinecraftForge.EVENT_BUS.register(new RenderWaypointsListener());
+        if(WaypointsGuiRendererTranfromer.isSuccessful && WaypointsIngameRendererTranfromer.isSuccessful) {
+            MinecraftForge.EVENT_BUS.register(new RenderWaypointsListener());
+        }
         MinecraftForge.EVENT_BUS.register(new ClientListener());
         CustomNPCsFix.Channel.register(new HueihueaHandlerClient.WaypointHandler());
         CustomNpcs.Channel.register(new HueihueaHandlerClient.FixHandler());

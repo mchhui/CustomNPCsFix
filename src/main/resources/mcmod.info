@@ -12,6 +12,6 @@
   "logoFile": "assets/customnpcsfix/logo.png",
   "useDependencyInformation": true,
   "screenshots": [],
-  "dependencies": ["customnpcs"]
+  "dependencies": ["customnpcs","xaerominimap"]
 }
 ]

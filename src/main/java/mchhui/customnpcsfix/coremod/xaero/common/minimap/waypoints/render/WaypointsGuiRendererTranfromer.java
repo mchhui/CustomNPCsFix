@@ -18,7 +18,9 @@ import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraftforge.fml.common.FMLLog;
 
 public class WaypointsGuiRendererTranfromer implements IClassTransformer {
-
+    public static boolean isSuccessful=false;
+    
+    
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {
         if (transformedName.equals("xaero.common.minimap.waypoints.render.WaypointsGuiRenderer")) {
@@ -31,8 +33,6 @@ public class WaypointsGuiRendererTranfromer implements IClassTransformer {
                 if (method.name.equals("drawIconOnGUI")) {
                     if (!method.desc.equals(
                             "(Lxaero/common/minimap/waypoints/Waypoint;Lxaero/common/settings/ModSettings;II)V")) {
-                        FMLLog.log.warn(
-                                "CustomNPCsFix EnabledQuestWaypoint can't work in this version of xaero's minimap");
                         return basicClass;
                     }
                     InsnList list = new InsnList();
@@ -55,6 +55,7 @@ public class WaypointsGuiRendererTranfromer implements IClassTransformer {
             ClassWriter classWriter = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
             classNode.accept(classWriter);
             FMLLog.getLogger().warn("[Transformed:xaero.common.minimap.waypoints.render.WaypointsGuiRenderer]");
+            isSuccessful=true;
             return classWriter.toByteArray();
         }
         return basicClass;

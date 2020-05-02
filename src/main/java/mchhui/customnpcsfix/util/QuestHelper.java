@@ -5,6 +5,8 @@ import java.util.Map;
 
 import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.controllers.data.Waypoint;
+import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsGuiRendererTranfromer;
+import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsIngameRendererTranfromer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
@@ -13,6 +15,7 @@ import noppes.npcs.controllers.data.Quest;
 import xaero.common.minimap.waypoints.WaypointSet;
 import xaero.common.minimap.waypoints.WaypointWorldContainer;
 import xaero.common.minimap.waypoints.WaypointsManager;
+import xaero.common.minimap.waypoints.render.WaypointsIngameRenderer;
 import xaero.minimap.XaeroMinimap;
 
 public class QuestHelper {
@@ -20,6 +23,9 @@ public class QuestHelper {
     public static Map<xaero.common.minimap.waypoints.Waypoint, WaypointSet> setFromPoint = new HashMap<xaero.common.minimap.waypoints.Waypoint, WaypointSet>();
 
     public static void addWaypoint(Waypoint point) {
+        if (!WaypointsGuiRendererTranfromer.isSuccessful || !WaypointsIngameRendererTranfromer.isSuccessful) {
+            return;
+        }
         WaypointsManager manager = XaeroMinimap.instance.getWaypointsManager();
         WaypointWorldContainer container = manager.getWorldContainer(manager.getAutoContainerID().split("/")[0]);
         container = container.addSubContainer(point.worldDIM);
@@ -34,13 +40,16 @@ public class QuestHelper {
     }
 
     public static void removeWaypoint(Waypoint point) {
+        if (!WaypointsGuiRendererTranfromer.isSuccessful || !WaypointsIngameRendererTranfromer.isSuccessful) {
+            return;
+        }
         WaypointsManager manager = XaeroMinimap.instance.getWaypointsManager();
         WaypointWorldContainer container = manager.getWorldContainer(manager.getAutoContainerID().split("/")[0]);
         container = container.addSubContainer(point.worldDIM);
         WaypointSet set = container.addWorld("waypoints").getSets().get(point.setName);
         xaero.common.minimap.waypoints.Waypoint waypoint = (xaero.common.minimap.waypoints.Waypoint) points
                 .remove(point.questID);
-        if(waypoint==null) {
+        if (waypoint == null) {
             return;
         }
         set.getList().remove(waypoint);
@@ -48,6 +57,9 @@ public class QuestHelper {
     }
 
     public static void clearAllWaypoint() {
+        if (!WaypointsGuiRendererTranfromer.isSuccessful || !WaypointsIngameRendererTranfromer.isSuccessful) {
+            return;
+        }
         points.clear();
         for (Object point : setFromPoint.keySet().toArray()) {
             setFromPoint.get((xaero.common.minimap.waypoints.Waypoint) point).getList()
@@ -58,7 +70,8 @@ public class QuestHelper {
 
     public static Waypoint getQuestWaypoint(Quest quest) {
         try {
-            return ((Waypoint) Class.forName("noppes.npcs.controllers.data.Quest").getField("waypoint").get(quest)).bind(quest);
+            return ((Waypoint) Class.forName("noppes.npcs.controllers.data.Quest").getField("waypoint").get(quest))
+                    .bind(quest);
         } catch (IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException
                 | ClassNotFoundException e) {
             e.printStackTrace();

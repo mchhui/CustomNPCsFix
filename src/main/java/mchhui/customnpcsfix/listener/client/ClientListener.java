@@ -12,9 +12,13 @@ import mchhui.customnpcsfix.Client;
 import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.api.event.client.ClientSendDataEvent;
 import mchhui.customnpcsfix.client.gui.HueihueaGuiQuestEdit;
+import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsGuiRendererTranfromer;
+import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsIngameRendererTranfromer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -34,8 +38,9 @@ import xaero.common.minimap.waypoints.WaypointsManager;
 import xaero.minimap.XaeroMinimap;
 
 public class ClientListener {
-    private static String lastAutoContainerID=null;
-    
+    private static String lastAutoContainerID = null;
+    private static boolean initMessageSent=false;
+
     @SubscribeEvent
     public void onClientSendData(ClientSendDataEvent event) {
         if (!Config.DontSendDubiousScript) {
@@ -65,18 +70,29 @@ public class ClientListener {
         if (event.phase != Phase.END) {
             return;
         }
-        WaypointsManager manager = XaeroMinimap.instance.getWaypointsManager();
-        if(lastAutoContainerID!=manager.getAutoContainerID()) {
-            if(manager.getAutoContainerID()!=null) {
-                Client.getAllQuestWaypoint();
+        if (WaypointsGuiRendererTranfromer.isSuccessful || WaypointsIngameRendererTranfromer.isSuccessful) {
+            WaypointsManager manager = XaeroMinimap.instance.getWaypointsManager();
+            if (lastAutoContainerID != manager.getAutoContainerID()) {
+                if (manager.getAutoContainerID() != null) {
+                    Client.getAllQuestWaypoint();
+                }
+            }
+            lastAutoContainerID = manager.getAutoContainerID();
+            if (Minecraft.getMinecraft().world == null) {
+                lastAutoContainerID = null;
             }
         }
-        lastAutoContainerID=manager.getAutoContainerID();
-        if(Minecraft.getMinecraft().world==null) {
-            lastAutoContainerID=null;
+        if(Minecraft.getMinecraft().world!=null) {
+            if(!initMessageSent) {
+                if (!WaypointsGuiRendererTranfromer.isSuccessful || !WaypointsIngameRendererTranfromer.isSuccessful) {
+                    Minecraft.getMinecraft().player.sendMessage(new TextComponentString(I18n.format("mod.xmap.unsupportedversion")));
+                }
+                initMessageSent=true;
+            }
         }
         GuiScreen gui = Minecraft.getMinecraft().currentScreen;
-        if (gui instanceof GuiWaypoints) {
+        if ((WaypointsGuiRendererTranfromer.isSuccessful || WaypointsIngameRendererTranfromer.isSuccessful)
+                && gui instanceof GuiWaypoints) {
             List<Waypoint> list;
             ConcurrentSkipListSet<Integer> selectedListSet;
             Class GuiWaypointsClass = GuiWaypoints.class;

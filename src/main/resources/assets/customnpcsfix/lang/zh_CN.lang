@@ -6,3 +6,4 @@ quest.waypoint.y=Y坐标
 quest.waypoint.z=Z坐标
 quest.waypoint.disable=禁用
 quest.waypoint.enable=启用
+mod.xmap.unsupportedversion=§aCustomNPCsFix §r不支持当前版本的 §cXaeros_Minimap

@@ -25,6 +25,7 @@ public class Config {
     public static boolean SafeRenderNoTexNPC;
     public static boolean LimitedScriptGuiAddButton;
     public static boolean DontUseScriptItemTextures;
+    public static int[] OffestQuestWaypoint = new int[] { 8, 8 };
 
     public Config(FMLPreInitializationEvent event) {
         logger = event.getModLog();
@@ -63,7 +64,8 @@ public class Config {
         comment = "在玩家受到来源npc的伤害自动将其类型转为NPCDamageSource\n" + "这通常是方便开发者用的";
         AutoUseNPCDamageSource = config.get(Configuration.CATEGORY_GENERAL, "AutoUseNPCDamageSource", false, comment)
                 .getBoolean();
-        comment = "启动任务导航点功能\n" + "这允许你在玩家进行任务时在地图上标点为玩家导航\n" + "这需要在客户端安装CustomNPCsFix和Xaeros Minimap\n"+"推荐开启小地图选项\"以上距离路近点显示名称\"";
+        comment = "启动任务导航点功能\n" + "这允许你在玩家进行任务时在地图上标点为玩家导航\n" + "这需要在客户端安装CustomNPCsFix和Xaeros Minimap\n"
+                + "推荐开启小地图选项\"以上距离路近点显示名称\"";
         EnabledQuestWaypoint = config.get(Configuration.CATEGORY_GENERAL, "EnabledQuestWaypoint", false, comment)
                 .getBoolean();
         comment = "更精准的物品搜集任务判定\n" + "优化物品搜集任务的不精准判断";
@@ -83,6 +85,12 @@ public class Config {
         comment = "不使用脚本物品材质\n" + "这可以用来修复脚本物品不支持高清修复的自定义物品模型";
         DontUseScriptItemTextures = config
                 .get(Configuration.CATEGORY_CLIENT, "DontUseScriptItemTextures", false, comment).getBoolean();
+        comment = "渲染任务导航点图标的偏移量\n" + "第一个是X坐标偏移 第二个是Y坐标偏移";
+        int[] arr = config.get(Configuration.CATEGORY_CLIENT, "OffestQuestWaypoint", OffestQuestWaypoint, comment)
+                .getIntList();
+        for (int i = 0; i < 2 && i < arr.length; i++) {
+            OffestQuestWaypoint[i] = arr[i];
+        }
 
         config.save();
         logger.info("Finished loading config. ");
