@@ -326,13 +326,6 @@ public class JSONTokener {
                 case 'r':
                     sb.append('\r');
                     break;
-                case 'u':
-                    try {
-                        sb.append((char) Integer.parseInt(this.next(4), 16));
-                    } catch (NumberFormatException e) {
-                        throw this.syntaxError("Illegal escape.", e);
-                    }
-                    break;
                 case '"':
                 case '\'':
                 case '\\':
@@ -340,7 +333,8 @@ public class JSONTokener {
                     sb.append(c);
                     break;
                 default:
-                    throw this.syntaxError("Illegal escape.");
+                    sb.append("\\").append(c);
+                    break;
                 }
                 break;
             default:
