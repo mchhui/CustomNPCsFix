@@ -24,6 +24,9 @@ public class Waypoint {
     }
 
     public void readNBT(NBTTagCompound compound) {
+        if(compound.hasNoTags()) {
+            return;
+        }
         questID = compound.getInteger("QuestID");
         displayName = compound.getString("DisplayName");
         worldDIM = compound.getString("WorldDIM");
