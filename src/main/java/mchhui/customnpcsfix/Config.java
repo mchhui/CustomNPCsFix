@@ -59,7 +59,7 @@ public class Config {
         comment = "*已完全废弃 失效 \n" + "不接受可疑的脚本保存请求 如果保存请求是无脚本内容且启动是关闭的 就过滤掉\n"
                 + "1.这会抛出Error with EnumPacketServer.null\n" + "2.更加推荐在客户端开启DontSendDubiousScript\n"
                 + "这通常用于解决有时候出现的脚本保存丢失";
-        if (config.get(Configuration.CATEGORY_GENERAL, "DontAccpetDubiousScript", false, comment).getBoolean()) {
+        if (config.hasKey(Configuration.CATEGORY_GENERAL, "DontAccpetDubiousScript")&&config.get(Configuration.CATEGORY_GENERAL, "DontAccpetDubiousScript", false, comment).getBoolean()) {
             FMLLog.log.warn("你在customnpcsfix.cfg内开启了一个已失效的选项 DontAccpetDubiousScript");
         }
         comment = "在玩家受到来源npc的伤害自动将其类型转为NPCDamageSource\n" + "这通常是方便开发者用的";
@@ -84,7 +84,7 @@ public class Config {
         LimitedScriptGuiAddButton = config
                 .get(Configuration.CATEGORY_CLIENT, "LimitedScriptGuiAddButton", false, comment).getBoolean();
         comment = "*已完全废弃 失效 \n" +"不使用脚本物品材质\n" + "这可以用来修复脚本物品不支持高清修复的自定义物品模型";
-        if (config.get(Configuration.CATEGORY_GENERAL, "DontUseScriptItemTextures", false, comment).getBoolean()) {
+        if (config.hasKey(Configuration.CATEGORY_CLIENT, "DontUseScriptItemTextures")&&config.get(Configuration.CATEGORY_CLIENT, "DontUseScriptItemTextures", false, comment).getBoolean()) {
             FMLLog.log.warn("你在customnpcsfix.cfg内开启了一个已失效的选项 DontUseScriptItemTextures");
         }
         comment = "渲染任务导航点图标的偏移量\n" + "第一个是X坐标偏移 第二个是Y坐标偏移";
