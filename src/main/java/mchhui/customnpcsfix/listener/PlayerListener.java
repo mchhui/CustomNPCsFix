@@ -62,7 +62,7 @@ public class PlayerListener {
 
     @SubscribeEvent
     public void pickUp(EntityItemPickupEvent event) {
-        if(!Config.EffectiveCollectItemQuest) {
+        if (!Config.EffectiveCollectItemQuest) {
             return;
         }
         if (!(event.getEntityPlayer() instanceof EntityPlayerMP)) {
@@ -96,8 +96,8 @@ public class PlayerListener {
             event.getEntityPlayer().inventory.getStackInSlot(i)
                     .setCount(event.getEntityPlayer().inventory.getStackInSlot(i).getCount()
                             - event.getItem().getItem().getCount());
-            ((EntityPlayerMP) event.getEntityPlayer())
-                    .sendContainerToPlayer(event.getEntityPlayer().inventoryContainer);
+            ((EntityPlayerMP) event.getEntityPlayer()).sendSlotContents(event.getEntityPlayer().inventoryContainer, i,
+                    event.getEntityPlayer().inventory.getStackInSlot(i));
         }
     }
 
@@ -106,9 +106,6 @@ public class PlayerListener {
                 && stack1.getCount() < stack1.getMaxStackSize() && stack1.getCount() < 64;
     }
 
-    /**
-     * Checks item, NBT, and meta if the item is not damageable
-     */
     private boolean stackEqualExact(ItemStack stack1, ItemStack stack2) {
         return stack1.getItem() == stack2.getItem()
                 && (!stack1.getHasSubtypes() || stack1.getMetadata() == stack2.getMetadata())
