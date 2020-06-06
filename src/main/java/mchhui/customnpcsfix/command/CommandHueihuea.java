@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.List;
 
 import mchhui.customnpcsfix.Config;
+import mchhui.customnpcsfix.CustomNPCsFix;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.server.MinecraftServer;
@@ -30,15 +31,15 @@ public class CommandHueihuea extends CommandBase {
     public List addTabCompletionOptions(ICommandSender sender, String[] args) {
         switch (args.length) {
         case 1:
-            return this.getListOfStringsMatchingLastWord(args, "help","reload");
+            return this.getListOfStringsMatchingLastWord(args, "help", "reload", "version");
         case 2:
-            return this.getListOfStringsMatchingLastWord(args,"reserialize");
+            return this.getListOfStringsMatchingLastWord(args, "reserialize");
         case 3:
             return this.getListOfStringsMatchingLastWord(args, "playerdata");
         }
-        return super.addTabCompletionOptions(sender,args);
+        return super.addTabCompletionOptions(sender, args);
     }
-    
+
     @Override
     public void processCommand(ICommandSender sender, String[] args) {
         if (args.length == 0) {
@@ -50,9 +51,14 @@ public class CommandHueihuea extends CommandBase {
                 sender.addChatMessage(new ChatComponentText("/hueihuea reload 重载配置"));
                 return;
             }
-            if(args[0].equals("reload")) {
+            if (args[0].equals("reload")) {
                 Config.reload();
                 sender.addChatMessage(new ChatComponentText("已重载配置"));
+                return;
+            }
+            if (args[0].equals("version")) {
+                sender.addChatMessage(new ChatComponentText("CustomNPCsFix " + CustomNPCsFix.VERSION));
+                sender.addChatMessage(new ChatComponentText("BY. HUEIHUEA"));
                 return;
             }
         }
