@@ -13,16 +13,17 @@ public class CustomNPCFixPlugin implements IFMLLoadingPlugin {
     @Override
     public String[] getASMTransformerClass() {
         return new String[] { "mchhui.customnpcsfix.coremod.noppes.npcs.util.NBTJsonUtilTransformer",
-                "mchhui.customnpcsfix.coremod.noppes.npcs.roles.RoleCompanionTransfromer",
-                "mchhui.customnpcsfix.coremod.noppes.npcs.client.PacketHandlerClientTransfromer",
-                "mchhui.customnpcsfix.coremod.noppes.npcs.client.ClientTransFromer",
-                "mchhui.customnpcsfix.coremod.noppes.npcs.controllers.data.TransportLocationTransfromer",
-                "mchhui.customnpcsfix.coremod.noppes.npcs.controllers.data.QuestTransfromer",
-                "mchhui.customnpcsfix.coremod.noppes.npcs.client.renderer.RenderCustomNpcTansfromer",
-                "mchhui.customnpcsfix.coremod.noppes.npcs.ServerTransfromer",
-                "mchhui.customnpcsfix.coremod.noppes.npcs.api.wrapper.PlayerWrapperTransfromer", 
-                "mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsGuiRendererTranfromer", 
-                "mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsIngameRendererTranfromer", 
+                "mchhui.customnpcsfix.coremod.noppes.npcs.roles.RoleCompanionTransformer",
+                "mchhui.customnpcsfix.coremod.noppes.npcs.client.PacketHandlerClientTransformer",
+                "mchhui.customnpcsfix.coremod.noppes.npcs.client.ClientTransFormer",
+                "mchhui.customnpcsfix.coremod.noppes.npcs.controllers.data.TransportLocationTransformer",
+                "mchhui.customnpcsfix.coremod.noppes.npcs.controllers.data.QuestTransformer",
+                "mchhui.customnpcsfix.coremod.noppes.npcs.client.renderer.RenderCustomNpcTansformer",
+                "mchhui.customnpcsfix.coremod.noppes.npcs.ServerTransformer",
+                "mchhui.customnpcsfix.coremod.noppes.npcs.api.wrapper.PlayerWrapperTransformer", 
+                "mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsGuiRendererTranformer", 
+                "mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsIngameRendererTranformer", 
+                "mchhui.customnpcsfix.coremod.journeymap.client.waypoint.WaypointStoreTransformer", 
                 };
 
     }

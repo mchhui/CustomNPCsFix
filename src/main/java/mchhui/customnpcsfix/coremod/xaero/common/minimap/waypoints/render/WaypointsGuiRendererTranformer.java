@@ -17,7 +17,7 @@ import org.objectweb.asm.tree.VarInsnNode;
 import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraftforge.fml.common.FMLLog;
 
-public class WaypointsGuiRendererTranfromer implements IClassTransformer {
+public class WaypointsGuiRendererTranformer implements IClassTransformer {
     public static boolean isSuccessful=false;
     
     

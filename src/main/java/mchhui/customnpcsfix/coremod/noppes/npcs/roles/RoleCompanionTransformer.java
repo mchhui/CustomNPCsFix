@@ -21,7 +21,7 @@ import net.minecraft.init.Items;
 import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraftforge.fml.common.FMLLog;
 
-public class RoleCompanionTransfromer implements IClassTransformer {
+public class RoleCompanionTransformer implements IClassTransformer {
 
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {

@@ -20,7 +20,7 @@ import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper;
 
-public class WaypointsIngameRendererTranfromer implements IClassTransformer {
+public class WaypointsIngameRendererTranformer implements IClassTransformer {
     public static boolean isSuccessful = false;
 
     @Override

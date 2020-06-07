@@ -16,7 +16,7 @@ import org.objectweb.asm.tree.VarInsnNode;
 import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraftforge.fml.common.FMLLog;
 
-public class PlayerWrapperTransfromer implements IClassTransformer {
+public class PlayerWrapperTransformer implements IClassTransformer {
     @Override
     public byte[] transform(String name, String transformedName, byte[] basicClass) {
         if (transformedName.equals("noppes.npcs.api.wrapper.PlayerWrapper")) {
