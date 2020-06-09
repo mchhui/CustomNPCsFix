@@ -23,7 +23,7 @@ import noppes.npcs.controllers.data.Quest;
 import xaero.common.interfaces.render.InterfaceRenderer;
 
 public class RenderWaypointsListener {
-    private static final ResourceLocation TEX = new ResourceLocation("customnpcsfix", "textures/waypoint_quest.png");
+    private static final ResourceLocation TEX = new ResourceLocation("customnpcsfix", "textures/waypoints/waypoint_quest.png");
 
     @SubscribeEvent
     public void onDrawIconOnGUI(DrawIconOnGUIEvent event) {

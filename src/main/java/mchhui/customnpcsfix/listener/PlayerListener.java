@@ -1,6 +1,7 @@
 package mchhui.customnpcsfix.listener;
 
 import mchhui.customnpcsfix.Config;
+import mchhui.customnpcsfix.util.ItemHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -74,7 +75,7 @@ public class PlayerListener {
             if (i == -1) {
                 for (int index = 0; index < event.getEntityPlayer().inventory.getSizeInventory(); index++) {
                     ItemStack is = event.getEntityPlayer().inventory.getStackInSlot(index);
-                    if (canMergeStacks(is, event.getItem().getItem())) {
+                    if (ItemHelper.canMergeStacks(is, event.getItem().getItem())) {
                         flag = true;
                         i = index;
                     }
@@ -99,16 +100,5 @@ public class PlayerListener {
             ((EntityPlayerMP) event.getEntityPlayer()).sendSlotContents(event.getEntityPlayer().inventoryContainer, i,
                     event.getEntityPlayer().inventory.getStackInSlot(i));
         }
-    }
-
-    private boolean canMergeStacks(ItemStack stack1, ItemStack stack2) {
-        return !stack1.isEmpty() && this.stackEqualExact(stack1, stack2) && stack1.isStackable()
-                && stack1.getCount() < stack1.getMaxStackSize() && stack1.getCount() < 64;
-    }
-
-    private boolean stackEqualExact(ItemStack stack1, ItemStack stack2) {
-        return stack1.getItem() == stack2.getItem()
-                && (!stack1.getHasSubtypes() || stack1.getMetadata() == stack2.getMetadata())
-                && ItemStack.areItemStackTagsEqual(stack1, stack2);
     }
 }

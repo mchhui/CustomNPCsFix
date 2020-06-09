@@ -5,8 +5,10 @@ import java.io.IOException;
 import java.util.List;
 
 import mchhui.customnpcsfix.Config;
+import mchhui.customnpcsfix.CustomNPCsFix;
 import mchhui.customnpcsfix.NetListener;
 import mchhui.customnpcsfix.NetListener.ListenData;
+import mchhui.customnpcsfix.Server;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
@@ -16,6 +18,7 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import noppes.npcs.controllers.PlayerDataController;
 import noppes.npcs.controllers.TransportController;
 import noppes.npcs.util.NBTJsonUtil;
@@ -38,7 +41,7 @@ public class CommandHueihuea extends CommandBase {
             BlockPos targetPos) {
         switch (args.length) {
         case 1:
-            return this.getListOfStringsMatchingLastWord(args, "help", "reload", "listennet");
+            return this.getListOfStringsMatchingLastWord(args, "help", "reload", "listennet", "version");
         }
         if (args.length >= 1) {
             if (args[0].equals("listennet")) {
@@ -63,7 +66,19 @@ public class CommandHueihuea extends CommandBase {
             }
             if (args[0].equals("reload")) {
                 Config.reload();
+                
+                //刷新所有人的任务点配置
+                boolean isFromDIM = !Config.QuestWaypointFromWorldName;
+                for (EntityPlayerMP player : FMLCommonHandler.instance().getMinecraftServerInstance().getPlayerList()
+                        .getPlayers()) {
+                    Server.sendIsWaypointFromDIM(player, isFromDIM);
+                }
                 sender.sendMessage(new TextComponentString("已重载配置"));
+                return;
+            }
+            if (args[0].equals("version")) {
+                sender.sendMessage(new TextComponentString("CustomNPCsFix " + CustomNPCsFix.VERSION));
+                sender.sendMessage(new TextComponentString("BY. HUEIHUEA"));
                 return;
             }
         }

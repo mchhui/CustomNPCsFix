@@ -9,6 +9,7 @@ import noppes.npcs.client.gui.util.ITextfieldListener;
 import noppes.npcs.client.gui.util.SubGuiInterface;
 
 public class HueihueaGuiQuestWaypoint extends SubGuiInterface implements ITextfieldListener {
+    public static boolean isFromDIM = false;
     public Waypoint point;
 
     public HueihueaGuiQuestWaypoint(Waypoint point) {
@@ -22,16 +23,24 @@ public class HueihueaGuiQuestWaypoint extends SubGuiInterface implements ITextfi
     @Override
     public void initGui() {
         super.initGui();
-        addLabel(new GuiNpcLabel(4, "quest.waypoint.worlddim", guiLeft + 4, guiTop + 20));
+        if (isFromDIM) {
+            addLabel(new GuiNpcLabel(4, "quest.waypoint.dim", guiLeft + 4, guiTop + 20));
+        } else {
+            addLabel(new GuiNpcLabel(4, "quest.waypoint.worldname", guiLeft + 4, guiTop + 20));
+        }
         addLabel(new GuiNpcLabel(5, "quest.waypoint.setname", guiLeft + 4, guiTop + 50));
         addLabel(new GuiNpcLabel(6, "quest.waypoint.x", guiLeft + 4, guiTop + 80));
         addLabel(new GuiNpcLabel(7, "quest.waypoint.y", guiLeft + 4, guiTop + 110));
         addLabel(new GuiNpcLabel(8, "quest.waypoint.z", guiLeft + 4, guiTop + 140));
 
-        addTextField(new GuiNpcTextField(4, this, fontRenderer, guiLeft + 130, guiTop + 15, 100, 20, point.worldDIM));
+        if(isFromDIM) {
+            addTextField(new GuiNpcTextField(4, this, fontRenderer, guiLeft + 130, guiTop + 15, 100, 20, String.valueOf(point.worldDIM)));
+        }else {
+            addTextField(new GuiNpcTextField(4, this, fontRenderer, guiLeft + 130, guiTop + 15, 100, 20, point.worldName));
+        }
         addTextField(new GuiNpcTextField(5, this, fontRenderer, guiLeft + 130, guiTop + 45, 100, 20, point.setName));
-        addTextField(
-                new GuiNpcTextField(6, this, fontRenderer, guiLeft + 130, guiTop + 75, 100, 20, String.valueOf(point.x)));
+        addTextField(new GuiNpcTextField(6, this, fontRenderer, guiLeft + 130, guiTop + 75, 100, 20,
+                String.valueOf(point.x)));
         addTextField(new GuiNpcTextField(7, this, fontRenderer, guiLeft + 130, guiTop + 105, 100, 20,
                 String.valueOf(point.y)));
         addTextField(new GuiNpcTextField(8, this, fontRenderer, guiLeft + 130, guiTop + 135, 100, 20,
@@ -57,20 +66,34 @@ public class HueihueaGuiQuestWaypoint extends SubGuiInterface implements ITextfi
     @Override
     public void unFocused(GuiNpcTextField textField) {
         if (textField.getId() == 4) {
-            point.worldDIM = textField.getText();
+            if (isFromDIM) {
+                point.worldDIM = Integer.valueOf(textField.getText());
+            } else {
+                point.worldName = textField.getText();
+            }
         }
         if (textField.getId() == 5) {
             point.setName = textField.getText();
         }
         if (textField.getId() == 6) {
-            point.x = Integer.valueOf(textField.getText());
+            point.x = getInt(textField.getText());
         }
         if (textField.getId() == 7) {
-            point.y = Integer.valueOf(textField.getText());
+            point.y = getInt(textField.getText());
         }
         if (textField.getId() == 8) {
-            point.z = Integer.valueOf(textField.getText());
+            point.z = getInt(textField.getText());
         }
+    }
+
+    private static int getInt(String str) {
+        int i = 0;
+        try {
+            Integer.valueOf(str);
+        } catch (NumberFormatException err) {
+
+        }
+        return i;
     }
 
 }

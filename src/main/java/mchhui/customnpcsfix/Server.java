@@ -10,6 +10,10 @@ import mchhui.customnpcsfix.util.QuestHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.network.internal.FMLProxyPacket;
 import noppes.npcs.controllers.data.Quest;
 
@@ -21,9 +25,21 @@ public class Server {
             if (!point.isEnabled) {
                 return;
             }
+            if (Config.QuestWaypointFromWorldName) {
+                boolean isFound=false;
+                for (World world : FMLCommonHandler.instance().getMinecraftServerInstance().worlds) {
+                    if (world.getWorldInfo().getWorldName().equals(point.worldName)) {
+                        point.worldDIM = world.provider.getDimension();
+                        isFound=true;
+                    }
+                    if(!isFound) {
+                        return;
+                    }
+                }
+            }
             try {
                 if (!noppes.npcs.Server.fillBuffer(buffer, EnumFixPacketClient.ADD_WAYPOINT,
-                        new Object[] { point.writeNBT() })) {
+                        new Object[] { point.writeNbtWithDIM() })) {
                     return;
                 }
                 CustomNPCsFix.Channel.sendTo(new FMLProxyPacket(buffer, "CustomNPCsFix"), player);
@@ -38,8 +54,9 @@ public class Server {
         CustomNPCsFixScheduler.runTack(() -> {
             PacketBuffer buffer = new PacketBuffer(Unpooled.buffer());
             try {
+                Waypoint point = QuestHelper.getQuestWaypoint(quest);
                 if (!noppes.npcs.Server.fillBuffer(buffer, EnumFixPacketClient.REMOVE_WAYPOINT,
-                        new Object[] { QuestHelper.getQuestWaypoint(quest).writeNBT() })) {
+                        new Object[] { point.writeNbtWithDIM() })) {
                     return;
                 }
                 CustomNPCsFix.Channel.sendTo(new FMLProxyPacket(buffer, "CustomNPCsFix"), player);
@@ -55,6 +72,22 @@ public class Server {
             PacketBuffer buffer = new PacketBuffer(Unpooled.buffer());
             try {
                 if (!noppes.npcs.Server.fillBuffer(buffer, EnumFixPacketClient.CLEAR_WAYPOINT)) {
+                    return;
+                }
+                CustomNPCsFix.Channel.sendTo(new FMLProxyPacket(buffer, "CustomNPCsFix"), player);
+            } catch (IOException e) {
+                // TODO 自动生成的 catch 块
+                e.printStackTrace();
+            }
+        });
+    }
+
+    public static void sendIsWaypointFromDIM(EntityPlayerMP player, boolean isFromDIM) {
+        CustomNPCsFixScheduler.runTack(() -> {
+            PacketBuffer buffer = new PacketBuffer(Unpooled.buffer());
+            try {
+                if (!noppes.npcs.Server.fillBuffer(buffer, EnumFixPacketClient.SETTING_IS_WAYPOINT_FROM_DIM,
+                        new Object[] { isFromDIM })) {
                     return;
                 }
                 CustomNPCsFix.Channel.sendTo(new FMLProxyPacket(buffer, "CustomNPCsFix"), player);

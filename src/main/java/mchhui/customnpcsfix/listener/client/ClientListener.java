@@ -9,18 +9,28 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ConcurrentSkipListSet;
 
+import com.mamiyaotaru.voxelmap.VoxelMap;
+import com.mamiyaotaru.voxelmap.textures.TextureAtlas;
+
+import journeymap.client.ui.component.Button;
+import journeymap.client.ui.waypoint.WaypointManager;
+import journeymap.client.ui.waypoint.WaypointManagerItem;
 import mchhui.customnpcsfix.Client;
 import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.api.event.client.ClientSendDataEvent;
 import mchhui.customnpcsfix.client.gui.HueihueaGuiQuestEdit;
-import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsGuiRendererTranfromer;
-import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsIngameRendererTranfromer;
+import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsGuiRendererTranformer;
+import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsIngameRendererTranformer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextComponentString;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
+import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.resource.VanillaResourceType;
 import net.minecraftforge.common.MinecraftForge;
@@ -53,7 +63,8 @@ import xaero.minimap.XaeroMinimap;
 
 public class ClientListener {
     private static String lastAutoContainerID = null;
-    private static boolean initMessageSent=false;
+    private static boolean initMessageSent = false;
+    private static World lastWorld;
 
     @SubscribeEvent
     public void onClientSendData(ClientSendDataEvent event) {
@@ -84,29 +95,33 @@ public class ClientListener {
         if (event.phase != Phase.END) {
             return;
         }
-        if (WaypointsGuiRendererTranfromer.isSuccessful || WaypointsIngameRendererTranfromer.isSuccessful) {
-            WaypointsManager manager = XaeroMinimap.instance.getWaypointsManager();
-            if (lastAutoContainerID != manager.getAutoContainerID()) {
-                if (manager.getAutoContainerID() != null) {
+
+        //开始信息
+        if (Minecraft.getMinecraft().world != null) {
+            if (!initMessageSent) {
+                if (Loader.isModLoaded("Xaero's Minimap") && (!WaypointsGuiRendererTranformer.isSuccessful
+                        || !WaypointsIngameRendererTranformer.isSuccessful)) {
+                    Minecraft.getMinecraft().player
+                            .sendMessage(new TextComponentString(I18n.format("mod.xmap.unsupportedversion")));
+                }
+                initMessageSent = true;
+            }
+        }
+
+        //每次换地图
+        if (lastWorld != Minecraft.getMinecraft().world) {
+            if (Minecraft.getMinecraft().world != null) {
+                Client.getSetting();
+                if (!Config.QuestWaypointJMapMode) {
+                    //请求任务坐标点信息
                     Client.getAllQuestWaypoint();
                 }
             }
-            lastAutoContainerID = manager.getAutoContainerID();
-            if (Minecraft.getMinecraft().world == null) {
-                lastAutoContainerID = null;
-            }
         }
-        
-        if(Minecraft.getMinecraft().world!=null) {
-            if(!initMessageSent) {
-                if (Loader.isModLoaded("Xaero's Minimap")&&(!WaypointsGuiRendererTranfromer.isSuccessful || !WaypointsIngameRendererTranfromer.isSuccessful)) {
-                    Minecraft.getMinecraft().player.sendMessage(new TextComponentString(I18n.format("mod.xmap.unsupportedversion")));
-                }
-                initMessageSent=true;
-            }
-        }
+
+        lastWorld = Minecraft.getMinecraft().world;
         GuiScreen gui = Minecraft.getMinecraft().currentScreen;
-        if ((WaypointsGuiRendererTranfromer.isSuccessful || WaypointsIngameRendererTranfromer.isSuccessful)
+        if ((WaypointsGuiRendererTranformer.isSuccessful || WaypointsIngameRendererTranformer.isSuccessful)
                 && gui instanceof GuiWaypoints) {
             List<Waypoint> list;
             ConcurrentSkipListSet<Integer> selectedListSet;
@@ -154,6 +169,53 @@ public class ClientListener {
                 if (!(questgui instanceof HueihueaGuiQuestEdit)) {
                     questgui = HueihueaGuiQuestEdit.create(questgui);
                     manageQuestGui.setSubGui(questgui);
+                }
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public void onGuiOpen(GuiScreenEvent.InitGuiEvent.Post event) {
+        if (Loader.isModLoaded("VoxelMap") && event.getGui() instanceof WaypointManager) {
+            WaypointManager gui = (WaypointManager) event.getGui();
+            ArrayList<WaypointManagerItem> items = null;
+            Field fieldItems = null;
+            try {
+                fieldItems = gui.getClass().getDeclaredField("items");
+                fieldItems.setAccessible(true);
+                items = (ArrayList<WaypointManagerItem>) fieldItems.get(gui);
+            } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+                e.printStackTrace();
+            }
+            for (WaypointManagerItem item : items.toArray(new WaypointManagerItem[items.size()])) {
+                journeymap.client.model.Waypoint waypoint = null;
+                Field fieldWaypoint = null;
+                try {
+                    fieldWaypoint = item.getClass().getDeclaredField("waypoint");
+                    fieldWaypoint.setAccessible(true);
+                    waypoint = (journeymap.client.model.Waypoint) fieldWaypoint.get(item);
+                } catch (NoSuchFieldException | SecurityException | IllegalArgumentException
+                        | IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+                if (waypoint.getOrigin().equals("NPCFIX")) {
+                    Button editButton = null;
+                    Button removeButton = null;
+                    Field fieldEditButton = null;
+                    Field fieldRemoveButton = null;
+                    try {
+                        fieldEditButton = item.getClass().getDeclaredField("buttonEdit");
+                        fieldEditButton.setAccessible(true);
+                        editButton = (Button) fieldEditButton.get(item);
+                        fieldRemoveButton = item.getClass().getDeclaredField("buttonRemove");
+                        fieldRemoveButton.setAccessible(true);
+                        removeButton = (Button) fieldRemoveButton.get(item);
+                    } catch (NoSuchFieldException | SecurityException | IllegalArgumentException
+                            | IllegalAccessException e) {
+                        e.printStackTrace();
+                    }
+                    editButton.setVisible(false);
+                    removeButton.setVisible(false);
                 }
             }
         }

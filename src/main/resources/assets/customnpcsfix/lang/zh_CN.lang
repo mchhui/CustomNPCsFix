@@ -1,5 +1,6 @@
 quest.waypoint=导航点
-quest.waypoint.worlddim=世界DIM
+quest.waypoint.dim=世界ID
+quest.waypoint.worldname=世界名字
 quest.waypoint.setname=路径点集(设置)
 quest.waypoint.x=X坐标
 quest.waypoint.y=Y坐标

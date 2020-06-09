@@ -18,7 +18,23 @@ public class Client {
         CustomNPCsFixScheduler.runTack(() -> {
             PacketBuffer buffer = new PacketBuffer(Unpooled.buffer());
             try {
-                if (!noppes.npcs.Server.fillBuffer(buffer, EnumFixPacketServer.GETALLQUESTWAYPOINT,
+                if (!noppes.npcs.Server.fillBuffer(buffer, EnumFixPacketServer.GET_ALL_QUEST_WAY_POINT,
+                        new Object[] {})) {
+                    return;
+                }
+                CustomNPCsFix.Channel.sendToServer(new FMLProxyPacket(buffer, "CustomNPCsFix"));
+            } catch (IOException e) {
+                // TODO 自动生成的 catch 块
+                e.printStackTrace();
+            }
+        });
+    }
+    
+    public static void getSetting() {
+        CustomNPCsFixScheduler.runTack(() -> {
+            PacketBuffer buffer = new PacketBuffer(Unpooled.buffer());
+            try {
+                if (!noppes.npcs.Server.fillBuffer(buffer, EnumFixPacketServer.GET_SETTING,
                         new Object[] {})) {
                     return;
                 }

@@ -5,10 +5,11 @@ import java.io.IOException;
 import io.netty.buffer.ByteBuf;
 import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.EnumHandler;
+import mchhui.customnpcsfix.client.gui.HueihueaGuiQuestWaypoint;
 import mchhui.customnpcsfix.constants.EnumFixPacketClient;
 import mchhui.customnpcsfix.controllers.data.Waypoint;
-import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsGuiRendererTranfromer;
-import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsIngameRendererTranfromer;
+import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsGuiRendererTranformer;
+import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsIngameRendererTranformer;
 import mchhui.customnpcsfix.util.QuestHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
@@ -49,6 +50,9 @@ public class HueihueaHandlerClient {
             if (type == EnumFixPacketClient.CLEAR_WAYPOINT) {
                 QuestHelper.clearAllWaypoint();
             }
+            if (type == EnumFixPacketClient.SETTING_IS_WAYPOINT_FROM_DIM) {
+                HueihueaGuiQuestWaypoint.isFromDIM = buffer.readBoolean();
+            }
             buffer.release();
         }
     }
@@ -56,7 +60,7 @@ public class HueihueaHandlerClient {
     public static class FixHandler {
         @SubscribeEvent(priority = EventPriority.HIGH)
         public void onHandle(ClientCustomPacketEvent event) {
-            
+
         }
     }
 }

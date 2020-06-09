@@ -18,6 +18,7 @@ public class Config {
     public static boolean TPUseBukkitAPI;
     public static boolean AutoUseNPCDamageSource;
     public static boolean EnabledQuestWaypoint;
+    public static boolean QuestWaypointFromWorldName;
     public static boolean EffectiveCollectItemQuest;
 
     //Client
@@ -27,6 +28,7 @@ public class Config {
     public static boolean DontUseScriptItemTextures;
     public static int[] OffestQuestWaypoint = new int[] { 8, 8 };
     public static boolean QuestWaypointJMapMode;
+    public static boolean QuestWaypointVMapMode;
 
     public Config(FMLPreInitializationEvent event) {
         logger = event.getModLog();
@@ -69,6 +71,9 @@ public class Config {
                 + "推荐开启小地图选项\"以上距离路近点显示名称\"";
         EnabledQuestWaypoint = config.get(Configuration.CATEGORY_GENERAL, "EnabledQuestWaypoint", false, comment)
                 .getBoolean();
+        comment = "通过世界名判断任务导航点\n" + "如果你使用多世界插件 最好启用这个选项";
+        QuestWaypointFromWorldName = config.get(Configuration.CATEGORY_GENERAL, "QuestWaypointFromWorldName", false, comment)
+                .getBoolean();
         comment = "更精准的物品搜集任务判定\n" + "优化物品搜集任务的不精准判断";
         EffectiveCollectItemQuest = config
                 .get(Configuration.CATEGORY_GENERAL, "EffectiveCollectItemQuest", false, comment).getBoolean();
@@ -96,6 +101,9 @@ public class Config {
         comment = "任务导航点使用JourneyMap";
         QuestWaypointJMapMode = config
                 .get(Configuration.CATEGORY_CLIENT, "QuestWaypointJMapMode", false, comment).getBoolean();
+        comment = "任务导航点使用VoxelMap";
+        QuestWaypointVMapMode = config
+                .get(Configuration.CATEGORY_CLIENT, "QuestWaypointVMapMode", false, comment).getBoolean();
 
         config.save();
         logger.info("Finished loading config. ");
