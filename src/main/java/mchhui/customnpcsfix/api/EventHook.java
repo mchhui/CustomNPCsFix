@@ -1,15 +1,24 @@
 package mchhui.customnpcsfix.api;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import mchhui.customnpcsfix.NetListener;
 import mchhui.customnpcsfix.api.event.CustomNPCsPreSendPacketEvent;
 import mchhui.customnpcsfix.api.event.CustomNPCsSendPacketEvent;
 import mchhui.customnpcsfix.api.event.OnPlayerGetAllQuestWaypointEvent;
 import mchhui.customnpcsfix.api.event.client.ClientSendDataEvent;
 import mchhui.customnpcsfix.api.event.client.RenderCustomNpcEvent;
+import mchhui.customnpcsfix.api.event.client.ResourcePackRepositoryGetFilesEvent;
+import mchhui.customnpcsfix.api.event.voxelmap.VMapResourceReloadEvent;
 import mchhui.customnpcsfix.api.event.xaerominimap.DrawIconOnGUIEvent;
 import mchhui.customnpcsfix.api.event.xaerominimap.RenderWaypointIngameEvent;
+import mchhui.customnpcsfix.util.ResourcePackHelper;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.resources.IResourceManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.math.Vec3d;
@@ -62,8 +71,24 @@ public class EventHook {
                 new RenderWaypointIngameEvent(renderer, cameraAngleYaw, lookVector, lookVectorMultiplier, eyesX, eyesY,
                         eyesZ, waypoint, modMain, radius, d3, d4, d5, entity, bufferBuilder, tessellator, divideBy8));
     }
-    
-    public static void OnPlayerGetAllQuestWaypoint(EntityPlayerMP player) {
+
+    public static void onPlayerGetAllQuestWaypoint(EntityPlayerMP player) {
         MinecraftForge.EVENT_BUS.post(new OnPlayerGetAllQuestWaypointEvent(player));
+    }
+
+    public static void onPreVMapResourceReload(IResourceManager resourceManager) {
+        MinecraftForge.EVENT_BUS.post(new VMapResourceReloadEvent.Pre(resourceManager));
+    }
+
+    public static void onPostVMapResourceReload(IResourceManager resourceManager) {
+        MinecraftForge.EVENT_BUS.post(new VMapResourceReloadEvent.Post(resourceManager));
+    }
+
+    public static List<File> onResourcePackRepositoryGetFiles(List<File> list) {
+        List<File> arrayList=new ArrayList<File>();
+        arrayList.addAll(list);
+        MinecraftForge.EVENT_BUS.post(new ResourcePackRepositoryGetFilesEvent(arrayList));
+        ResourcePackHelper.onResourcePackRepositoryGetFiles(arrayList);
+        return Arrays.asList(arrayList.toArray(new File[arrayList.size()]));
     }
 }

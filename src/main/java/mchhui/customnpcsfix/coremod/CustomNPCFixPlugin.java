@@ -20,11 +20,12 @@ public class CustomNPCFixPlugin implements IFMLLoadingPlugin {
                 "mchhui.customnpcsfix.coremod.noppes.npcs.controllers.data.QuestTransformer",
                 "mchhui.customnpcsfix.coremod.noppes.npcs.client.renderer.RenderCustomNpcTansformer",
                 "mchhui.customnpcsfix.coremod.noppes.npcs.ServerTransformer",
-                "mchhui.customnpcsfix.coremod.noppes.npcs.api.wrapper.PlayerWrapperTransformer", 
-                "mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsGuiRendererTranformer", 
-                "mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsIngameRendererTranformer", 
-                "mchhui.customnpcsfix.coremod.journeymap.client.waypoint.WaypointStoreTransformer", 
-                };
+                "mchhui.customnpcsfix.coremod.noppes.npcs.api.wrapper.PlayerWrapperTransformer",
+                "mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsGuiRendererTranformer",
+                "mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsIngameRendererTranformer",
+                "mchhui.customnpcsfix.coremod.journeymap.client.waypoint.WaypointStoreTransformer",
+                "mchhui.customnpcsfix.coremod.com.mamiyaotaru.voxelmap.VoxelMapTransformer",
+                "mchhui.customnpcsfix.coremod.net.minecraft.client.resources.ResourcePackRepositoryTransformer" };
 
     }
 

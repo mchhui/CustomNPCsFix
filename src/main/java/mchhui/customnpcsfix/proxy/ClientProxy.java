@@ -63,7 +63,6 @@ public class ClientProxy extends CommonProxy {
         }
         MinecraftForge.EVENT_BUS.register(new WorldRenderListener());
         MinecraftForge.EVENT_BUS.register(new RenderGameOverlayListener());
-        MinecraftForge.EVENT_BUS.register(new ClientListener());
         MinecraftForge.EVENT_BUS.register(new JMapWayPointLoadedListener());
         CustomNPCsFix.Channel.register(new HueihueaHandlerClient.WaypointHandler());
         CustomNpcs.Channel.register(new HueihueaHandlerClient.FixHandler());

@@ -38,7 +38,7 @@ public class HueihueaHandlerServer {
             ByteBuf buffer = event.getPacket().payload().copy();
             EnumFixPacketServer type = EnumFixPacketServer.values()[buffer.readInt()];
             if (type == EnumFixPacketServer.GET_ALL_QUEST_WAY_POINT) {
-                EventHook.OnPlayerGetAllQuestWaypoint(((NetHandlerPlayServer) event.getHandler()).player);
+                EventHook.onPlayerGetAllQuestWaypoint(((NetHandlerPlayServer) event.getHandler()).player);
             }
             if (type == EnumFixPacketServer.GET_SETTING) {
                 mchhui.customnpcsfix.Server.sendIsWaypointFromDIM(((NetHandlerPlayServer) event.getHandler()).player,

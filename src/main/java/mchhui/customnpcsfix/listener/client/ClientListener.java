@@ -1,5 +1,6 @@
 package mchhui.customnpcsfix.listener.client;
 
+import java.io.File;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -18,12 +19,15 @@ import journeymap.client.ui.waypoint.WaypointManagerItem;
 import mchhui.customnpcsfix.Client;
 import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.api.event.client.ClientSendDataEvent;
+import mchhui.customnpcsfix.api.event.client.ResourcePackRepositoryGetFilesEvent;
+import mchhui.customnpcsfix.api.event.voxelmap.VMapResourceReloadEvent;
 import mchhui.customnpcsfix.client.gui.HueihueaGuiQuestEdit;
 import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsGuiRendererTranformer;
 import mchhui.customnpcsfix.coremod.xaero.common.minimap.waypoints.render.WaypointsIngameRendererTranformer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.client.resources.SimpleReloadableResourceManager;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
@@ -60,6 +64,7 @@ import xaero.common.minimap.waypoints.Waypoint;
 import xaero.common.minimap.waypoints.WaypointWorldContainer;
 import xaero.common.minimap.waypoints.WaypointsManager;
 import xaero.minimap.XaeroMinimap;
+import net.minecraft.client.resources.ResourcePackRepository.Entry;
 
 public class ClientListener {
     private static String lastAutoContainerID = null;
@@ -217,6 +222,23 @@ public class ClientListener {
                     editButton.setVisible(false);
                     removeButton.setVisible(false);
                 }
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public void onPreVMapResourceReload(VMapResourceReloadEvent.Pre event) {
+        for (Entry entry : Minecraft.getMinecraft().getResourcePackRepository().getRepositoryEntriesAll()) {
+            if (entry.getResourcePackName().equals("CustomNPCsFix.zip")) {
+                List list = new ArrayList();
+                list.addAll(Minecraft.getMinecraft().getResourcePackRepository().getRepositoryEntries());
+                if (!list.contains(entry)) {
+                    list.add(entry);
+                    Minecraft.getMinecraft().getResourcePackRepository().setRepositories(list);
+                }
+                ((SimpleReloadableResourceManager) Minecraft.getMinecraft().getResourceManager())
+                        .reloadResourcePack(entry.getResourcePack());
+                return;
             }
         }
     }
