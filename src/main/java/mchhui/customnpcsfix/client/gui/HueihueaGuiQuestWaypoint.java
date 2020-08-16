@@ -89,7 +89,7 @@ public class HueihueaGuiQuestWaypoint extends SubGuiInterface implements ITextfi
     private static int getInt(String str) {
         int i = 0;
         try {
-            Integer.valueOf(str);
+            i=Integer.valueOf(str);
         } catch (NumberFormatException err) {
 
         }

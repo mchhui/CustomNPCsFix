@@ -2,12 +2,16 @@ package mchhui.customnpcsfix.listener;
 
 import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.util.BukkitHelper;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import noppes.npcs.api.event.RoleEvent.TraderEvent;
 import noppes.npcs.api.event.RoleEvent.TransporterUseEvent;
+import noppes.npcs.api.item.IItemStack;
 import noppes.npcs.controllers.data.TransportLocation;
+import noppes.npcs.roles.RoleTrader;
 
 public class RoleListener {
     @SubscribeEvent
@@ -36,5 +40,15 @@ public class RoleListener {
                         BukkitHelper.teleport(event.player.getName(), worldName, (TransportLocation) event.location));
             }
         }
+    }
+    
+    @SubscribeEvent
+    public void onTraderUse(TraderEvent event) {
+        event.setCanceled(true);
+        RoleTrader role=(RoleTrader) event.npc.getRole();
+        IItemStack currency1=event.currency1;
+        IItemStack currency2=event.currency2;
+        
+        
     }
 }

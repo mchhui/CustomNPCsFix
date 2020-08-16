@@ -20,7 +20,10 @@ public class Config {
     public static boolean EnabledQuestWaypoint;
     public static boolean QuestWaypointFromWorldName;
     public static boolean EffectiveCollectItemQuest;
-
+    public static boolean FastTrading;
+    public static boolean TraderMatchItemRegisteredID;
+    public static boolean TraderMatchItemRegisteredName;
+    
     //Client
     public static boolean DontSendDubiousScript;
     public static boolean SafeRenderNoTexNPC;

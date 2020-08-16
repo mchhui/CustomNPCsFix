@@ -32,9 +32,9 @@ public class Server {
                         point.worldDIM = world.provider.getDimension();
                         isFound=true;
                     }
-                    if(!isFound) {
-                        return;
-                    }
+                }
+                if(!isFound) {
+                    return;
                 }
             }
             try {
