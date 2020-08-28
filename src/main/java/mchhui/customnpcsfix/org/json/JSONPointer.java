@@ -1,4 +1,4 @@
-package mchhui.org.json;
+package mchhui.customnpcsfix.org.json;
 
 import static java.lang.String.format;
 

@@ -1,4 +1,4 @@
-package mchhui.org.json;
+package mchhui.customnpcsfix.org.json;
 
 import java.io.Closeable;
 

@@ -27,6 +27,7 @@ public class CustomNPCFixPlugin implements IFMLLoadingPlugin {
     @Override
     public String getSetupClass() {
         // TODO 自动生成的方法存根
+        
         return null;
     }
 

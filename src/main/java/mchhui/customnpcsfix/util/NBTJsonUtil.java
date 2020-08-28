@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Map;
 
 import mchhui.customnpcsfix.Config;
-import mchhui.org.json.JSONObject;
-import mchhui.org.json.JSONTokener;
+import mchhui.customnpcsfix.org.json.JSONObject;
+import mchhui.customnpcsfix.org.json.JSONTokener;
 import net.minecraft.nbt.NBTTagCompound;
 
 public class NBTJsonUtil {
