@@ -1,5 +1,7 @@
 package mchhui.customnpcsfix.listener;
 
+import java.util.HashSet;
+
 import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.util.ItemHelper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,6 +16,9 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
+import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
+import net.minecraftforge.fml.relauncher.Side;
 import noppes.npcs.NpcDamageSource;
 import noppes.npcs.NpcDamageSourceInderect;
 import noppes.npcs.api.NpcAPI;
@@ -21,6 +26,8 @@ import noppes.npcs.controllers.data.PlayerData;
 import noppes.npcs.entity.EntityNPCInterface;
 
 public class PlayerListener {
+    public HashSet<String> toCheckList=new HashSet<String>();
+    
     //on entity attacked player
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public void onPlayerAttack(LivingAttackEvent event) {
@@ -66,39 +73,17 @@ public class PlayerListener {
         if (!Config.EffectiveCollectItemQuest) {
             return;
         }
-        if (!(event.getEntityPlayer() instanceof EntityPlayerMP)) {
+        toCheckList.add(event.getEntityPlayer().getName());
+    }
+    
+    @SubscribeEvent
+    public void playerTick(PlayerTickEvent event) {
+        if(event.phase!=Phase.END||event.side!=Side.SERVER) {
             return;
         }
-        if (!event.getEntityPlayer().world.isRemote) {
-            int i = event.getEntityPlayer().inventory.getFirstEmptyStack();
-            boolean flag = false;
-            if (i == -1) {
-                for (int index = 0; index < event.getEntityPlayer().inventory.getSizeInventory(); index++) {
-                    ItemStack is = event.getEntityPlayer().inventory.getStackInSlot(index);
-                    if (ItemHelper.canMergeStacks(is, event.getItem().getItem())) {
-                        flag = true;
-                        i = index;
-                    }
-                }
-            }
-            if (i == -1) {
-                return;
-            }
-
-            if (flag) {
-                event.getEntityPlayer().inventory.getStackInSlot(i)
-                        .setCount(event.getEntityPlayer().inventory.getStackInSlot(i).getCount()
-                                + event.getItem().getItem().getCount());
-            } else {
-                event.getEntityPlayer().inventory.setInventorySlotContents(i, event.getItem().getItem().copy());
-            }
-
-            PlayerData.get(event.getEntityPlayer()).questData.checkQuestCompletion(event.getEntityPlayer(), 0);
-            event.getEntityPlayer().inventory.getStackInSlot(i)
-                    .setCount(event.getEntityPlayer().inventory.getStackInSlot(i).getCount()
-                            - event.getItem().getItem().getCount());
-            ((EntityPlayerMP) event.getEntityPlayer()).sendSlotContents(event.getEntityPlayer().inventoryContainer, i,
-                    event.getEntityPlayer().inventory.getStackInSlot(i));
+        if(toCheckList.contains(event.player.getName())) {
+            PlayerData.get(event.player).questData.checkQuestCompletion(event.player, 0);
+            toCheckList.remove(event.player.getName());
         }
     }
 }
