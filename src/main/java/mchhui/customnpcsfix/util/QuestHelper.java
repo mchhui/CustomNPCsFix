@@ -25,6 +25,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.Loader;
 import noppes.npcs.controllers.data.Quest;
 import xaero.common.minimap.waypoints.WaypointSet;
 import xaero.common.minimap.waypoints.WaypointWorldContainer;
@@ -36,21 +37,39 @@ public class QuestHelper {
     public static Lock lock = new ReentrantLock();
 
     public static void addWaypoint(Waypoint point) {
-        JMap.addWaypoint(point);
-        VMap.addWaypoint(point);
-        XMap.addWaypoint(point);
+        if(Loader.isModLoaded("journeymap")) {
+            JMap.addWaypoint(point);
+        }
+        if(Loader.isModLoaded("voxelmap")) {
+            VMap.addWaypoint(point);  
+        }
+        if(Loader.isModLoaded("xaerominimap")) {
+            XMap.addWaypoint(point);
+        }
     }
 
     public static void removeWaypoint(Waypoint point) {
-        JMap.removeWaypoint(point);
-        VMap.removeWaypoint(point);
-        XMap.removeWaypoint(point);
+        if(Loader.isModLoaded("journeymap")) {
+            JMap.removeWaypoint(point);
+        }
+        if(Loader.isModLoaded("voxelmap")) {
+            VMap.removeWaypoint(point);  
+        }
+        if(Loader.isModLoaded("xaerominimap")) {
+            XMap.removeWaypoint(point);
+        }
     }
 
     public static void clearAllWaypoint() {
-        JMap.clearAllWaypoint();
-        VMap.clearAllWaypoint();
-        XMap.clearAllWaypoint();
+        if(Loader.isModLoaded("journeymap")) {
+            JMap.clearAllWaypoint();
+        }
+        if(Loader.isModLoaded("voxelmap")) {
+            VMap.clearAllWaypoint();  
+        }
+        if(Loader.isModLoaded("xaerominimap")) {
+            XMap.clearAllWaypoint();
+        }
     }
 
     public static class XMap {
