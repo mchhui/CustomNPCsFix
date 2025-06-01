@@ -10,7 +10,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
-version = "B1.2.2.6-1.12.2"
+version = "1.3-1.12.2"
 group = "mchhui.customnpcsfix." // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "CustomNPCsFix"
 
@@ -53,12 +53,7 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-    compile files ("lib/CustomNPCs_1.12.2-30May19snapshot-deobf.jar")
-    compile files ("lib/Spigot-1.12.2-forge.jar")
-    compile files ("lib/[时装工坊]1.12.2-0.49.1-deobf.jar")
-    compile files ("lib/Xaeros_Minimap_20.6.0_Forge_1.12-deobf.jar")
-    compile files ("lib/journeymap-1.12.2-5.7.0-deobf.jar")
-    compile files ("lib/forgemod_VoxelMap-1.9.19_for_1.12.2-deobf.jar")
+    compile fileTree(dir: 'lib', include: '*.jar')
 }
 
 processResources {
