@@ -3,6 +3,7 @@ package mchhui.customnpcsfix.proxy;
 import mchhui.customnpcsfix.Config;
 import mchhui.customnpcsfix.CustomNPCsFix;
 import mchhui.customnpcsfix.EnumHandler;
+import mchhui.customnpcsfix.command.CmdQuestFix;
 import mchhui.customnpcsfix.command.CommandHueihuea;
 import mchhui.customnpcsfix.listener.PlayerListener;
 import mchhui.customnpcsfix.listener.QuestListener;
@@ -40,6 +41,7 @@ public class CommonProxy {
     
     public void onServerStart(FMLServerStartingEvent event) {
         event.registerServerCommand(new CommandHueihuea());
+        CustomNpcs.NoppesCommand.map.put("quest", new CmdQuestFix());
     }
     
 }
