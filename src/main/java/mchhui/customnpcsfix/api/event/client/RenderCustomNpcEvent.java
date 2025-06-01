@@ -37,4 +37,9 @@ public class RenderCustomNpcEvent extends LivingEvent {
     public EntityCustomNpc getNPC() {
         return this.npc;
     }
+
+    public RenderCustomNpc getRender() {
+        return render;
+    }
+    
 }

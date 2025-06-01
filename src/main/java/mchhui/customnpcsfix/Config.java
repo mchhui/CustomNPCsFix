@@ -30,6 +30,7 @@ public class Config {
     public static boolean LimitedScriptGuiAddButton;
     public static boolean DontUseScriptItemTextures;
     public static int[] OffestQuestWaypoint = new int[] { 8, 8 };
+    public static boolean AddSlashBladeLayerToNPCModel;
 
     public Config(FMLPreInitializationEvent event) {
         logger = event.getModLog();
@@ -105,7 +106,10 @@ public class Config {
 //        comment = "任务导航点使用VoxelMap";
 //        QuestWaypointVMapMode = config
 //                .get(Configuration.CATEGORY_CLIENT, "QuestWaypointVMapMode", false, comment).getBoolean();
-
+        
+      comment = "为NPC模型添加拔刀剑渲染支持";
+      AddSlashBladeLayerToNPCModel = config
+              .get(Configuration.CATEGORY_CLIENT, "AddSlashBladeLayerToNPCModel", true, comment).getBoolean();
         config.save();
         logger.info("Finished loading config. ");
     }
