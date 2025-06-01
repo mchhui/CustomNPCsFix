@@ -48,7 +48,7 @@ public class HueihueaGuiQuestWaypoint extends SubGuiInterface implements ITextfi
 
         addButton(new GuiNpcButton(66, guiLeft + 20, guiTop + 190, 100, 20, "gui.done"));
         addButton(new GuiNpcButton(67, guiLeft + 20 + 100 + 16, guiTop + 190, 100, 20,
-                ((point.isEnabled) ? "quest.waypoint.disable" : "quest.waypoint.enable")));
+                ((point.isEnabled) ? "quest.waypoint.enable" : "quest.waypoint.disable")));
     }
 
     @Override

@@ -1,10 +1,10 @@
 quest.waypoint=导航点
 quest.waypoint.dim=世界ID
 quest.waypoint.worldname=世界名字
-quest.waypoint.setname=路径点集(设置)
+quest.waypoint.setname=路径点集(Xmap设置)
 quest.waypoint.x=X坐标
 quest.waypoint.y=Y坐标
 quest.waypoint.z=Z坐标
-quest.waypoint.disable=禁用
-quest.waypoint.enable=启用
+quest.waypoint.disable=§c已禁用
+quest.waypoint.enable=§a已启用
 mod.xmap.unsupportedversion=§aCustomNPCsFix §r不支持当前版本的 §cXaeros_Minimap
