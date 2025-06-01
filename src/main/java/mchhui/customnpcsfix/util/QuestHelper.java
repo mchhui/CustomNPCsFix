@@ -36,38 +36,20 @@ public class QuestHelper {
     public static Lock lock = new ReentrantLock();
 
     public static void addWaypoint(Waypoint point) {
-        if (Config.QuestWaypointJMapMode) {
-            JMap.addWaypoint(point);
-            return;
-        }
-        if (Config.QuestWaypointVMapMode) {
-            VMap.addWaypoint(point);
-            return;
-        }
+        JMap.addWaypoint(point);
+        VMap.addWaypoint(point);
         XMap.addWaypoint(point);
     }
 
     public static void removeWaypoint(Waypoint point) {
-        if (Config.QuestWaypointJMapMode) {
-            JMap.removeWaypoint(point);
-            return;
-        }
-        if (Config.QuestWaypointVMapMode) {
-            VMap.removeWaypoint(point);
-            return;
-        }
+        JMap.removeWaypoint(point);
+        VMap.removeWaypoint(point);
         XMap.removeWaypoint(point);
     }
 
     public static void clearAllWaypoint() {
-        if (Config.QuestWaypointJMapMode) {
-            JMap.clearAllWaypoint();
-            return;
-        }
-        if (Config.QuestWaypointVMapMode) {
-            VMap.clearAllWaypoint();
-            return;
-        }
+        JMap.clearAllWaypoint();
+        VMap.clearAllWaypoint();
         XMap.clearAllWaypoint();
     }
 
@@ -83,10 +65,7 @@ public class QuestHelper {
             WaypointWorldContainer container = manager.getWorldContainer(manager.getAutoContainerID().split("/")[0]);
             container = container.addSubContainer("dim%" + point.worldDIM);
             WaypointSet set = container.getFirstWorld().getSets().get(point.setName);
-            xaero.common.minimap.waypoints.Waypoint waypoint = new xaero.common.minimap.waypoints.Waypoint(point.x,
-                    point.y, point.z, point.displayName, "", ((int) (Math.random() * 255) * 1000000
-                            + (int) (Math.random() * 255) * 1000 + (int) (Math.random() * 255)),
-                    1001, true);
+            xaero.common.minimap.waypoints.Waypoint waypoint = new xaero.common.minimap.waypoints.Waypoint(point.x, point.y, point.z, point.displayName, "", ((int)(Math.random() * 255) * 1000000 + (int)(Math.random() * 255) * 1000 + (int)(Math.random() * 255)), 1001, true);
             points.put(point.questID, waypoint);
             CustomNPCsFixScheduler.runTack(() -> {
                 try {
@@ -105,8 +84,7 @@ public class QuestHelper {
             if (!WaypointsGuiRendererTranformer.isSuccessful || !WaypointsIngameRendererTranformer.isSuccessful) {
                 return;
             }
-            xaero.common.minimap.waypoints.Waypoint waypoint = (xaero.common.minimap.waypoints.Waypoint) points
-                    .remove(point.questID);
+            xaero.common.minimap.waypoints.Waypoint waypoint = (xaero.common.minimap.waypoints.Waypoint)points.remove(point.questID);
             if (waypoint == null) {
                 return;
             }
@@ -136,8 +114,7 @@ public class QuestHelper {
                 try {
                     QuestHelper.lock.lock();
                     for (Object point : setFromPoint.keySet().toArray()) {
-                        setFromPoint.get((xaero.common.minimap.waypoints.Waypoint) point).getList()
-                                .remove(((xaero.common.minimap.waypoints.Waypoint) point));
+                        setFromPoint.get((xaero.common.minimap.waypoints.Waypoint)point).getList().remove(((xaero.common.minimap.waypoints.Waypoint)point));
                     }
                     setFromPoint.clear();
                 } catch (Exception err) {
@@ -152,10 +129,8 @@ public class QuestHelper {
 
     public static class JMap {
         public static void addWaypoint(Waypoint point) {
-            HueihueaJMapWaypoint waypoint = new HueihueaJMapWaypoint(point.displayName,
-                    new BlockPos(point.x, point.y, point.z),
-                    new Color((int) (255 * Math.random()), (int) (255 * Math.random()), (int) (255 * Math.random())),
-                    Type.Normal, point.worldDIM, "customnpcsfix:textures/waypoints/waypoint_quest.png");
+            HueihueaJMapWaypoint waypoint =
+                new HueihueaJMapWaypoint(point.displayName, new BlockPos(point.x, point.y, point.z), new Color((int)(255 * Math.random()), (int)(255 * Math.random()), (int)(255 * Math.random())), Type.Normal, point.worldDIM, "customnpcsfix:textures/waypoints/waypoint_quest.png");
             WaypointStore.INSTANCE.add(waypoint);
         }
 
@@ -184,9 +159,7 @@ public class QuestHelper {
         public static void addWaypoint(Waypoint point) {
             TreeSet<Integer> set = new TreeSet<Integer>();
             set.add(point.worldDIM);
-            com.mamiyaotaru.voxelmap.util.Waypoint waypoint = new com.mamiyaotaru.voxelmap.util.Waypoint(
-                    point.displayName, point.x, point.y, point.z, true, (float) Math.random(), (float) Math.random(),
-                    (float) Math.random(), "quest", "", set);
+            com.mamiyaotaru.voxelmap.util.Waypoint waypoint = new com.mamiyaotaru.voxelmap.util.Waypoint(point.displayName, point.x, point.y, point.z, true, (float)Math.random(), (float)Math.random(), (float)Math.random(), "quest", "", set);
             CustomNPCsFixScheduler.runTack(() -> {
                 try {
                     QuestHelper.lock.lock();
@@ -215,8 +188,7 @@ public class QuestHelper {
         }
 
         public static void clearAllWaypoint() {
-            Iterator<com.mamiyaotaru.voxelmap.util.Waypoint> iterator = VoxelMap.getInstance().getWaypointManager()
-                    .getWaypoints().iterator();
+            Iterator<com.mamiyaotaru.voxelmap.util.Waypoint> iterator = VoxelMap.getInstance().getWaypointManager().getWaypoints().iterator();
             CustomNPCsFixScheduler.runTack(() -> {
                 try {
                     QuestHelper.lock.lock();
@@ -238,10 +210,8 @@ public class QuestHelper {
 
     public static Waypoint getQuestWaypoint(Quest quest) {
         try {
-            return ((Waypoint) Class.forName("noppes.npcs.controllers.data.Quest").getField("waypoint").get(quest))
-                    .bind(quest);
-        } catch (IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException
-                | ClassNotFoundException e) {
+            return ((Waypoint)Class.forName("noppes.npcs.controllers.data.Quest").getField("waypoint").get(quest)).bind(quest);
+        } catch (IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return new Waypoint();

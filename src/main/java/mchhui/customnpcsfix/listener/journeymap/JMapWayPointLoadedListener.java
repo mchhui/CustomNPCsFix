@@ -8,8 +8,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class JMapWayPointLoadedListener {
     @SubscribeEvent
     public void onJMapWayPointLoaded(JMapWayPointLoadedEvent event) {
-        if (Config.QuestWaypointJMapMode) {
-            Client.getAllQuestWaypoint();
-        }
+        Client.getAllQuestWaypoint();
     }
 }

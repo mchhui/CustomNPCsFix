@@ -30,8 +30,6 @@ public class Config {
     public static boolean LimitedScriptGuiAddButton;
     public static boolean DontUseScriptItemTextures;
     public static int[] OffestQuestWaypoint = new int[] { 8, 8 };
-    public static boolean QuestWaypointJMapMode;
-    public static boolean QuestWaypointVMapMode;
 
     public Config(FMLPreInitializationEvent event) {
         logger = event.getModLog();
@@ -48,12 +46,12 @@ public class Config {
         //General
         comment = "更快的JSON(反)序列化 虽然不是特别快 但是比NPC自带的快的多\n" + "JSON(反)序列化常被npc用于 保存玩家数据 任务数据 对话数据等\n"
                 + "NPC的IO和网络通讯使用同一线程\n" + "因此,如果JSON(反)序列化速度慢的话 可能会导致像交互延迟等现象";
-        FastJsonDeserialize = config.get(Configuration.CATEGORY_GENERAL, "FastJsonDeserialize", false, comment)
+        FastJsonDeserialize = config.get(Configuration.CATEGORY_GENERAL, "FastJsonDeserialize", true, comment)
                 .getBoolean();
         comment = "修复同伴的进食BUG";
-        WIPNoFoodBUG = config.get(Configuration.CATEGORY_GENERAL, "WIPNoFoodBUG", false, comment).getBoolean();
+        WIPNoFoodBUG = config.get(Configuration.CATEGORY_GENERAL, "WIPNoFoodBUG", true, comment).getBoolean();
         comment = "修复%信息崩溃bug\n" + "这通常用于修复:\n" + "1.NPC台词里使用%导致错误\n" + "2.NPC脚本里NPC的say方法和玩家的message发送%导致错误";
-        NoMsgPercentSymbolBug = config.get(Configuration.CATEGORY_GENERAL, "NoMsgPercentSymbolBug", false, comment)
+        NoMsgPercentSymbolBug = config.get(Configuration.CATEGORY_GENERAL, "NoMsgPercentSymbolBug", true, comment)
                 .getBoolean();
         comment = "传送师使用世界名判断世界而不是ID \n" + "注:\n" + "1.启动此项后 会在设定传送点时保存其世界名\n"
                 + "2.启动此项后 新建一个传送点 就会自动为先前没有WorldName的传送点补全WorldName(不一定正确)\n" + "这通常用于修复MV插件与NPC传送师的数据不同步等异常";
@@ -72,21 +70,21 @@ public class Config {
                 .getBoolean();
         comment = "启动任务导航点功能\n" + "这允许你在玩家进行任务时在地图上标点为玩家导航\n" + "这需要在客户端安装CustomNPCsFix和Xaeros Minimap(或JourneyMap)\n"
                 + "推荐开启小地图选项\"以上距离路近点显示名称\"";
-        EnabledQuestWaypoint = config.get(Configuration.CATEGORY_GENERAL, "EnabledQuestWaypoint", false, comment)
+        EnabledQuestWaypoint = config.get(Configuration.CATEGORY_GENERAL, "EnabledQuestWaypoint", true, comment)
                 .getBoolean();
         comment = "通过世界名判断任务导航点\n" + "如果你使用多世界插件 最好启用这个选项";
         QuestWaypointFromWorldName = config.get(Configuration.CATEGORY_GENERAL, "QuestWaypointFromWorldName", false, comment)
                 .getBoolean();
         comment = "更精准的物品搜集任务判定\n" + "优化物品搜集任务的不精准判断";
         EffectiveCollectItemQuest = config
-                .get(Configuration.CATEGORY_GENERAL, "EffectiveCollectItemQuest", false, comment).getBoolean();
+                .get(Configuration.CATEGORY_GENERAL, "EffectiveCollectItemQuest", true, comment).getBoolean();
 
         //Client
         comment = "不发送无脚本内容的保存请求。 \n" + "这通常用于解决有时候出现的脚本保存丢失";
-        DontSendDubiousScript = config.get(Configuration.CATEGORY_CLIENT, "DontSendDubiousScript", false, comment)
+        DontSendDubiousScript = config.get(Configuration.CATEGORY_CLIENT, "DontSendDubiousScript", true, comment)
                 .getBoolean();
         comment = "会为无材质的NPC使用透明材质,这防止了此错误信息在客户端日志里刷屏\n" + "这通常服务强迫症和开发者";
-        SafeRenderNoTexNPC = config.get(Configuration.CATEGORY_CLIENT, "SafeRenderNoTexNPC", false, comment)
+        SafeRenderNoTexNPC = config.get(Configuration.CATEGORY_CLIENT, "SafeRenderNoTexNPC", true, comment)
                 .getBoolean();
         comment = "当脚本为11页时,隐藏添加按钮\n" + "这通常服务强迫症和开发者";
         LimitedScriptGuiAddButton = config
@@ -101,12 +99,12 @@ public class Config {
         for (int i = 0; i < 2 && i < arr.length; i++) {
             OffestQuestWaypoint[i] = arr[i];
         }
-        comment = "任务导航点使用JourneyMap";
-        QuestWaypointJMapMode = config
-                .get(Configuration.CATEGORY_CLIENT, "QuestWaypointJMapMode", false, comment).getBoolean();
-        comment = "任务导航点使用VoxelMap";
-        QuestWaypointVMapMode = config
-                .get(Configuration.CATEGORY_CLIENT, "QuestWaypointVMapMode", false, comment).getBoolean();
+//        comment = "任务导航点使用JourneyMap";
+//        QuestWaypointJMapMode = config
+//                .get(Configuration.CATEGORY_CLIENT, "QuestWaypointJMapMode", false, comment).getBoolean();
+//        comment = "任务导航点使用VoxelMap";
+//        QuestWaypointVMapMode = config
+//                .get(Configuration.CATEGORY_CLIENT, "QuestWaypointVMapMode", false, comment).getBoolean();
 
         config.save();
         logger.info("Finished loading config. ");

@@ -117,10 +117,7 @@ public class ClientListener {
         if (lastWorld != Minecraft.getMinecraft().world) {
             if (Minecraft.getMinecraft().world != null) {
                 Client.getSetting();
-                if (!Config.QuestWaypointJMapMode) {
-                    //请求任务坐标点信息
-                    Client.getAllQuestWaypoint();
-                }
+                Client.getAllQuestWaypoint();
             }
         }
 
